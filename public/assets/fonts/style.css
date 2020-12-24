@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Messina Serif';
+    src: local('Messina Serif Light'), local('Messina-Serif-Light'),
+        url('MessinaSerif-Light.woff2') format('woff2'),
+        url('MessinaSerif-Light.woff') format('woff'),
+        url('MessinaSerif-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
