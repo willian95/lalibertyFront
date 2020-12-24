@@ -16,19 +16,19 @@
                   <div class="col-md-12 flex-custom  mt-3">
                     <div class="menu-flex">
                       <li class='nav-item  '>
-                        <a class='nav-link animsition-link  nav-link-black ' href='work.html'>WORK</a>
+                        <a class='nav-link animsition-link  nav-link-black ' href='{{ url('/') }}'>WORK</a>
                       </li>
                       <li class='nav-item '>
-                        <a class='nav-link animsition-link  ' href="fashion.html">FASHION MERCH</a>
+                        <a class='nav-link animsition-link  ' href="{{ url('/') }}">FASHION MERCH</a>
                       </li>
                       <li class='nav-item '>
-                        <a class='nav-link animsition-link ' href="shop.html">LIBERTY SHOP</a>
+                        <a class='nav-link animsition-link ' href="{{ url('/shop') }}">LIBERTY SHOP</a>
                       </li>
                       <li class='nav-item '>
-                        <a class='nav-link animsition-link ' href="about.html">ABOUT US</a>
+                        <a class='nav-link animsition-link ' href="{{ url('/') }}">ABOUT US</a>
                       </li>
                       <li class='nav-item mr-5'>
-                        <a class='nav-link animsition-link ' href="blog.html">BLOG</a>
+                        <a class='nav-link animsition-link ' href="{{ url('/') }}">BLOG</a>
                       </li>
                   
                     </div>
@@ -62,7 +62,7 @@
                     <div class="menu-flex">
 
                       <li class='nav-item'>
-                        <a class='brand animsition-link ' href='index.html'>
+                        <a class='brand animsition-link ' href="{{ url('/') }}">
                           <img alt='redes' src="{{ url('assets/img/logo.png') }}">
                         </a>
                       </li>

@@ -9,10 +9,10 @@
   <title>LЛ＊LIBERTУ</title>
 
 
-  <link rel="stylesheet" href="assets/css/slick.css">
-  <link rel="stylesheet" href="assets/css/slick-theme.css">
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/font-awesome.css">
+  <link rel="stylesheet" href="{{ url('assets/css/slick.css')}}">
+  <link rel="stylesheet" href="{{ url('assets/css/slick-theme.css')}}">
+  <link rel="stylesheet" href="{{ url('assets/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{ url('assets/css/font-awesome.css')}}">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">   <link rel="stylesheet" href="assets/css/style.css">
 
@@ -46,19 +46,19 @@
                   <div class="col-md-12 flex-custom border-menu mt-3">
                     <div class="menu-flex">
                       <li class='nav-item  '>
-                        <a class='nav-link  animsition-link nav-link-white ' href='work.html'>WORK</a>
+                        <a class='nav-link  animsition-link nav-link-white ' href="{{ url('/') }}">WORK</a>
                       </li>
                       <li class='nav-item '>
-                        <a class='nav-link animsition-link nav-link-white ' href="fashion.html">FASHION MERCH</a>
+                        <a class='nav-link animsition-link nav-link-white ' href="{{ url('/') }}">FASHION MERCH</a>
                       </li>
                       <li class='nav-item '>
-                        <a class='nav-link animsition-link  nav-link-white' href="shop.html">LIBERTY SHOP</a>
+                        <a class='nav-link animsition-link  nav-link-white' href="{{ url('/shop') }}">LIBERTY SHOP</a>
                       </li>
                       <li class='nav-item '>
-                        <a class='nav-link animsition-link nav-link-white ' href="about.html">ABOUT US</a>
+                        <a class='nav-link animsition-link nav-link-white ' href="{{ url('/') }}">ABOUT US</a>
                       </li>
                       <li class='nav-item mr-5'>
-                        <a class='nav-link animsition-link nav-link-white' href="blog.html">BLOG</a>
+                        <a class='nav-link animsition-link nav-link-white' href="{{ url('/') }}">BLOG</a>
                       </li>
 
                     
@@ -81,8 +81,8 @@
                     <div class="menu-flex">
                     
                       <li class='nav-item '>
-                        <a class='brand animsition-link ' href='index.html'>
-                          <img class="invertir-color" alt='redes' src='assets/img/logo.png'>
+                        <a class='brand animsition-link ' href="{{ url('/') }}">
+                          <img class="invertir-color" alt='redes' src="{{ url('assets/img/logo.png') }}">
                         </a>
                       </li>
                     
