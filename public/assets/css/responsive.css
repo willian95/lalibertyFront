@@ -1,6 +1,27 @@
 @media (max-width: 767px) {}
 
 @media (min-width: 0px) and (max-width: 767px) {
+    .navbar-expand-md .navbar-nav .nav-link {
+
+        padding-left: 0;
+    }
+    .redes-nav {
+        text-align: center;
+        position: initial;
+        right: inherit;
+        display: flex;
+        justify-content: center;
+    }
+    .menu-flex {
+        display: block;
+    
+    }
+    .navbar-nav .flex-custom{
+        flex-direction: column;
+    }
+    .brand-xs {
+        display: block;
+    }
     .elipse img {
 
         width: 80%!important;

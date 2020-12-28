@@ -17,10 +17,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">   <link rel="stylesheet" href="{{ url('assets/css/style.css') }}">
 
   <link rel="stylesheet" href="{{ url('assets/css/animsition.min.css') }}">
-
+  <link rel="stylesheet" href="assets/css/responsive.css">
     @stack("css")
-  <!--- <link rel="stylesheet" href="assets/css/responsive.css">--->
-</head>
+
+</head
 
 <body>
   <div class="animsition">
