@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
 class PaymentController extends Controller
 {
     function index(){
@@ -11,4 +12,10 @@ class PaymentController extends Controller
         return view("payment");
 
     }
+
+    function ping(){
+
+        
+    }
+
 }
