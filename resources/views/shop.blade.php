@@ -46,19 +46,19 @@
                   <div class="col-md-12 flex-custom border-menu mt-3">
                     <div class="menu-flex">
                       <li class='nav-item  '>
-                        <a class='nav-link  animsition-link nav-link-white ' href='work.html'>WORK</a>
+                        <a class='nav-link  animsition-link nav-link-white ' href="{{ url('/works') }}">WORK</a>
                       </li>
                       <li class='nav-item '>
-                        <a class='nav-link animsition-link nav-link-white ' href="fashion.html">FASHION MERCH</a>
+                        <a class='nav-link animsition-link nav-link-white ' href="{{ url('/fashion-merch') }}">FASHION MERCH</a>
                       </li>
                       <li class='nav-item '>
-                        <a class='nav-link animsition-link  nav-link-white' href="shop.html">LIBERTY SHOP</a>
+                        <a class='nav-link animsition-link  nav-link-white' href="{{ url('/shop') }}">LIBERTY SHOP</a>
                       </li>
                       <li class='nav-item '>
-                        <a class='nav-link animsition-link nav-link-white ' href="about.html">ABOUT US</a>
+                        <a class='nav-link animsition-link nav-link-white ' href="{{ url('/about') }}">ABOUT US</a>
                       </li>
                       <li class='nav-item mr-5'>
-                        <a class='nav-link animsition-link nav-link-white' href="blog.html">BLOG</a>
+                        <a class='nav-link animsition-link nav-link-white' href="{{ url('/blog') }}">BLOG</a>
                       </li>
 
                     
