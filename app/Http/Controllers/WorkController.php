@@ -9,9 +9,12 @@ class WorkController extends Controller
 {
     function index(Request $request){
 
+        if(!$request->has("work")){
+            return view("fashionMerch");
+        }
+
         $workId = Work::where("slug", $request->work)->first();
 
-        
         if($workId->is_fashion_merch == 1){
 
             $works = Work::where("is_fashion_merch", 1)->get();

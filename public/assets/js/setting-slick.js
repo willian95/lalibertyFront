@@ -50,6 +50,7 @@ $('.main-banner__content').slick({
   $('.slider-nav').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
+    infinite: true,
     asNavFor: '.slider-for',
     dots: false,
     arrows: true,
