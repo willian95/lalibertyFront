@@ -61,16 +61,18 @@
                   <div class="col-md-12  espacios-m6">
                     <div class="menu-flex">
 
-                      <li class='nav-item'>
+                      <li class='nav-item logo_content'>
                         <a class='brand animsition-link ' href="{{ url('/') }}">
                           <img alt='redes' src="{{ url('assets/img/logo.png') }}">
+                          
                         </a>
+                        <p class="txt">We are a brand that loves to work with other brands</p>
                       </li>
 
                     </div>
-                    <div class="col-md-12">
+                  <!---  <div class="col-md-12">
                       <p class="txt">We are a brand that loves to work with other brands</p>
-                    </div>
+                    </div>-->
                   </div>
                  
 
