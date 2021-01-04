@@ -1370,6 +1370,8 @@ position: relative;
 .grid-item img {
   width: 800px;
   object-fit: contain;
+      height: 500px;
+  
 }
 
 .grid-item:nth-child(1) {
