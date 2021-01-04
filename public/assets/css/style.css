@@ -1371,6 +1371,7 @@ position: relative;
   width: 800px;
   object-fit: contain;
       height: 500px;
+      display: initial!important;
   
 }
 
