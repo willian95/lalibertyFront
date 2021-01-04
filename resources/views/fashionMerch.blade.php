@@ -41,25 +41,21 @@
                                 <div id="effect-title" class="mt-5"></div>
                                 <div class="galleria-client mt-5">
                                     <!----GALERIA------>                                  
-                                        <div >
+                                
                                             
                                             <div class="grid container-fluid">
                                                 @foreach(App\WorkImage::where("work_id", $work->id)->get() as $workImage)
                                                 <div class="grid-item ">
-                                                <a href="">
+                                            
                                                     <img
                                                     src="{{ $workImage->image }}"
                                                     alt="">
-                                                    <div class="grid-infoo">
-                                                    <p class="grid-p">
-                                                        <h3>{{ $work->title }}</h3>
-                                                    </p>
-                                                    </div>
-                                                </a>
+                                             
+                                           
                                                 </div>
                                                 @endforeach
                                             </div>
-                                        </div>
+                                      
                                 
                                     <!----GALERIA------>
                                 </div>
