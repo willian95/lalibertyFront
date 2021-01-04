@@ -1356,7 +1356,7 @@ div#galeria:hover img:hover {
 
 .grid-item {
 position: relative;
-  margin-bottom: 7rem;
+  margin-bottom: 15rem;
 }
 
 .grid-item:nth-child(2n) {
