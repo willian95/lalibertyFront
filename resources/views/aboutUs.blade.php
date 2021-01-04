@@ -25,27 +25,42 @@
                         <div class="servicios-about mt-5 mb-5">
                             <div class="row">
                                 <div class="col-md-4">
-                                    <h3>Lorem</h3>
+                                    <h3>DIGITAL CRAFTS      </h3>
                                     <ul class="service-list">
-                                        <li>lorem</li>
-                                        <li>lorem 2</li>
-                                        <li>lorem 3</li>
+                                        <li>-Social media management</li>
+                                        <li>-Creative content</li>
+                                        <li>-Animation graphics</li>
+                                        <li>Web design</li>
                                     </ul>
                                 </div>
                                 <div class="col-md-4">
-                                    <h3>Lorem</h3>
+                                    <h3>BRAND STYLING   </h3>
                                     <ul class="service-list">
-                                        <li>lorem</li>
-                                        <li>lorem 2</li>
-                                        <li>lorem 3</li>
+                                        <li>-Naming</li>
+                                        <li>-Brand design</li>
+                                        <li>-Brand personality</li>
+                                        <li>-Packaging</li>
+                                        <li>-Photo concept</li>
+                                        <li>-Fashion Merch</li>
                                     </ul>
                                 </div>
                                 <div class="col-md-4">
-                                    <h3>Lorem</h3>
+                                    <h3>COMMUNICATION DESIGN 	</h3>
                                     <ul class="service-list">
-                                        <li>lorem</li>
-                                        <li>lorem 2</li>
-                                        <li>lorem 3</li>
+                                        <li>-Strategic stotytelling</li>
+                                        <li>-Brand experience.</li>
+                                        <li>-Brand movies</li>
+                                        <li>-Art Prints</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <h3>BEYOND DESIGN	</h3>
+                                    <ul class="service-list">
+                                        <li>-Fashion design</li>
+                                        <li>-Space design</li>
+                                        <li>-Editorial design </li>
+                                        <li>-Objetcs design</li>
+                                        <li>-Shopwindow design</li>
                                     </ul>
                                 </div>
                             </div>

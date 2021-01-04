@@ -1448,6 +1448,7 @@ transition: all .8s;
   
   .servicios-about{
 text-align: center;
+padding: 7rem 0px;
   }
   .servicios-about h3{
     font-size: 23px;
