@@ -528,9 +528,15 @@ p {
 }
 
 #blog-modal .modal-dialog {
-    max-width: 60%;
+    max-width: fit-content;
+    margin-top: 0;
 }
 
+#blog-modal .modal-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .btn {
     color: #ffffff;
     cursor: pointer;
@@ -891,10 +897,13 @@ p {
 .redes a {
     margin-right: 12px;
 }
+.galleria-client{
+    width: 100%;
+}
 
 .cliente-img {
     height: 350px;
-    object-fit: cover;
+    object-fit: contain;
     object-position: top;
 }
 
@@ -1434,3 +1443,15 @@ transition: all .8s;
   .grid-item a:hover h3{
     opacity: 1;
   }
+  
+  .servicios-about{
+text-align: center;
+  }
+  .servicios-about h3{
+    font-size: 23px;
+  }
+  .service-list{
+padding: 0;
+font-size: 14px;
+list-style: none;  
+}

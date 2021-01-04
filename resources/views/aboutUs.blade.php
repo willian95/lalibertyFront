@@ -21,6 +21,38 @@
                     <div class="container mt-4">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit molestias vero incidunt debitis corporis esse necessitatibus doloremque quo voluptatem, consequatur placeat eius qui praesentium vel corrupti dolorum assumenda asperiores? Consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vitae commodi natus consectetur deserunt, quasi omnis dolorem aspernatur, fuga sapiente sit. Laudantium aliquid mollitia omnis similique minima repellendus quasi corporis?</p>
 
+
+                        <div class="servicios-about mt-5 mb-5">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h3>Lorem</h3>
+                                    <ul class="service-list">
+                                        <li>lorem</li>
+                                        <li>lorem 2</li>
+                                        <li>lorem 3</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <h3>Lorem</h3>
+                                    <ul class="service-list">
+                                        <li>lorem</li>
+                                        <li>lorem 2</li>
+                                        <li>lorem 3</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <h3>Lorem</h3>
+                                    <ul class="service-list">
+                                        <li>lorem</li>
+                                        <li>lorem 2</li>
+                                        <li>lorem 3</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+
                         <ul class="person mt-5">
                             <li>
                                 <p>Rigoski</p>
