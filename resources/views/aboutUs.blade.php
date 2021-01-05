@@ -21,6 +21,53 @@
                     <div class="container mt-4">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit molestias vero incidunt debitis corporis esse necessitatibus doloremque quo voluptatem, consequatur placeat eius qui praesentium vel corrupti dolorum assumenda asperiores? Consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vitae commodi natus consectetur deserunt, quasi omnis dolorem aspernatur, fuga sapiente sit. Laudantium aliquid mollitia omnis similique minima repellendus quasi corporis?</p>
 
+
+                        <div class="servicios-about mt-5 mb-5">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h3>DIGITAL CRAFTS      </h3>
+                                    <ul class="service-list">
+                                        <li>-Social media management</li>
+                                        <li>-Creative content</li>
+                                        <li>-Animation graphics</li>
+                                        <li>Web design</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <h3>BRAND STYLING   </h3>
+                                    <ul class="service-list">
+                                        <li>-Naming</li>
+                                        <li>-Brand design</li>
+                                        <li>-Brand personality</li>
+                                        <li>-Packaging</li>
+                                        <li>-Photo concept</li>
+                                        <li>-Fashion Merch</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <h3>COMMUNICATION DESIGN 	</h3>
+                                    <ul class="service-list">
+                                        <li>-Strategic stotytelling</li>
+                                        <li>-Brand experience.</li>
+                                        <li>-Brand movies</li>
+                                        <li>-Art Prints</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <h3>BEYOND DESIGN	</h3>
+                                    <ul class="service-list">
+                                        <li>-Fashion design</li>
+                                        <li>-Space design</li>
+                                        <li>-Editorial design </li>
+                                        <li>-Objetcs design</li>
+                                        <li>-Shopwindow design</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+
                         <ul class="person mt-5">
                             <li>
                                 <p>Rigoski</p>

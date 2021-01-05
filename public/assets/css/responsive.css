@@ -1,6 +1,26 @@
 @media (max-width: 767px) {}
 
 @media (min-width: 0px) and (max-width: 767px) {
+    .carrito-icon svg{
+        display: none;
+    }
+    .card-effect {
+
+        margin: 0px;
+    }
+    .person {
+ 
+        display: block;
+        padding: 0;
+    }
+    .grid-item {
+       
+        margin-bottom: 6rem;
+    }
+    .grid-item img{
+        width: 100%;
+        height: auto;
+    }
     .navbar-expand-md .navbar-nav .nav-link {
 
         padding-left: 0;

@@ -41,21 +41,21 @@
                                 <div id="effect-title" class="mt-5"></div>
                                 <div class="galleria-client mt-5">
                                     <!----GALERIA------>                                  
-                                        <div id="galeria" class="galeria galeria--h container">
+                                
                                             
-                                            @foreach(App\WorkImage::where("work_id", $work->id)->get() as $workImage)
-
-                                                <div class="galeria-brick galeria-brick--h">
-                                                    <a href="#">                                          
-                                                        <img src="{{ $workImage->image }}" class="galeria-img"
-                                                            alt="iamegn">
-                                                    </a>
+                                            <div class="grid container-fluid">
+                                                @foreach(App\WorkImage::where("work_id", $work->id)->get() as $workImage)
+                                                <div class="grid-item ">
+                                            
+                                                    <img
+                                                    src="{{ $workImage->image }}"
+                                                    alt="">
+                                             
+                                           
                                                 </div>
-
-                                            @endforeach
-                                            
-                                    
-                                        </div>
+                                                @endforeach
+                                            </div>
+                                      
                                 
                                     <!----GALERIA------>
                                 </div>
