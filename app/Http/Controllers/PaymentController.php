@@ -205,7 +205,7 @@ class PaymentController extends Controller
             
 
         }catch(\Exception $e){
-            return response()->json(["success" => false, "msg" => "Hubo un problema con su pago", "err" => $e->getMessage()]);
+            return response()->json(["success" => false, "msg" => "Hubo un problema con su pago", "err" => $e->getMessage(), "ln" => $e->getLine()]);
         }
 
     }
