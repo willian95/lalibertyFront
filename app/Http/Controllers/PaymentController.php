@@ -177,7 +177,8 @@ class PaymentController extends Controller
 
                 $user = GuestUser::find($guestUser->id);
                 $data = ["user" => $user, "products" => $request->products, "payment" => $payment];
-                
+                $to_name = $user->name;               
+                $to_email = $user->email;
 
                 \Mail::send("emails.purchaseEmail", $data, function($message) use ($to_name, $to_email) {
 
