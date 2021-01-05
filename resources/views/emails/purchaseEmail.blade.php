@@ -147,8 +147,8 @@ td .es-button-border-2:hover {
                             <td style="border: 1px solid black; border-collapse:collapse; text-align:center">{{ $loop->index + 1 }}</td>
                             <td style="border: 1px solid black; border-collapse:collapse; text-align:center"><img src="{{ $product['productColorSize']['product']['image'] }}" style="width: 60px;"><p>{{ $product["productColorSize"]["product"]["name"] }}</p></td>
                      
-                            <td style="border: 1px solid black; border-collapse:collapse; text-align:center">{{ {{ $product["productColorSize"]["size"]["size"] }} </td>
-                            <td style="border: 1px solid black; border-collapse:collapse; text-align:center">{{ {{ $product["productColorSize"]["color"]["name"] }} </td>
+                            <td style="border: 1px solid black; border-collapse:collapse; text-align:center">{{ $product["productColorSize"]["size"]["size"] }} </td>
+                            <td style="border: 1px solid black; border-collapse:collapse; text-align:center">{{ $product["productColorSize"]["color"]["name"] }} </td>
                             
                             <td style="border: 1px solid black; border-collapse:collapse; text-align:center">1</td>
                             <td style="border: 1px solid black; border-collapse:collapse; text-align:center">$ {{ number_format($product["productColorSize"]["price"], 0, ",", ".") }}</td>
