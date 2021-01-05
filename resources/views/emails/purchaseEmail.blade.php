@@ -117,7 +117,7 @@ td .es-button-border-2:hover {
                       <td>Dirección: {{ $user->address }}</td>
                       </tr>
                       <tr>
-                      <td>Paypal #: {{ $payment->order_id }}</td>
+                      <td>PayU Transaction #: {{ $payment->order_id }}</td>
                       </tr>
 
                       <tr>

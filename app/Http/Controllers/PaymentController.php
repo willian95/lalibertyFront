@@ -183,7 +183,7 @@ class PaymentController extends Controller
                 \Mail::send("emails.purchaseEmail", $data, function($message) use ($to_name, $to_email) {
 
     
-                    $message->to($to_email, $to_name)->subject("¡Haz realizado una compra en Aidacaceresart.com!");
+                    $message->to($to_email, $to_name)->subject("¡Haz realizado una compra en Laliberty Shop!");
                     $message->from(env("MAIL_FROM_ADDRESS"), env("MAIL_FROM_NAME"));
 
                 });
