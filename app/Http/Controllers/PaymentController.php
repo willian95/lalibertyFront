@@ -22,9 +22,9 @@ class PaymentController extends Controller
         try{
 
             $payment = Payment::first();
+            $user = GuestUser::find($guestUser->id);
             $data = ["user" => $user, "products" => $products, "payment" => $payment];
                 
-
             \Mail::send("emails.purchaseEmail", $data, function($message) use ($to_name, $to_email) {
 
                 $message->to($to_email, $to_name)->subject("¡Haz realizado una compra en Laliberty.com!");
