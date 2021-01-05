@@ -21,8 +21,8 @@ class PaymentController extends Controller
         ini_set("MAX_EXECUTION_TIME", 0);
         try{
 
-            $payment = Payment::first();
-            $user = GuestUser::find($guestUser->id);
+            /*$payment = Payment::first();
+            $user = GuestUser::find();
             $data = ["user" => $user, "products" => $products, "payment" => $payment];
                 
             \Mail::send("emails.purchaseEmail", $data, function($message) use ($to_name, $to_email) {
@@ -30,7 +30,7 @@ class PaymentController extends Controller
                 $message->to($to_email, $to_name)->subject("¡Haz realizado una compra en Laliberty.com!");
                 $message->from(env("MAIL_FROM_ADDRESS"), env("MAIL_FROM_NAME"));
 
-            });
+            });*/
 
             $referenceCode = uniqid();
             $total = $request->total;
