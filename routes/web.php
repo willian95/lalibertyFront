@@ -24,6 +24,7 @@ Route::get('/front-test', function () {
 Route::get("/shop", "ShopController@index");
 
 Route::get("/products/fetch", "ProductController@fetch");
+Route::get("/products/color/size/{product_color_size}", "ProductController@checkColorSize");
 
 Route::get("works", "WorkController@index");
 
@@ -32,6 +33,15 @@ Route::get("about", "AboutController@index");
 Route::get("blog", "BlogController@index");
 
 Route::get("fashion-merch", "FashionMerchController@index");
+
+Route::get("payment", "PaymentController@payment");
+Route::post("payment/confirmation", "PaymentController@confirmation");
+Route::get("/payment/status", "PaymentController@status");
+
+Route::post("checkout", "PaymentController@checkout");
+
+Route::get("/departments", "DepartmentController@fetch");
+Route::get("/municipalities/{department_id}", "MunicipalityController@fetch");
 
 //Route::get("/ping", "PaymentController@ping");
 

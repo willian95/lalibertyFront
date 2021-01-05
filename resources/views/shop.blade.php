@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">  <link rel="stylesheet" href="assets/css/animsition.min.css">
   <!--- <link rel="stylesheet" href="assets/css/responsive.css">--->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   
 
 </head>
@@ -26,7 +27,7 @@
 <body >
   <!--div class="animsition" -->>
     <div>
-
+    
     <main style="background: #000;">
     <header>
         <nav class='navbar navbar-expand-md navbar-fixed-js'>
@@ -292,6 +293,9 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
+
+        <div style="position: fixed; background: rgba(0, 0, 0, 0.5); top: 0; bottom:0; width: 100%; z-index: 99;" v-if="paymentLoader == true"></div>
+
         <div class="modal-body">
           <div class="row">
             <div class="col-md-8">
@@ -354,8 +358,32 @@
                             <input type="text" class="form-control" placeholder="email" v-model="guestEmail">
                           </div>
 
+                          <div class="col-md-6 mb-3">
+                            <div class="form-group">
+                              <select class="form-control" id="department" v-model="department" @change="fetchMunicipalities()">
+                                <option value="">Departamento</option>
+                                <option :value="department.id"  v-for="department in departments">@{{ department.department }}</option>
+                              </select>
+                            </div>
+                          </div>
+                         
+                          <div class="col-md-6 mb-3">
+                            <div class="form-group">
+                              <select class="form-control" id="municipality" v-model="municipality">
+                                <option value="">Ciudad</option>
+                                <option :value="municipality.id" v-for="municipality in municipalities">@{{ municipality.municipality }}</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="col-md-6 mb-3">
+                            <div class="form-group">
+                              <input type="text" class="form-control" placeholder="DNI" v-model="guestDNI">
+                            </div>
+                          </div>
+
                           <div class="col-md-12">
-                            <button class="btn btn-primary">pagar</button>
+                            <button type="button" class="btn btn-primary" @click="showPopUp()">pagar</button>
                           </div>
                         </div>
                       </form>
@@ -391,6 +419,9 @@
 
   <script src="{{ url('/js/app.js') }}"></script>
   <script type="text/javascript">
+    
+    var childWind = null
+
     const app = new Vue({
         el: '#producto-modal',
         data() {
@@ -476,7 +507,7 @@
 
         },
         mounted(){
-
+           
             window.setInterval(() => {
 
               if(window.localStorage.getItem("laliberty_product_flag") == "1"){
@@ -509,6 +540,7 @@
         }
     });
 
+
     const carrito = new Vue({
         el: '#carrito-modal',
         data() {
@@ -517,7 +549,14 @@
               guestName:"",
               guestAddress:"",
               guestEmail:"",
-              guestPhone:""
+              guestPhone:"",
+              guestDNI:"",
+              paymentLoader:false,
+              departments:[],
+              municipalities:[],
+              department:"",
+              municipality:"",
+              intervalID:null
             }
         },
         computed: {
@@ -525,7 +564,7 @@
 
             var total = 0
             this.products.forEach((data) => {
-              console.log(data)
+
               total = total + data.productColorSize.price
 
             })
@@ -542,10 +581,136 @@
             this.products.splice(id, 1)
             window.localStorage.setItem("laliberty_cart", JSON.stringify(this.products))
 
+          },
+          showPopUp(){
+
+            if(this.guestName == "" || this.guestName == null){
+              swal({
+                text:"Debes ingresar un nombre",
+                icon:"error"
+              })
+            }
+            else if(this.guestAddress == "" || this.guestAddress == null){
+              swal({
+                text:"Debes ingresar un email",
+                icon:"error"
+              })
+            }
+            else if(this.guestPhone == "" || this.guestPhone == null){
+              swal({
+                text:"Debes ingresar un teléfono",
+                icon:"error"
+              })
+            }
+            else if(this.department == "" || this.department == null){
+              swal({
+                text:"Debes ingresar un departamento",
+                icon:"error"
+              })
+            }
+            else if(this.municipality == "" || this.municipality == null){
+              swal({
+                text:"Debes ingresar una ciudad",
+                icon:"error"
+              })
+            }
+            else if(this.guestDNI == "" || this.guestDNI == null){
+              swal({
+                text:"Debes ingresar tu DNI",
+                icon:"error"
+              })
+            }
+            else{
+
+              window.localStorage.setItem("laliberty_guest_name", this.guestName)
+              window.localStorage.setItem("laliberty_guest_address", this.guestAddress)
+              window.localStorage.setItem("laliberty_guest_email", this.guestEmail)
+              window.localStorage.setItem("laliberty_guest_phone", this.guestPhone)
+              window.localStorage.setItem("laliberty_department", this.department)
+              window.localStorage.setItem("laliberty_municipality", this.municipality)
+              window.localStorage.setItem("laliberty_guest_dni", this.guestDNI)
+
+              this.paymentLoader = true
+              childWind = window.open("{{ url('payment') }}", 'print_popup', 'width=600,height=600');
+
+              this.intervalID = window.setInterval(this.checkWindow, 500);
+              
+
+            }
+
+          },
+          checkWindow() {
+            console.log("hey", childWind)
+              if (childWind && childWind.closed) {
+                  window.clearInterval(this.intervalID);
+                  this.paymentLoader = false
+                  if (localStorage.getItem("paymentStatusLaliberty") == 'aprobado') {
+                      localStorage.removeItem("paymentStatusLaliberty")
+                      window.location.href = "{{ url('/') }}"
+                  } /*else if (localStorage.getItem("paymentStatusAida") == 'rechazado') {
+                      window.location.reload()
+                  }*/
+              }
+          },
+          fetchDepartments(){
+
+            axios.get("{{ url('/departments') }}").then(res => {
+              this.departments = res.data.departments
+            })
+
+          },
+          fetchMunicipalities(){
+
+            axios.get("{{ url('/municipalities') }}"+"/"+this.department).then(res => {
+              this.municipalities = res.data.municipalities
+            })
+
+          },
+          checkProductColorSize(id, indexReview){
+
+            axios.get("{{ url('/products/color/size/') }}"+"/"+id).then(res => {
+              var cart = JSON.parse(window.localStorage.getItem("laliberty_cart"))
+              
+              if(res.data.success == true){
+                if(res.data.product.stock > 0){
+                  cart[indexReview].price = res.data.product.price
+                  cart[indexReview].stock = res.data.product.stock
+                  cart[indexReview].productColorSize.price = res.data.product.price
+                }else{
+                  cart.splice(indexReview, 1)
+                }
+                
+
+              }else{
+                cart.splice(indexReview, 1)
+              }
+              
+              window.localStorage.setItem("laliberty_cart", JSON.stringify(cart))
+              this.products = cart
+              
+            })
+
+          },
+          reviewCart(){
+
+            var cart = JSON.parse(window.localStorage.getItem("laliberty_cart"))
+            if(cart != null){
+              cart.forEach((data, index) => {
+              
+                this.checkProductColorSize(data.productColorSize.id, index)
+                
+
+              })
+            
+            }
+
           }
 
         },
         mounted(){
+
+          this.reviewCart()
+          this.fetchDepartments()
 
           this.products = JSON.parse(window.localStorage.getItem("laliberty_cart"))
 
