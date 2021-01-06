@@ -22,11 +22,11 @@
 
             </div>-->
             <div class="timeline">
-                @foreach(App\Blog::all() as $blog)
+                @foreach(App\Blog::orderBy("id", "desc")->get() as $blog)
                   <div class="timeline-item" data-text="{{ $blog->created_at->format('d/m/Y') }}"  >
 
                   <!----------------₍ ὸ.ό₎ރ---------------------->
-                    <a href="">
+                    <a href="{{ url('/blog/'.$blog->slug) }}">
                      <div class="timeline__content"><img class="timeline__img" src="{{ $blog->image }}" />
                           <h2 class="timeline__content-title">{{ $blog->title }}</h2>
                           <p class="timeline__content-desc">{!! substr($blog->description, 0, 60) !!}...</p>
@@ -67,33 +67,6 @@
   );
 </script>
 
-
-
-
-  <!-- Modal blog detalle -->
-  @foreach(App\Blog::all() as $blog)
-  <div class="modal fade" id="blog-modal{{ $loop->index }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header border-0">
-        <p class="titulo-producto">{{ $blog->title }}    -    {{ $blog->created_at->format('d/m/Y') }}
-        </p>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          
-          <div class="content-blog">
-            <img src="{{ $blog->image }}" alt="">
-            {!! $blog->description !!}
-          </div>
-        </div>
-    
-      </div>
-    </div>
-  </div>
-  @endforeach
 </body>
 
 </html>

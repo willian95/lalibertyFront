@@ -15,7 +15,7 @@
             <section class="container mt-5 pt-5">
                 <div class="slider slider-nav mb-5">
                     
-                    @foreach(App\Work::all() as $work)
+                    @foreach(App\Work::where("is_fashion_merch", 0)->get() as $work)
                         <div id="{{ $work->id }}">
                             <h3>{{ $work->client_name }}</h3>
                         </div>
@@ -45,10 +45,16 @@
                                             
                                             <div class="grid container-fluid">
                                                 @foreach(App\WorkImage::where("work_id", $work->id)->get() as $workImage)
-                                                <div class="grid-item ">                                           
+                                                <div class="grid-item ">  
+                                                    @if($workImage->file_type == "image")                                         
                                                     <img
                                                     src="{{ $workImage->image }}"
-                                                    alt="">                                                                                         
+                                                    alt="">     
+                                                    @else
+                                                        <video style="width: 100%;" controls>
+                                                            <source src="{{ $workImage->image }}" type="video/mp4">
+                                                        </video>
+                                                    @endif                                                                                    
                                                 </div>
                                                 @endforeach
                                             </div>
@@ -101,11 +107,12 @@
                 $(this).removeClass("hover");
             }
         );
-
-        $(document).ready(() => {
-            $('.slider-nav').slick("slickGoTo","{{ $workIndex }}")
-            //$('.slider-for').slick("slickGoTo", 3)
-        })
+        @if(isset($workIndex))
+            $(document).ready(() => {
+                $('.slider-nav').slick("slickGoTo","{{ $workIndex }}")
+                //$('.slider-for').slick("slickGoTo", 3)
+            })
+        @endif
     </script>
 
     <!-- Modal detalle del producto -->

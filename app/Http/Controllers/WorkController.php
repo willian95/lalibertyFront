@@ -9,29 +9,10 @@ class WorkController extends Controller
 {
     function index(Request $request){
 
-        if(!$request->has("work")){
-            return view("fashionMerch");
-        }
 
-        $workId = Work::where("slug", $request->work)->first();
-
-        if($workId->is_fashion_merch == 1){
-
-            $works = Work::where("is_fashion_merch", 1)->get();
-            $index = 0;
-            $workIndex = 0;
-            foreach($works as $work){
-
-                if($workId->id == $work->id){
-                    $workIndex = $index;
-                }
-                $index++;
-            }
-
-
-            return view("fashionMerch", ["workIndex" => $workIndex]);
-        }else{
-
+        if($request->has("work")){
+            
+            $workId = Work::where("slug", $request->work)->first();
             $works = Work::where("is_fashion_merch", 0)->get();
             $index = 0;
             $workIndex = 0;
@@ -45,7 +26,13 @@ class WorkController extends Controller
 
 
             return view("works", ["workIndex" => $workIndex]);
+            
+
+        }else{
+            return view("works");
         }
+
+       
        
 
     }
