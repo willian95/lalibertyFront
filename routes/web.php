@@ -31,6 +31,7 @@ Route::get("works", "WorkController@index");
 Route::get("about", "AboutController@index");
 
 Route::get("blog", "BlogController@index");
+Route::get("blog/{slug}", "BlogController@show");
 
 Route::get("fashion-merch", "FashionMerchController@index");
 
