@@ -47,9 +47,15 @@
                                                 @foreach(App\WorkImage::where("work_id", $work->id)->get() as $workImage)
                                                 <div class="grid-item ">
                                             
+                                                    @if($workImage->file_type == "image")                                         
                                                     <img
                                                     src="{{ $workImage->image }}"
-                                                    alt="">
+                                                    alt="">     
+                                                    @else
+                                                        <video style="width: 100%;" controls>
+                                                            <source src="{{ $workImage->image }}" type="video/mp4">
+                                                        </video>
+                                                    @endif   
                                              
                                            
                                                 </div>

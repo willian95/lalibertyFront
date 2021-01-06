@@ -8,7 +8,11 @@
         <div class="grid container-fluid">
           @foreach(App\Work::take(6)->inRandomOrder()->take(6)->get() as $work)
           <div class="grid-item ">
+            @if($work->is_fashion_merch == 0)
             <a href="{{ url('/works?work='.$work->slug) }}">
+            @else
+            <a href="{{ url('/fashion-merch?work='.$work->slug) }}">
+            @endif
               <img
                 src="{{ $work->main_image }}"
                 alt="imagen">
