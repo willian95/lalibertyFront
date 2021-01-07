@@ -240,14 +240,14 @@
           </button>
         </div>
         <div class="modal-body">
-          <div class="row">
+          <div class="row ">
             <div class="col-md-6">
               <div class="details-product">
                 <img :src="product.image" alt="">
               </div>
             </div>
             <div class="col-md-6">
-              <div class="row">
+              <div class="row reverse-info">
                 <div class="col-md-4">
                   <strong v-if="stock != ''">
                     <p>Stock : @{{ stock }}</p>
@@ -311,7 +311,7 @@
         <div style="position: fixed; background: rgba(0, 0, 0, 0.5); top: 0; bottom:0; width: 100%; z-index: 99;" v-if="paymentLoader == true"></div>
 
         <div class="modal-body">
-          <div class="row">
+          <div class="row reverse-info">
             <div class="col-md-8">
               <div id="accordion">
                 <div class="card-tab">
@@ -328,13 +328,13 @@
                     <div class="card-body">
                       <div class="item-product" v-for="(product, index) in products">
                         <ul>
-                          <li>@{{ index + 1 }}</li>
+                          <li class="numero">@{{ index + 1 }}</li>
                           <li><img :src="product.product.image" alt=""></li>
                           <li>
                             <p>@{{ product.product.name }}</p>
                             <p>$ @{{ product.productColorSize.price }}</p>
                           </li>
-                          <li>
+                          <li class="trash-product">
                             <button type="button" class="close" @click="removeCartProduct(index)" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                             </button>
