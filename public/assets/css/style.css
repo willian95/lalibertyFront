@@ -179,7 +179,7 @@ Nav
     .hamburger-inner::after {
         width: 35px;
         height: 3px;
-        background-color: #ffff;
+        background-color: #000;
         border-radius: 3px;
         position: absolute;
         transition-property: transform;
@@ -599,9 +599,12 @@ p {
 
 .titulo-producto {
     margin-bottom: 0;
-    font-size: 40px;
+    font-size: 30px;
     color: #282828;
     font-family: 'subtitulos';
+}
+.single-blog span{
+    font-size: 13px;
 }
 
 .precio {
@@ -691,12 +694,13 @@ p {
 
 .timeline__content-title {
     font-weight: normal;
-    font-size: 45px;
+    font-size: 30px;
     margin: 7px 0 0 0;
     transition: 0.4s;
     padding: 0 10px;
     box-sizing: border-box;
     color: #282828;
+    padding: 0;
 }
 
 .timeline__content-desc {
@@ -909,9 +913,14 @@ p {
     object-position: top;
 }
 
+.texto-client::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: #f9f8f2 !important;
+}
 .texto-client {
-    height: 50vh;
-    overflow: scroll;
+    max-height: 50vh;
+    overflow-y: scroll;
 }
 
 .texto-client p {
@@ -1471,4 +1480,7 @@ font-family: 'Roboto';
   }
   .brand img{
     width: 50%;
+  }
+  .logo-xs{
+      display: none;
   }
