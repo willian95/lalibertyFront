@@ -413,13 +413,13 @@
                 <p class="sub-resumen">Resumen</p>
                 <ul>
                   <li><p><strong>Subtotal:</strong>  $ @{{ subtotal }}</p></li>
-                  <li><p><strong>Envio:</strong> $5.00</p></li>
+                  <!--<li><p><strong>Envio:</strong> $5.00</p></li>-->
 
-                  <li class="border-top pt-3"><p><strong>Total:</strong>$ @{{ subtotal + 5 }}</p></li>
+                  <li class="border-top pt-3"><p><strong>Total:</strong>$ @{{ subtotal }}</p></li>
                 </ul>
               </div>
-              <p class="mt-3 mt-4">Codigo de descuento?</p>
-              <input type="text" class="form-control" placeholder="info">
+              <!--<p class="mt-3 mt-4">Codigo de descuento?</p>
+              <input type="text" class="form-control" placeholder="info">-->
 
          
             </div>

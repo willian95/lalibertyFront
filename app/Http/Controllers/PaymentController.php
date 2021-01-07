@@ -11,6 +11,7 @@ use App\Payment;
 use App\ProductPurchase;
 use App\ProductColorSize;
 use App\GuestUser;
+use App\Mail;
 //use GuzzleHttp\Client;
 
 class PaymentController extends Controller
@@ -187,6 +188,24 @@ class PaymentController extends Controller
                     $message->from(env("MAIL_FROM_ADDRESS"), env("MAIL_FROM_NAME"));
 
                 });
+
+                foreach(AdminMail::all() as $admin){
+
+                    $data = ["user" => $user, "products" => $request->products, "payment" => $payment];
+                    $to_name = "Admin";               
+                    $to_email = $admin->email;
+
+                    \Mail::send("emails.adminPurchaseEmail", $data, function($message) use ($to_name, $to_email) {
+
+        
+                        $message->to($to_email, $to_name)->subject("¡Un cliente ha realizado una compra en Laliberty Shop!");
+                        $message->from(env("MAIL_FROM_ADDRESS"), env("MAIL_FROM_NAME"));
+
+                    });
+
+                }
+
+
 
                 return response()->json(["success" => true, "msg" => "Pago realizado exitosamente"]);
 
