@@ -43,7 +43,7 @@
               </span>
             </button>
             <div class='offcanvas-collapse fil' id='navbarNav'>
-              <ul class='navbar-nav'>
+              <ul class='navbar-nav container'>
                 <div class="row">
                   <div class="col-md-12 flex-custom  mt-3">
                     <div class="menu-flex">
@@ -98,7 +98,7 @@
                           <img class=" invertir-color" alt='redes' src="{{ url('assets/img/logo.png') }}">
                           
                         </a>
-                        <p class="txt nav-link-white         ">We are a brand that loves to work with other brands</p>
+                     <!---   <p class="txt nav-link-white         ">We are a brand that loves to work with other brands</p>--->
                       </li>
 
                     </div>

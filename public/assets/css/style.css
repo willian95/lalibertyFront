@@ -1454,13 +1454,21 @@ text-align: center;
 padding: 7rem 0px;
   }
   .servicios-about h3{
-    font-size: 23px;
+    font-size: 15px;
   }
   .service-list{
 padding: 0;
 font-size: 14px;
 list-style: none;  
+font-family: 'Roboto';
 }
 .single-blog{
     text-align:center;
+  }
+
+  .text-about{
+    font-size: 13px;
+  }
+  .brand img{
+    width: 50%;
   }

@@ -19,12 +19,16 @@
                     </div>
 
                     <div class="container mt-4">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit molestias vero incidunt debitis corporis esse necessitatibus doloremque quo voluptatem, consequatur placeat eius qui praesentium vel corrupti dolorum assumenda asperiores? Consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vitae commodi natus consectetur deserunt, quasi omnis dolorem aspernatur, fuga sapiente sit. Laudantium aliquid mollitia omnis similique minima repellendus quasi corporis?</p>
+                        <p class="text-about">Somos una marca que ama trabajar con otras marcas. No somos una agencia que hace camisetas, sino una marca que sabe hacer campañas y que se resiste a seguir los caprichos de la moda. Somos nuevos pero llevamos más de 20 años en el mundo de las ideas trabajando para algunas de las marcas más importantes del mundo y las agencias más grandes del país.
+                            <br><br>
+                            Somos independientes y operamos sin sedes ni muros. Cobramos la experiencia, no el edificio, Creemos en el diseño, la tecnología, el entretenimiento, las colaboraciones, lo hecho a mano y a la medida. Creemos en los emprendedores, en la libertad de expresión, de culto, de género y orientación sexual. Nos obsesiona lograr relevancia cultural e impacto social, antes que premios. Estamos convencidos que desde la comunicación no sólo podemos ayudar a las marcas a lograr sus objetivos, sino también a construir un mundo mejor –y lo creemos desde mucho antes del COVID-19–.
+                           
+                            No sólo compartimos lo que creamos, sino todo en lo que creemos, hay espacio para la escritura, la música, el diseño, la moda… No buscamos clientes, sino amigos para divertirnos haciendo crecer los negocios. Bienvenidos a La*Liberty</p>
 
 
                         <div class="servicios-about mt-5 mb-5">
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <h3>DIGITAL CRAFTS      </h3>
                                     <ul class="service-list">
                                         <li>-Social media management</li>
@@ -33,7 +37,7 @@
                                         <li>Web design</li>
                                     </ul>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <h3>BRAND STYLING   </h3>
                                     <ul class="service-list">
                                         <li>-Naming</li>
@@ -44,7 +48,7 @@
                                         <li>-Fashion Merch</li>
                                     </ul>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <h3>COMMUNICATION DESIGN 	</h3>
                                     <ul class="service-list">
                                         <li>-Strategic stotytelling</li>
@@ -53,7 +57,7 @@
                                         <li>-Art Prints</li>
                                     </ul>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <h3>BEYOND DESIGN	</h3>
                                     <ul class="service-list">
                                         <li>-Fashion design</li>
