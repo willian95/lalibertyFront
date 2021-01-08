@@ -100,18 +100,18 @@ td .es-button-border-2:hover {
                       <td align="center" style="padding:0;Margin:0;font-size:0px;"><img class="adapt-img" src="https://www.laliberty.com.co/assets/img/logo1.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;object-fit: contain;" width="200" height="133"></td> 
                      </tr> 
                      <tr style="border-collapse:collapse;"> 
-                        <td align="center" style="padding:0;Margin:0;"><h1 style="Margin:0;line-height:24px;mso-line-height-rule:exactly;font-family:tahoma, verdana, segoe, sans-serif;font-size:20px;font-style:normal;font-weight:bold;color:#0c4572;">¡Compra realizada! </h1></td> 
+                        <td align="center" style="padding:0;Margin:0;"><h1 style="Margin:0;line-height:24px;mso-line-height-rule:exactly;font-family:tahoma, verdana, segoe, sans-serif;font-size:20px;font-style:normal;font-weight:bold;color:#0c4572;margin-bottom: 80px;">¡Compra realizada! </h1></td> 
 
                      </tr> 
 
-                      <tr>
+                      <tr style="margin-top: 40px;">
                         <td>Nombre: {{ $user->name }}</td>
                       </tr>
                       <tr>
                       <td>Total: $ {{ $payment->total }}</td>
                       </tr>
                       <tr>
-                        <td>Exmail: {{ $user->email }}</td>
+                        <td>Email: {{ $user->email }}</td>
                       </tr>
                       <tr>
                       <td>Dirección: {{ $user->address }}</td>
