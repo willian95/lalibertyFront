@@ -34,7 +34,7 @@
         <nav class='navbar navbar-expand-md navbar-fixed-js'>
           <div class='flex-custom'>
             <a class='brand brand-xs' href='#'>
-              <img alt='' src="{{ url('assets/img/logo.png') }} ">
+              <img alt='' src="{{ url('assets/img/logo-xs.png') }} ">
             </a>
             <button class='navbar-toggler p-2 border-0 hamburger hamburger--elastic d-none-lg' data-toggle='offcanvas'
               type='button'>

@@ -118,7 +118,7 @@
                     </thead>
                     <tbody>
                       <tr v-for="product in products">
-                        <td><p>@{{ product.product.name }}</p><img style="width: 40%;" :src="product.product.image" alt=""></td>
+                        <td><p>@{{ product.product.name }}</p><img class="img-pay" style="width: 40%;" :src="product.product.image" alt=""></td>
                         <td>@{{ product.productColorSize.size.size }}</td>
                         <td>@{{ product.productColorSize.color.name }}</td>
                         <td>1</td>
