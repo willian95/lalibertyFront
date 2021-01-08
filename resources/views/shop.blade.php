@@ -680,6 +680,8 @@
             })
 
           },
+          
+          
           checkProductColorSize(id, indexReview){
 
             axios.get("{{ url('/products/color/size/') }}"+"/"+id).then(res => {
@@ -687,9 +689,11 @@
               
               if(res.data.success == true){
                 if(res.data.product.stock > 0){
+
                   cart[indexReview].price = res.data.product.price
                   cart[indexReview].stock = res.data.product.stock
                   cart[indexReview].productColorSize.price = res.data.product.price
+                  
                 }else{
                   cart.splice(indexReview, 1)
                 }
