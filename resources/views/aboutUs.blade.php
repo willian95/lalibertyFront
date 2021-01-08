@@ -75,7 +75,7 @@
                         <ul class="person mt-5">
                             <li>
                                 <p>Rigoski</p>
-                                <img class="person-img" src="http://imgfz.com/i/eNBIo0d.png" alt="">
+                                <img class="person-img" src="{{ url('assets/img/rigo.JPG') }}" alt="">
                                 <div class="redes">
                                     <a href=""><img src="assets/img/iconos/whatsapp.svg" alt=""></a>
                                     <a href=""><img src="assets/img/iconos/linkedin.svg" alt=""></a>
@@ -83,7 +83,7 @@
                                 </div>
                             </li>
                             <li><p>Freddyski</p>
-                                <img class="person-img" src="http://imgfz.com/i/eNBIo0d.png" alt="">
+                                <img class="person-img" src="{{ url('assets/img/freddy.JPG') }}" alt="">
                                 <div class="redes">
                                     <a href=""><img src="assets/img/iconos/whatsapp.svg" alt=""></a>
                                     <a href=""><img src="assets/img/iconos/linkedin.svg" alt=""></a>
