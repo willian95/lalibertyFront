@@ -12,6 +12,7 @@ use App\ProductPurchase;
 use App\ProductColorSize;
 use App\GuestUser;
 use App\Mail;
+use App\AdminMail;
 //use GuzzleHttp\Client;
 
 class PaymentController extends Controller
