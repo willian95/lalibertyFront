@@ -603,10 +603,22 @@ p {
     color: #282828;
     font-family: 'subtitulos';
 }
-.single-blog span{
-    font-size: 13px;
+.titulo-blog{
+    margin-bottom: 0;
+    font-size: 50px;
+    color: #282828;
+    font-family: "subtitulos"!important;
 }
-
+.single-blog span{
+    font-size: 11px;
+}
+.volver  a{
+    font-size: 12px;
+}
+.volver img{
+    width: 15px;
+    margin-right: 8px;
+}
 .precio {
     font-size: 25px;
     color: #a1b2a1;
@@ -865,11 +877,12 @@ p {
 }
 
 .video-about {
-    height: 400px;
+    height: 460px;
 }
 
 .video-about img {
     object-fit: cover;
+    object-position: 0px -50px;
 }
 
 .person-img {
@@ -1518,4 +1531,9 @@ font-family: 'Roboto';
 .modal-content {
    
     overflow: hidden;
+}
+.img-shoop{
+    height: 300px;
+    object-fit: cover;
+    object-position: 0px -17rem;
 }

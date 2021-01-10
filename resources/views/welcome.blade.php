@@ -28,4 +28,10 @@
 
       </section>
 
+
+      <section class="container">
+        <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-30b1c87e-828d-4d63-a66b-4ff6f7f23578"></div>
+      </section>
+
 @endsection

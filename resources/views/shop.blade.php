@@ -48,6 +48,9 @@
                   <div class="col-md-12 flex-custom  mt-3">
                     <div class="menu-flex">
                       <li class='nav-item  '>
+                        <a class='nav-link animsition-link  nav-link-white  ' href="{{ url('/front-test') }}">HOME</a>
+                      </li>
+                      <li class='nav-item  '>
                         <a class='nav-link animsition-link  nav-link-white        ' href="{{ url('/works') }}">WORK</a>
                       </li>
                       <li class='nav-item '>
@@ -120,10 +123,11 @@
         <div class="container mt-5">
           <div class="tienda">
             <div class="row">
-              <div class="col-md-6">
-                <img class="img-fix  " src="http://imgfz.com/i/r5EbFA9.jpeg" alt="">
+              <div class="col-md-12">
+                <img class="img-fix  img-shoop" src="{{ url('assets/img/02_foto_rigofred-min.jpg') }}" alt="">
+               
               </div>
-              <div class="col-md-6">
+              <div class="col-md-12">
                 <p class="nav-link-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, consequatur eaque consectetur ad
                   quaerat odio velit sit! Commodi sapiente facere nam. Facere magni reprehenderit dicta nostrum commodi
                   tempore dolorem dolor.</p>

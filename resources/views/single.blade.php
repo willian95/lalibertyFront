@@ -16,11 +16,15 @@
     <section class="single-blog container">
         <p class="main_title-general"></p>
 
-       <p class="titulo-producto">{{ $blog->title }}</p>
+       <p class="titulo-producto titulo-blog">{{ $blog->title }}</p>
        <span>{{ $blog->created_at->format("d/m/Y") }}</span>
         <div class="content-blog">
           <img src="{{ $blog->image }}" alt="">
           {!! $blog->description !!}
+        </div>
+
+        <div class="volver text-sm-left">
+          <a href="{{ url('/blog') }}">       <img src="{{ url('assets/img/left.svg') }}" alt="">  volver a blog</a>
         </div>
     </section>
 

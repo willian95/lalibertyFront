@@ -15,7 +15,7 @@
                 <!------data-scroll-------->
                 <div class="container mt-5">
                     <div class="video-about">
-                        <img src="http://imgfz.com/i/eNBIo0d.png" alt="">
+                        <img src="{{ url('assets/img/banedera.jpg') }}" alt="">
                     </div>
 
                     <div class="container mt-4">
