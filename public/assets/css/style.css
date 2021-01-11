@@ -603,10 +603,22 @@ p {
     color: #282828;
     font-family: 'subtitulos';
 }
-.single-blog span{
-    font-size: 13px;
+.titulo-blog{
+    margin-bottom: 0;
+    font-size: 50px;
+    color: #282828;
+    font-family: "subtitulos"!important;
 }
-
+.single-blog span{
+    font-size: 11px;
+}
+.volver  a{
+    font-size: 12px;
+}
+.volver img{
+    width: 15px;
+    margin-right: 8px;
+}
 .precio {
     font-size: 25px;
     color: #a1b2a1;
@@ -865,11 +877,12 @@ p {
 }
 
 .video-about {
-    height: 400px;
+    height: 460px;
 }
 
 .video-about img {
     object-fit: cover;
+    object-position: 0px -50px;
 }
 
 .person-img {
@@ -1353,55 +1366,61 @@ div#galeria:hover img:hover {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-.grid-item:nth-child(4n+1){
+.grid-top:nth-child(4n+1){
   background: palegreen;
 }
-.grid-item:nth-child(4n+2){
+.grid-top:nth-child(4n+2){
   background: red;
   transform: translate(0px, 37rem);
 }*/
 
 
-.grid {}
+.grid-top{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    text-align: center;
+    justify-content: center;
+}
 
 .grid-item {
 position: relative;
   margin-bottom: 15rem;
 }
 
-.grid-item:nth-child(2n) {
+.grid-top:nth-child(2n) {
   text-align: end;
 }
 
-.grid-item:nth-child(2n+1) {
+.grid-top:nth-child(2n+1) {
   text-align: center;
 }
 
-.grid-item img {
-  width: 800px;
-  object-fit: contain;
-      height: 500px;
-      display: initial!important;
+.grid-top img {
+    width: 100%;
+    object-fit: contain;
+    height: auto;
+    display: initial!important;
   
 }
 
-.grid-item:nth-child(1) {
+.grid-top:nth-child(1) {
   text-align: center;
 }
 
-.grid-item:nth-child(2) {
+.grid-top:nth-child(2) {
   text-align: start;
 }
 
-.grid-item:nth-child(3) {
+.grid-top:nth-child(3) {
   text-align: end;
 }
 
-.grid-item:nth-child(4) {
+.grid-top:nth-child(4) {
   text-align: center;
 }
 
-.grid-item:nth-child(5) {
+.grid-top:nth-child(5) {
   text-align: left;
 }
 
@@ -1518,4 +1537,9 @@ font-family: 'Roboto';
 .modal-content {
    
     overflow: hidden;
+}
+.img-shoop{
+    height: 300px;
+    object-fit: cover;
+    object-position: 0px -17rem;
 }

@@ -1,6 +1,13 @@
 @media (max-width: 767px) {}
 
 @media (min-width: 0px) and (max-width: 767px) {
+    .video-about img{
+        object-fit: contain;
+        object-position: 0;
+    }
+    .video-about{
+        height: auto;
+    }
     .numero{
         display: none;
     }
