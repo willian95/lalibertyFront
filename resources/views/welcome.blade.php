@@ -6,47 +6,76 @@
         <!------data-scroll-------->
 
         <div class="grid container-fluid">
-          @foreach(App\Work::take(6)->inRandomOrder()->take(6)->get() as $work)
+          @foreach(App\HomeOrder::with("work", "workImage", "product", "productImage", "blog")->orderBy("order")->get() as $order)
          <div class="grid-top">
           <div class="grid-item ">
-        
-            <a href="{{ url('/fashion-merch?work='.$work->slug) }}">
-              <img
-                src="{{ $work->main_image }}"
-                alt="imagen">
+
+            @if($order->work)
+            <a href="#">
+              @if($order->work->main_image_file_type == 'image')
+                <img src="{{ $order->work->main_image }}" alt="imagen">
+              @else
+                <video style="width: 100%;" controls>
+                  <source src="{{ $order->work->main_image }}" type="video/mp4">
+                </video>
+              @endif
               <div class="grid-infoo">
                 <p class="grid-p">
-                  <h3>{{ $work->title }}</h3>
+                  <h3>{{ $order->work->title }}</h3>
                 </p>
               </div>
             </a>
-          </div>
-          <div class="grid-item ">
-        
-            <a href="{{ url('/fashion-merch?work='.$work->slug) }}">
-              <img
-                src="{{ $work->main_image }}"
-                alt="imagen">
+            @elseif($order->workImage)
+            <a href="#">
+              @if($order->workImage->file_type == 'image')
+                <img src="{{ $order->workImage->image }}" alt="imagen">
+              @else
+                <video style="width: 100%;" controls>
+                  <source src="{{ $order->workImage->image }}" type="video/mp4">
+                </video>
+              @endif
+            </a>
+            @elseif($order->product)
+            <a href="#">
+              @if($order->product->main_image_file_type == 'image')
+                <img src="{{ $order->product->image }}" alt="imagen">
+              @else
+                <video style="width: 100%;" controls>
+                  <source src="{{ $order->product->image }}" type="video/mp4">
+                </video>
+              @endif
               <div class="grid-infoo">
                 <p class="grid-p">
-                  <h3>{{ $work->title }}</h3>
+                  <h3>{{ $order->product->name }}</h3>
                 </p>
               </div>
             </a>
-          </div>
-          <div class="grid-item ">
-        
-            <a href="{{ url('/fashion-merch?work='.$work->slug) }}">
-              <img
-                src="{{ $work->main_image }}"
-                alt="imagen">
-              <div class="grid-infoo">
-                <p class="grid-p">
-                  <h3>{{ $work->title }}</h3>
-                </p>
-              </div>
+            @elseif($order->productImage)
+            <a href="#">
+              @if($order->productImage->file_type == 'image')
+                <img src="{{ $order->productImage->image }}" alt="imagen">
+              @else
+                <video style="width: 100%;" controls>
+                  <source src="{{ $order->productImage->image }}" type="video/mp4">
+                </video>
+              @endif
+              
             </a>
+            @elseif($order->blog)
+            <a href="#">
+              @if($order->blog->main_image_file_type == 'image')
+                <img src="{{ $order->blog->image }}" alt="imagen">
+              @else
+                <video style="width: 100%;" controls>
+                  <source src="{{ $order->blog->image }}" type="video/mp4">
+                </video>
+              @endif
+              
+            </a>
+            @endif
+
           </div>
+          
          </div>
           @endforeach
         </div>
