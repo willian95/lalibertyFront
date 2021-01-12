@@ -188,7 +188,7 @@
 <p class="ig-title mt-4">    <img alt='logo'  src="{{ url('assets/img/cursor.png') }}"> somoslaliberty</p>
 <iframe src="https://snapwidget.com/embed/906132" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; "></iframe>
 <div class="text-center">
-  <a href="https://www.instagram.com/somoslaliberty/"> <img class="siguenos" src="{{ url('assets/img/instagram.svg') }}" alt=""> Síguenos en Instagram</a>
+  <a href="https://www.instagram.com/somoslaliberty/"> <!--<img class="siguenos" src="{{ url('assets/img/instagram.svg') }}" alt="">--> Síguenos en Instagram</a>
 </div>
       </section>
 
