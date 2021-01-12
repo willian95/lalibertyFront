@@ -146,7 +146,13 @@
             <div class="card-transition" data-toggle="modal" data-target="#producto-modal" onclick="storeLocal(JSON.parse('{{ $product }}'))">
               <figure class="card-effect">
                 <p class="ml-3">{{ $product->name }}</p>
+                @if($product->main_image_file_type == 'image')
                 <img src="{{ $product->image }}" alt="" />
+                @else
+                  <video style="width: 100%;" controls>
+                    <source src="{{ $product->image }}" type="video/mp4">
+                  </video>
+                @endif
               <a href="#"></a>
               </figure>
             </div>
@@ -254,12 +260,17 @@
                           <div id="custCarousel" class="carousel slide" data-ride="carousel" >
                               <!-- slides -->
                               <div class="carousel-inner" id="inner-carousel">
-                                  <div class="carousel-item active"> <img :src="product.image" alt="imagen de producto"> </div>
+                                  <div class="carousel-item active"> 
+                                    <img :src="product.image" alt="imagen de producto" v-if="product.main_image_file_type == 'image'"> 
+                                    <video style="width: 100%;" controls v-else>
+                                      <source :src="product.image" type="video/mp4">
+                                    </video>
+                                  </div>
                                   
                               </div> <!-- Left right -->
                                <a class="carousel-control-prev" href="#custCarousel" data-slide="prev"> <span class="carousel-control-prev-icon"></span> </a> <a class="carousel-control-next" href="#custCarousel" data-slide="next"> <span class="carousel-control-next-icon"></span> </a> <!-- Thumbnails -->
                               <ol class="carousel-indicators list-inline" id="bottom-carousel">
-                                  <li class="list-inline-item active"> <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel"> <img :src="product.image" class="img-fluid"> </a> </li>
+                                  <li class="list-inline-item active"> <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel"> <img :src="product.image" v-if="product.main_image_file_type == 'image'" class="img-fluid"> <span v-else>Video</span> </a> </li>
                                  
                               </ol>
                           </div>
@@ -554,9 +565,22 @@
                 this.productColorSizes = this.product.product_color_sizes
                 this.secondaryImages = this.product.secondary_images
 
+                console.log("product", this.product)
+            
                 this.secondaryImages.forEach((data,index) => {
-                  $("#inner-carousel").append("<div class='carousel-item'> <img src='"+data.image+"' > </div>")
-                  $("#bottom-carousel").append("<li class='list-inline-item'> <a id='carousel-selector-"+(index+1)+"' data-slide-to='"+(index+1)+"' data-target='#custCarousel'> <img src='"+data.image+"' class='img-fluid'> </a> </li>")
+
+                  if(data.file_type == 'image'){
+                    $("#inner-carousel").append("<div class='carousel-item'> <img src='"+data.image+"' > </div>")
+                    $("#bottom-carousel").append("<li class='list-inline-item'> <a id='carousel-selector-"+(index+1)+"' data-slide-to='"+(index+1)+"' data-target='#custCarousel'> <img src='"+data.image+"' class='img-fluid'> </a> </li>")
+                  
+                  }else{
+                    
+                    $("#inner-carousel").append("<div class='carousel-item'><video style='width: 100%;' controls> <source src='"+data.image+"' type='video/mp4'></video></div>")
+                    $("#bottom-carousel").append("<li class='list-inline-item'> <a id='carousel-selector-"+(index+1)+"' data-slide-to='"+(index+1)+"' data-target='#custCarousel'> <span>Video</span> </a> </li>")
+
+                  }
+
+                  
                 })
                 
 

@@ -27,7 +27,15 @@
 
                   <!----------------₍ ὸ.ό₎ރ---------------------->
                     <a href="{{ url('/blog/'.$blog->slug) }}">
-                     <div class="timeline__content"><img class="timeline__img" src="{{ $blog->image }}" />
+                     <div class="timeline__content">
+                        @if($blog->main_image_file_type == 'image')
+                          <img class="timeline__img" src="{{ $blog->image }}" />
+                        @else
+                          <video style="width: 100%;" controls>
+                            <source src="{{ $blog->image }}" type="video/mp4">
+                          </video>
+                        @endif
+
                           <h2 class="timeline__content-title">{{ $blog->title }}</h2>
                           <p class="timeline__content-desc">{!! substr($blog->description, 0, 60) !!}...</p>
                       </div>

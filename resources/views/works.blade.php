@@ -30,7 +30,13 @@
                         <div>
                             <div class="row">
                                 <div class="col-md-5">
-                                    <img class="cliente-img" src="{{ $work->main_image }}" alt="">
+                                    @if($work->main_image_file_type == 'image')
+                                        <img class="cliente-img" src="{{ $work->main_image }}" alt="">
+                                    @else
+                                        <video style="width: 100%;" controls>
+                                            <source src="{{ $work->main_image }}" type="video/mp4">
+                                        </video>
+                                    @endif
                                 </div>
                                 <div class="col-md-7">
                                     <div class="texto-client">

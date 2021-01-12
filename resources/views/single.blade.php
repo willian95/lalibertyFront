@@ -19,7 +19,13 @@
        <p class="titulo-producto titulo-blog">{{ $blog->title }}</p>
        <span>{{ $blog->created_at->format("d/m/Y") }}</span>
         <div class="content-blog">
-          <img src="{{ $blog->image }}" alt="">
+            @if($blog->main_image_file_type == 'image')
+              <img class="timeline__img" src="{{ $blog->image }}" />
+            @else
+              <video style="width: 100%;" controls>
+                <source src="{{ $blog->image }}" type="video/mp4">
+              </video>
+            @endif
           {!! $blog->description !!}
         </div>
 
