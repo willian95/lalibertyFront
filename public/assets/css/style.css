@@ -1546,3 +1546,14 @@ font-family: 'Roboto';
 .img-miniatura{
     height: 300px!important;
 }
+.ig-title{
+    font-weight: 900;
+    font-family: 'secciones';
+    font-size: 19px;
+}
+.ig-title img{
+    width: 34px;
+}
+.siguenos{
+    width: 24px;
+}

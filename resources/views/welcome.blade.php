@@ -184,9 +184,11 @@
 
       <!-- SnapWidget -->
 <script src="https://snapwidget.com/js/snapwidget.js"></script>
-<p>somoslaliberty</p>
+<p class="ig-title mt-4">    <img alt='logo'  src="{{ url('assets/img/cursor.png') }}"> somoslaliberty</p>
 <iframe src="https://snapwidget.com/embed/906132" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; "></iframe>
-<a href="">Síguenos en Instagram</a>
+<div class="text-center">
+  <a href="https://www.instagram.com/somoslaliberty/"> <img class="siguenos" src="http://imgfz.com/i/wXeHCOA.png" alt=""> Síguenos en Instagram</a>
+</div>
       </section>
 
 @endsection
