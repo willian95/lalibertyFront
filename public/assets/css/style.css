@@ -1399,7 +1399,7 @@ position: relative;
 .grid-top img {
     width: 100%;
     object-fit: contain;
-    height: auto;
+    height: 400px;
     display: initial!important;
   
 }
