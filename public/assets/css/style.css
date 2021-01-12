@@ -1386,6 +1386,7 @@ div#galeria:hover img:hover {
 .grid-item {
 position: relative;
   margin-bottom: 15rem;
+  margin-top: 10rem;
 }
 
 .grid-top:nth-child(2n) {
@@ -1545,6 +1546,7 @@ font-family: 'Roboto';
 }
 .img-miniatura{
     height: 300px!important;
+    object-fit: contain;
 }
 .ig-title{
     font-weight: 900;
