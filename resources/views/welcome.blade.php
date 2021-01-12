@@ -180,8 +180,14 @@
 
 
       <section class="container">
-        <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-<div class="elfsight-app-30b1c87e-828d-4d63-a66b-4ff6f7f23578"></div>
+        <iframe width= "100%" src="https://open.spotify.com/embed/playlist/4Gw7ehv7RVkyaGys4Yrbbm" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+
+      <!-- SnapWidget -->
+<script src="https://snapwidget.com/js/snapwidget.js"></script>
+<p>somoslaliberty</p>
+<iframe src="https://snapwidget.com/embed/906132" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; "></iframe>
+<a href="">Síguenos en Instagram</a>
       </section>
 
 @endsection
