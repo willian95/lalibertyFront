@@ -31,7 +31,7 @@
             <div class="grid-item "><!-- imagenes secundarias -->
             <a href="{{ url('/works?work='.$order->workImage->work->slug) }}">
               @if($order->workImage->file_type == 'image')
-                <img src="{{ $order->workImage->image }}" alt="imagen">
+                <img class="img-miniatura" src="{{ $order->workImage->image }}" alt="imagen">
               @else
                 <video style="width: 100%;" controls>
                   <source src="{{ $order->workImage->image }}" type="video/mp4">
@@ -60,7 +60,7 @@
             <div class="grid-item "><!-- imagenes secundarias -->
             <a href="{{ url('/shop') }}">
               @if($order->productImage->file_type == 'image')
-                <img src="{{ $order->productImage->image }}" alt="imagen">
+                <img class="img-miniatura" src="{{ $order->productImage->image }}" alt="imagen">
               @else
                 <video style="width: 100%;" controls>
                   <source src="{{ $order->productImage->image }}" type="video/mp4">
