@@ -564,8 +564,6 @@
                 this.product = JSON.parse(window.localStorage.getItem("laliberty_product"))
                 this.productColorSizes = this.product.product_color_sizes
                 this.secondaryImages = this.product.secondary_images
-
-                console.log("product", this.product)
             
                 this.secondaryImages.forEach((data,index) => {
 
