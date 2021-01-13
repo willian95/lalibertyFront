@@ -27,7 +27,7 @@
                     @if($isMob)
                     <video style="width: 100%;" controls>
                     @else
-                    <video style="width: 100%;" loop muted>
+                    <video style="width: 100%;" loop autoplay="true" muted="muted">
                     @endif
                       <source src="{{ $order->work->main_image }}" type="video/mp4">
                     </video>
@@ -48,7 +48,7 @@
                     @if($isMob)
                     <video style="width: 100%;" controls>
                     @else
-                    <video style="width: 100%;" loop muted>
+                    <video style="width: 100%;" loop autoplay="true" muted="muted">
                     @endif
                       <source src="{{ $order->workImage->image }}" type="video/mp4">
                     </video>
@@ -64,7 +64,7 @@
                     @if($isMob)
                     <video style="width: 100%;" controls>
                     @else
-                    <video style="width: 100%;" loop muted>
+                    <video style="width: 100%;" loop autoplay="true" muted="muted">
                     @endif
                       <source src="{{ $order->product->image }}" type="video/mp4">
                     </video>
@@ -85,7 +85,7 @@
                     @if($isMob)
                     <video style="width: 100%;" controls>
                     @else
-                    <video style="width: 100%;" loop muted>
+                    <video style="width: 100%;" loop autoplay="true" muted="muted">
                     @endif
                       <source src="{{ $order->productImage->image }}" type="video/mp4">
                     </video>
@@ -102,7 +102,7 @@
                     @if($isMob)
                     <video style="width: 100%;" controls>
                     @else
-                    <video style="width: 100%;" loop muted>
+                    <video style="width: 100%;" loop autoplay="true" muted="muted">
                     @endif
                       <source src="{{ $order->blog->image }}" type="video/mp4">
                     </video>
@@ -127,7 +127,7 @@
                     @if($isMob)
                     <video style="width: 100%;" controls>
                     @else
-                    <video style="width: 100%;" loop muted>
+                    <video style="width: 100%;" loop autoplay="true" muted="muted">
                     @endif
                       <source src="{{ $order->work->main_image }}" type="video/mp4">
                     </video>
@@ -148,7 +148,7 @@
                     @if($isMob)
                     <video style="width: 100%;" controls>
                     @else
-                    <video style="width: 100%;" loop muted>
+                    <video style="width: 100%;" loop autoplay="true" muted="muted">
                     @endif
                       <source src="{{ $order->workImage->image }}" type="video/mp4">
                     </video>
@@ -164,7 +164,7 @@
                     @if($isMob)
                     <video style="width: 100%;" controls>
                     @else
-                    <video style="width: 100%;" loop muted>
+                    <video style="width: 100%;" loop autoplay="true" muted="muted">
                     @endif
                       <source src="{{ $order->product->image }}" type="video/mp4">
                     </video>
@@ -185,7 +185,7 @@
                     @if($isMob)
                     <video style="width: 100%;" controls>
                     @else
-                    <video style="width: 100%;" loop muted>
+                    <video style="width: 100%;" loop autoplay="true" muted="muted">
                     @endif
                       <source src="{{ $order->productImage->image }}" type="video/mp4">
                     </video>
@@ -202,7 +202,7 @@
                     @if($isMob)
                     <video style="width: 100%;" controls>
                     @else
-                    <video style="width: 100%;" loop muted>
+                    <video style="width: 100%;" loop autoplay="true" muted="muted">
                     @endif
                       <source src="{{ $order->blog->image }}" type="video/mp4">
                     </video>
