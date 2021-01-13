@@ -2,6 +2,13 @@
 
 @section("content")
 
+@php
+
+  $ua = strtolower($_SERVER['HTTP_USER_AGENT']);
+  $isMob = is_numeric(strpos($ua, "mobile"));
+
+@endphp
+
 <section class="mt-5 mb-5">
         <!------data-scroll-------->
 
@@ -17,7 +24,11 @@
                   @if($order->work->main_image_file_type == 'image')
                     <img src="{{ $order->work->main_image }}" alt="imagen">
                   @else
+                    @if($isMob)
                     <video style="width: 100%;" controls>
+                    @else
+                    <video style="width: 100%;" loop muted>
+                    @endif
                       <source src="{{ $order->work->main_image }}" type="video/mp4">
                     </video>
                   @endif
@@ -34,7 +45,11 @@
                   @if($order->workImage->file_type == 'image')
                     <img class="img-miniatura" src="{{ $order->workImage->image }}" alt="imagen">
                   @else
+                    @if($isMob)
                     <video style="width: 100%;" controls>
+                    @else
+                    <video style="width: 100%;" loop muted>
+                    @endif
                       <source src="{{ $order->workImage->image }}" type="video/mp4">
                     </video>
                   @endif
@@ -46,7 +61,11 @@
                   @if($order->product->main_image_file_type == 'image')
                     <img src="{{ $order->product->image }}" alt="imagen">
                   @else
+                    @if($isMob)
                     <video style="width: 100%;" controls>
+                    @else
+                    <video style="width: 100%;" loop muted>
+                    @endif
                       <source src="{{ $order->product->image }}" type="video/mp4">
                     </video>
                   @endif
@@ -63,7 +82,11 @@
                   @if($order->productImage->file_type == 'image')
                     <img class="img-miniatura" src="{{ $order->productImage->image }}" alt="imagen">
                   @else
+                    @if($isMob)
                     <video style="width: 100%;" controls>
+                    @else
+                    <video style="width: 100%;" loop muted>
+                    @endif
                       <source src="{{ $order->productImage->image }}" type="video/mp4">
                     </video>
                   @endif
@@ -76,7 +99,11 @@
                   @if($order->blog->main_image_file_type == 'image')
                     <img src="{{ $order->blog->image }}" alt="imagen">
                   @else
+                    @if($isMob)
                     <video style="width: 100%;" controls>
+                    @else
+                    <video style="width: 100%;" loop muted>
+                    @endif
                       <source src="{{ $order->blog->image }}" type="video/mp4">
                     </video>
                   @endif
@@ -97,7 +124,11 @@
                   @if($order->work->main_image_file_type == 'image')
                     <img src="{{ $order->work->main_image }}" alt="imagen">
                   @else
+                    @if($isMob)
                     <video style="width: 100%;" controls>
+                    @else
+                    <video style="width: 100%;" loop muted>
+                    @endif
                       <source src="{{ $order->work->main_image }}" type="video/mp4">
                     </video>
                   @endif
@@ -114,7 +145,11 @@
                   @if($order->workImage->file_type == 'image')
                     <img class="img-miniatura" src="{{ $order->workImage->image }}" alt="imagen">
                   @else
+                    @if($isMob)
                     <video style="width: 100%;" controls>
+                    @else
+                    <video style="width: 100%;" loop muted>
+                    @endif
                       <source src="{{ $order->workImage->image }}" type="video/mp4">
                     </video>
                   @endif
@@ -126,7 +161,11 @@
                   @if($order->product->main_image_file_type == 'image')
                     <img src="{{ $order->product->image }}" alt="imagen">
                   @else
+                    @if($isMob)
                     <video style="width: 100%;" controls>
+                    @else
+                    <video style="width: 100%;" loop muted>
+                    @endif
                       <source src="{{ $order->product->image }}" type="video/mp4">
                     </video>
                   @endif
@@ -143,7 +182,11 @@
                   @if($order->productImage->file_type == 'image')
                     <img class="img-miniatura" src="{{ $order->productImage->image }}" alt="imagen">
                   @else
+                    @if($isMob)
                     <video style="width: 100%;" controls>
+                    @else
+                    <video style="width: 100%;" loop muted>
+                    @endif
                       <source src="{{ $order->productImage->image }}" type="video/mp4">
                     </video>
                   @endif
@@ -156,7 +199,11 @@
                   @if($order->blog->main_image_file_type == 'image')
                     <img src="{{ $order->blog->image }}" alt="imagen">
                   @else
+                    @if($isMob)
                     <video style="width: 100%;" controls>
+                    @else
+                    <video style="width: 100%;" loop muted>
+                    @endif
                       <source src="{{ $order->blog->image }}" type="video/mp4">
                     </video>
                   @endif
