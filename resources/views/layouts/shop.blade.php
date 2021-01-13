@@ -7,6 +7,7 @@
   <meta charset="UTF-8">
   <link rel="shortcut icon" type="image/x-icon" href="{{ url('coming/assets/img/favicon.png') }}">
   <title>LЛ＊LIBERTУ</title>
+  @laravelPWA
 
 
   <link rel="stylesheet" href="{{ url('assets/css/slick.css') }}">

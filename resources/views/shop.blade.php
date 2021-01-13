@@ -8,6 +8,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
   <title>LЛ＊LIBERTУ</title>
 
+  @laravelPWA
 
   <link rel="stylesheet" href="{{ url('assets/css/slick.css')}}">
   <link rel="stylesheet" href="{{ url('assets/css/slick-theme.css')}}">
