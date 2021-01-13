@@ -47,6 +47,10 @@ Route::post("checkout", "PaymentController@checkout");
 Route::get("/departments", "DepartmentController@fetch");
 Route::get("/municipalities/{department_id}", "MunicipalityController@fetch");
 
+Route::get('/offline', function () {    
+    return view('offline');
+});
+
 //Route::get("/ping", "PaymentController@ping");
 
 //Route::get("/ping", "")
