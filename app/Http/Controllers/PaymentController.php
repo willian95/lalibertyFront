@@ -17,129 +17,11 @@ use App\AdminMail;
 
 class PaymentController extends Controller
 {
-    
+    function checkout(){
 
-    function checkout(Request $request){
-        ini_set("MAX_EXECUTION_TIME", 0);
         try{
 
-            /*$payment = Payment::first();
-            $user = GuestUser::find();
-            $data = ["user" => $user, "products" => $products, "payment" => $payment];
-                
-            \Mail::send("emails.purchaseEmail", $data, function($message) use ($to_name, $to_email) {
 
-                $message->to($to_email, $to_name)->subject("¡Haz realizado una compra en Laliberty.com!");
-                $message->from(env("MAIL_FROM_ADDRESS"), env("MAIL_FROM_NAME"));
-
-            });*/
-
-            $referenceCode = uniqid();
-            $total = $request->total;
-            $buyerMame = $request->buyerName;
-            $payerName = $request->payerName;
-            $email = $request->email;
-            $phone = $request->phone;
-            $dni = $request->dni;
-            $street = $request->street;
-            $city = Municipality::where("id", $request->municipalityId)->first()->municipality;
-            $department = Department::where("id", $request->departmentId)->first()->department;
-            $creditCardNumber = $request->creditCard;
-            $cvv = $request->cvv;
-            $expirationDate = $request->expirationDate;
-            $creditCardFranchise = "Visa";
-            $deviceSessionId = md5(session_id().microtime());//"vghs6tvkcle931686k1900o6e1";//
-            $userAgent = $_SERVER['HTTP_USER_AGENT'];
-
-            $paymentRequest = [
-                "language"=> "es",
-                "command"=> "SUBMIT_TRANSACTION",
-                "merchant"=> [
-                    "apiKey"=> "4Vj8eK4rloUd272L48hsrarnUA",
-                    "apiLogin"=> "pRRXKOl8ikMmt9u"
-                ],
-                "transaction"=> [
-                    "order"=> [
-                        "accountId"=> "512321",
-                        "referenceCode"=> $referenceCode,
-                        "description"=> "Compra en laliberty",
-                        "language"=> "es",
-                        "signature"=> $this->getSign($referenceCode, $total),
-                        "notifyUrl"=> url('/payment/confirmation'),
-                        "additionalValues"=> [
-                            "TX_VALUE"=> [
-                                "value"=> $total,
-                                "currency"=> "COP"
-                            ],
-                            "TX_TAX"=> [
-                                "value"=> "0",
-                                "currency"=> "COP"
-                            ],
-                            "TX_TAX_RETURN_BASE"=> [
-                                "value"=> "0",
-                                "currency"=> "COP"
-                            ]
-                        ],
-                        "buyer"=> [
-                            "fullName"=> $buyerMame,
-                            "emailAddress"=> $email,
-                            "contactPhone"=> $phone,
-                            "dniNumber"=> $dni,
-                            "shippingAddress"=> [
-                                "street1"=> $street,
-                                "city"=> $city,
-                                "state"=> $department,
-                                "country"=> "CO"
-                            ]
-                        ]
-                    ],
-                    "payer"=> [
-                        "fullName"=> $payerName,
-                        "emailAddress"=> $email,
-                        "contactPhone"=> $phone,
-                        "dniNumber"=> $dni,
-                        "billingAddress"=> [
-                            "street1"=> $street,
-                            "city"=> $city,
-                            "state"=> $department,
-                            "country"=> "CO"
-                        ]
-                    ],
-                    "creditCard"=> [
-                        "number"=> $creditCardNumber,
-                        "securityCode"=> $cvv,
-                        "expirationDate"=> $expirationDate,
-                        "name"=> $payerName
-                    ],
-                    "extraParameters"=> [
-                        "INSTALLMENTS_NUMBER"=> 1
-                    ],
-                    "type"=> "AUTHORIZATION_AND_CAPTURE",
-                    "paymentMethod"=> "VISA",
-                    "paymentCountry"=> "CO",
-                    "deviceSessionId"=> $deviceSessionId,
-                    "ipAddress"=> "64.225.21.150",
-                    "cookie"=> "pt1t38347bs6jc9ruv2ecpv7o2",
-                    "userAgent"=> $userAgent
-                ],
-                "test"=> env("PAYU_TEST")
-            ];
-
-            $options = array(
-                'http' => array(
-                'method'  => 'POST',
-                'content' => json_encode( $paymentRequest ),
-                'header'=>  "Content-Type: application/json\r\n" .
-                            "Accept: application/json\r\n"
-                )
-            );
-
-            $context  = stream_context_create( $options );
-            $result = file_get_contents( env("PAYU_URL"), false, $context );
-            $response = json_decode( $result );
-
-            //dd($response);
-            
             $guestUser = GuestUser::updateOrCreate([
                 "email" => $request->email
             ],[
@@ -221,20 +103,18 @@ class PaymentController extends Controller
 
             }
 
-            
-            
-
         }catch(\Exception $e){
-            return response()->json(["success" => false, "msg" => "Hubo un problema con su pago", "err" => $e->getMessage(), "ln" => $e->getLine()]);
+            return response()->json(["success" => false, "msg" => $e->getMessage()]);
         }
 
     }
 
-    function getSign($referenceCode, $total){
+    function getSign(Request $request){
 
-        $string = env("PAYU_API_KEY")."~".env("PAYU_MERCHANT_ID")."~".$referenceCode."~".$total."~COP";
+        $referenceCode = uniqid();
+        $string = env("PAYU_API_KEY")."~".env("PAYU_MERCHANT_ID")."~".$referenceCode."~".$request->total."~COP";
         $hash = md5(strval($string));
-        return $hash;
+        return response()->json(["hash" => $hash, "reference" => $referenceCode ]);
 
     }
 
@@ -244,10 +124,56 @@ class PaymentController extends Controller
 
     }
 
-    function status(){
+    function confirmation(Request $request){
+        
+        Log::info('Showing log from confirmation checkout');
+        //dd($request->all());
+        
 
-        return view("successPayment");
+    }
 
+    function response(Request $request){
+        
+        dd($request->all());
+        return view("successPayment", ["payment" => $request->all()]);
+
+    }
+
+    function store(Request $request){
+
+        try{
+
+            $guestUser = $this->storeGuestUser($request);
+
+            $payment = new Payment;
+            $payment->status = "pending";
+            $payment->total = $request->total;
+            $payment->order_id = $request->reference;
+            $payment->guest_user_id = $guestUser->id;
+            $payment->address = $request->address;
+            $payment->save();
+
+            return response()->json(["success" => true]);
+
+        }catch(\Exception $e){
+
+            return response()->json(["success" => false, "msg" => "Hubo un problema", "err" => $e->getMessage(), "ln" => $e->getLine()]);
+
+        }
+
+    }
+
+    function storeGuestUser($request){
+
+        $guestUser = GuestUser::updateOrCreate([
+            "email" => $request->email
+        ],[
+            "name" => $request->name,
+            "address" => $request->address,
+            "phone" => $request->phone
+        ]);
+
+        return $guestUser;
     }
 
 }

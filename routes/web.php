@@ -37,7 +37,10 @@ Route::get("fashion-merch", "FashionMerchController@index");
 
 Route::get("payment", "PaymentController@payment");
 Route::post("payment/confirmation", "PaymentController@confirmation");
-Route::get("/payment/status", "PaymentController@status");
+Route::get("payment/response", "PaymentController@response");
+Route::post("/payment/status", "PaymentController@status");
+Route::post("/getSignature", "PaymentController@getSign");
+Route::post("/payment/store","PaymentController@store");
 
 Route::post("checkout", "PaymentController@checkout");
 

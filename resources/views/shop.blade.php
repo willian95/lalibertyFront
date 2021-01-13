@@ -390,7 +390,7 @@
                   </div>
                   <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                     <div class="card-body">
-                      <form>
+         
                         <div class="row">
                           <div class="col-md-6 mb-3">
                             <input type="text" class="form-control" placeholder="Nombre" v-model="guestName">
@@ -406,35 +406,38 @@
                             <input type="text" class="form-control" placeholder="email" v-model="guestEmail">
                           </div>
 
-                          <div class="col-md-6 mb-3">
-                            <div class="form-group">
-                              <select class="form-control" id="department" v-model="department" @change="fetchMunicipalities()">
-                                <option value="">Departamento</option>
-                                <option :value="department.id"  v-for="department in departments">@{{ department.department }}</option>
-                              </select>
-                            </div>
-                          </div>
-                         
-                          <div class="col-md-6 mb-3">
-                            <div class="form-group">
-                              <select class="form-control" id="municipality" v-model="municipality">
-                                <option value="">Ciudad</option>
-                                <option :value="municipality.id" v-for="municipality in municipalities">@{{ municipality.municipality }}</option>
-                              </select>
-                            </div>
-                          </div>
-
-                          <div class="col-md-6 mb-3">
-                            <div class="form-group">
-                              <input type="text" class="form-control" placeholder="DNI" v-model="guestDNI">
-                            </div>
-                          </div>
+                          @if(env('PAYU_ENV') == 'local')
+                          <form method="post" action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/" id="form-pay">
+                          @else
+                          <form method="post" action="https://checkout.payulatam.com/ppp-web-gateway-payu/" id="form-pay">
+                          @endif
+                            <input name="merchantId"    type="hidden"  value="{{ env('PAYU_MERCHANT_ID') }}"   >
+                            <input name="accountId"     type="hidden"  value="{{ env('PAYU_ACCOUNT_ID') }}" >
+                            <input name="description"   type="hidden"  value="Compra la liberty shop"  >
+                            <input name="referenceCode" type="hidden"  v-model="referenceCode" >
+                            <input name="amount"        type="hidden"  v-model="total"   >
+                            <input name="tax"           type="hidden"  value="0"  >
+                            <input name="taxReturnBase" type="hidden"  value="0" >
+                            <input name="currency"      type="hidden"  value="COP" >
+                            <input name="signature"     type="hidden"  v-model="signature"  >
+                            @if(env('PAYU_ENV') == 'local')
+                            <input name="test"          type="hidden"  value="1" >
+                            @else
+                            <input name="test"          type="hidden"  value="0" >
+                            @endif
+                            <input name="buyerFullName"    type="hidden"  v-model="guestName" >
+                            {{--<input name="buyerEmail"    type="hidden"  v-model="guestEmail" >
+                            <input name="responseUrl"    type="hidden"  value="{{ url('/payment/response') }}" >
+                            <input name="confirmationUrl"    type="hidden"  value="{{ url('/payment/confirmation') }}" >--}}
+                            <input name="responseUrl"    type="hidden"  value="http://www.test.com/response" >
+                            <input name="confirmationUrl"    type="hidden"  value="http://www.test.com/confirmation" >
+                          </form>
 
                           <div class="col-md-12">
-                            <button type="button" class="btn btn-primary" @click="showPopUp()">pagar</button>
+                            <button type="button" class="btn btn-primary" @click="payment()">pagar</button>
                           </div>
                         </div>
-                      </form>
+                      
                     </div>
                   </div>
                 </div>
@@ -616,13 +619,15 @@
               guestAddress:"",
               guestEmail:"",
               guestPhone:"",
-              guestDNI:"",
               paymentLoader:false,
               departments:[],
               municipalities:[],
               department:"",
               municipality:"",
-              intervalID:null
+              intervalID:null,
+              referenceCode:"",
+              signature:"",
+              total:0
             }
         },
         computed: {
@@ -634,7 +639,7 @@
               total = total + data.productColorSize.price
 
             })
-
+            this.total = total
             return total
 
           }
@@ -648,7 +653,7 @@
             window.localStorage.setItem("laliberty_cart", JSON.stringify(this.products))
 
           },
-          showPopUp(){
+          payment(){
 
             if(this.guestName == "" || this.guestName == null){
               swal({
@@ -668,24 +673,7 @@
                 icon:"error"
               })
             }
-            else if(this.department == "" || this.department == null){
-              swal({
-                text:"Debes ingresar un departamento",
-                icon:"error"
-              })
-            }
-            else if(this.municipality == "" || this.municipality == null){
-              swal({
-                text:"Debes ingresar una ciudad",
-                icon:"error"
-              })
-            }
-            else if(this.guestDNI == "" || this.guestDNI == null){
-              swal({
-                text:"Debes ingresar tu DNI",
-                icon:"error"
-              })
-            }
+            
             else{
 
               window.localStorage.setItem("laliberty_guest_name", this.guestName)
@@ -697,12 +685,37 @@
               window.localStorage.setItem("laliberty_guest_dni", this.guestDNI)
 
               this.paymentLoader = true
-              childWind = window.open("{{ url('payment') }}", 'print_popup', 'width=600,height=600');
-
-              this.intervalID = window.setInterval(this.checkWindow, 500);
+              this.getSignature()
+           
+              //childWind = window.open("{{ url('payment') }}", 'print_popup', 'width=600,height=600');
+              //this.intervalID = window.setInterval(this.checkWindow, 500);
               
 
             }
+
+          },
+          getSignature(){
+
+            axios.post("{{ url('/getSignature') }}", {total: this.total}).then(res => {
+
+              this.signature = res.data.hash
+              this.referenceCode = res.data.reference
+              this.storePayment()
+              
+
+            })
+
+          },
+          storePayment(){
+
+            axios.post("{{ url('/payment/store') }}", {total: this.total, reference: this.referenceCode, email: this.guestEmail, name: this.guestName, address: this.guestAddress, phone: this.guestPhone}).then(res => {
+              console.log(res)
+              if(res.data.success == true){
+                window.setTimeout(() => {
+                  document.getElementById("form-pay").submit()
+                }, 1000);
+              }
+            }); 
 
           },
           checkWindow() {
