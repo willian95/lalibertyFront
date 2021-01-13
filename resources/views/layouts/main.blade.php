@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="assets/css/responsive.css">
     @stack("css")
 
-</head
+</head>
 
 <body>
   <div class="animsition">
