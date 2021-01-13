@@ -9,7 +9,7 @@
           <div class="row">
           @foreach(App\HomeOrder::with("work", "workImage", "workImage.work", "product", "productImage", "blog")->orderBy("order")->get() as $order)
         
-            @if($loop->index + 1 < 3)
+            @if($loop->index < 3)
 
               @if($order->work)
               <div class="col-md-4">
