@@ -129,7 +129,7 @@
                
               </div>
               <div class="col-md-12">
-                <p class="nav-link-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, consequatur eaque consectetur ad
+                <p class="nav-link-white top-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, consequatur eaque consectetur ad
                   quaerat odio velit sit! Commodi sapiente facere nam. Facere magni reprehenderit dicta nostrum commodi
                   tempore dolorem dolor.</p>
               </div>
