@@ -18,7 +18,13 @@ class BlogController extends Controller
         try{
 
             $blog = Blog::where("slug", $slug)->firstOrFail();
-            return view("single", ["blog" => $blog]);
+            $metas = "<meta property='og:title' content='".$blog->title."' />
+            <meta property='og:type' content='article' />
+            <meta property='og:url' content='".url()->current()."' />
+            <meta property='og:image' content='".$blog->image."' />
+            <meta property='og:description' content='".substr($blog->description, 0, 60)."' />";
+
+            return view("single", ["blog" => $blog, "metas" => $metas]);
 
         }catch(\Exception $e){
             abort(404);

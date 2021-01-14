@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-  @include("partials.htmlHead")
+  @include("partials.htmlHead", ["metas" => $metas])
   <!--- <link rel="stylesheet" href="assets/css/responsive.css">--->
 </head>
 
