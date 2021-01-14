@@ -1559,3 +1559,21 @@ font-family: 'Roboto';
 .siguenos{
     width: 24px;
 }
+.tab-arrow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tab-arrow svg{
+    fill: #fff;
+    width: 20px;
+    height: 100%;
+}
+.grid-item img{
+    height: 500px;
+    object-fit: contain;
+}
+.css-16twpr5 {
+   
+    border-radius: 0!important;
+}

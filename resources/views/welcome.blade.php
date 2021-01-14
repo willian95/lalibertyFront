@@ -230,13 +230,12 @@
         <iframe width= "100%" src="https://open.spotify.com/embed/playlist/4Gw7ehv7RVkyaGys4Yrbbm" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
 
-      <!-- SnapWidget -->
-<script src="https://snapwidget.com/js/snapwidget.js"></script>
-<p class="ig-title mt-4">    <img alt='logo'  src="{{ url('assets/img/cursor.png') }}"> somoslaliberty</p>
-<iframe src="https://snapwidget.com/embed/906132" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; "></iframe>
-<div class="text-center">
-  <a href="https://www.instagram.com/somoslaliberty/"> <!--<img class="siguenos" src="{{ url('assets/img/instagram.svg') }}" alt="">--> Síguenos en Instagram</a>
-</div>
+        <div data-mc-src="bfff06f2-8293-40d7-96fa-01fb4bb52cf0"></div>
+        
+        <script 
+          src="https://cdn2.woxo.tech/a.js#600069b1c99e460015690ada" 
+          async data-usrc>
+        </script>
       </section>
 
 @endsection
