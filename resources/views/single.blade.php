@@ -33,7 +33,7 @@
 <div id="fb-root"></div>
 
 <a href="https://www.facebook.com/sharer/sharer.php?u={{ url()->current() }}&display=popup" target="_blank"> share this </a>
-<a href="#" >Copiar link</a>
+<a href="#" onclick="clipboardCopy('{{ url()->current() }}')">Copiar link</a>
 
 
         <div class="volver text-sm-left">
@@ -86,7 +86,21 @@
     }
   );
 
-  
+  function clipboardCopy(link){
+    var copyText = link
+
+    /* Select the text field */
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+    /* Copy the text inside the text field */
+    document.execCommand("copy");
+
+    swal({
+      text: "Link copiado",
+      icon: "success"
+    })
+  }
   
 </script>
 
