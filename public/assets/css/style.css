@@ -49,12 +49,6 @@ p {
 
 
 
-video {
-    width: 100%;
-    height: 50vh;
-    object-fit: cover;
-}
-
 body :focus {
     outline: none;
 }
@@ -1576,4 +1570,18 @@ font-family: 'Roboto';
 .css-16twpr5 {
    
     border-radius: 0!important;
+}
+video {
+    object-fit: contain;
+    width: 529px;
+    height: 529px;
+}
+.shares{
+    display: flex;
+    justify-content: center;
+}
+.shares p{
+    font-size: 13px;
+    margin-left: 15px;
+    margin-top: 11px;
 }

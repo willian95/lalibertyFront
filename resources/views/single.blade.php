@@ -22,6 +22,10 @@
        <span>{{ $blog->created_at->format("d/m/Y") }}</span>
 
        <div class="shares">
+          <p>Share -</p>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ url()->current() }}&display=popup" target="_blank"> <p>Facebook </p> </a>
+       <p>-</p>
+        <a style="cursor: pointer;" onclick="clipboardCopy()"> <p>Copiar link</p> </a>
 
        </div>
         <div class="content-blog">
@@ -39,9 +43,6 @@
 
         
 <div id="fb-root"></div>
-
-<a href="https://www.facebook.com/sharer/sharer.php?u={{ url()->current() }}&display=popup" target="_blank"> share this </a>
-<a style="cursor: pointer;" onclick="clipboardCopy()">Copiar link</a>
 
 
         <div class="volver text-sm-left">
