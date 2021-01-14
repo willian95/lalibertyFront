@@ -1380,8 +1380,8 @@ div#galeria:hover img:hover {
 
 .grid-item {
 position: relative;
-  margin-bottom: 15rem;
-  margin-top: 10rem;
+  margin-bottom: 10rem;
+  margin-top: 3rem;
 }
 
 .grid-top:nth-child(2n) {
@@ -1585,4 +1585,7 @@ video {
     font-size: 13px;
     margin-left: 15px;
     margin-top: 11px;
+}
+.css-1tmxu1x{
+    display: none;
 }
