@@ -18,6 +18,10 @@
 
        <p class="titulo-producto titulo-blog">{{ $blog->title }}</p>
        <span>{{ $blog->created_at->format("d/m/Y") }}</span>
+
+       <div class="shares">
+
+       </div>
         <div class="content-blog">
             @if($blog->main_image_file_type == 'image')
               <img class="timeline__img" src="{{ $blog->image }}" />
