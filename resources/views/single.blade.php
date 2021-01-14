@@ -3,6 +3,7 @@
 
 <head>
   @include("partials.htmlHead")
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <!--- <link rel="stylesheet" href="assets/css/responsive.css">--->
 </head>
 
@@ -33,11 +34,13 @@
           {!! $blog->description !!}
         </div>
 
+        <input type="text" style="display: none" value="{{ url()->current() }}" id="myInput">
+
         
 <div id="fb-root"></div>
 
 <a href="https://www.facebook.com/sharer/sharer.php?u={{ url()->current() }}&display=popup" target="_blank"> share this </a>
-<a href="#" onclick="clipboardCopy('{{ url()->current() }}')">Copiar link</a>
+<a style="cursor: pointer;" onclick="clipboardCopy()">Copiar link</a>
 
 
         <div class="volver text-sm-left">
@@ -90,8 +93,8 @@
     }
   );
 
-  function clipboardCopy(link){
-    var copyText = link
+  function clipboardCopy(){
+    var copyText = document.getElementById("myInput");
 
     /* Select the text field */
     copyText.select();
