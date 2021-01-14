@@ -147,7 +147,7 @@
                 </a>	
               </div>	
               @elseif($order->workImage)	
-              <div class="col-md-4 "><!-- imagenes secundarias -->	
+              <div class="col-md-4 grid-item"><!-- imagenes secundarias -->	
                 <a href="{{ url('/works?work='.$order->workImage->work->slug) }}">	
                   @if($order->workImage->file_type == 'image')	
                     <img class="img-miniatura" src="{{ $order->workImage->image }}" alt="imagen">	
@@ -168,7 +168,7 @@
                 </a>	
               </div>	
               @elseif($order->product)	
-              <div class="col-md-6 offset-md-3 ">	
+              <div class="col-md-6 offset-md-3 grid-item ">	
                 <a href="{{ url('/shop') }}">	
                   @if($order->product->main_image_file_type == 'image')	
                     <img src="{{ $order->product->image }}" alt="imagen">	
@@ -189,7 +189,7 @@
                 </a>	
               </div>	
               @elseif($order->productImage)	
-              <div class="col-md-6 offset-md-3 "><!-- imagenes secundarias -->	
+              <div class="col-md-6 offset-md-3 grid-item"><!-- imagenes secundarias -->	
                 <a href="{{ url('/shop') }}">	
                   @if($order->productImage->file_type == 'image')	
                     <img class="img-miniatura" src="{{ $order->productImage->image }}" alt="imagen">	
@@ -210,7 +210,7 @@
                 </a>	
               </div>	
               @elseif($order->blog)	
-              <div class="offset-md-3">	
+              <div class="offset-md-3 grid-item">	
                 <a href="{{ url('/blog/'.$order->blog->slug) }}">	
                   @if($order->blog->main_image_file_type == 'image')	
                     <img src="{{ $order->blog->image }}" alt="imagen">	
