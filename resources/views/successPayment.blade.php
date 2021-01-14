@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -67,8 +69,14 @@
 
             <div class="row">
                 <div class="col-md-12">
+                  @if($payment["message"] == 'APPROVED')
                   <h3 style="text-align: center;">Gracias por tu compra</h3>
                   <p style="text-align: center;">Hemos enviado un correo con tu resumen de compra</p>
+                  @else
+                  <h3 style="text-align: center;">Hubo un problema con su pago</h3>
+                  @endif
+
+                  <p style="text-align: center;">Referencia: @{{ reference }}</p>
                 </div>
                 <div class="col-md-6">
                     
@@ -105,6 +113,7 @@
 
                 </div>
 
+                @if($payment["message"] == 'APPROVED')
                 <div class="col-md-12">
                   <table class="table">
                     <thead>
@@ -127,6 +136,7 @@
                     </tbody>
                   </table>
                 </div>
+                @endif
 
                 <div class="col-md-12">
                   <p class="text-center">
@@ -188,6 +198,7 @@
               email:"",
               phone:"",
               address:"",
+              reference:"{{ $payment['referenceCode'] }}",
               loading:false,
               total:0
             }
@@ -195,7 +206,7 @@
         methods: {
           accept(){            
             
-            window.close()
+            window.location.href="{{ url('/') }}"
 
           },
 
@@ -204,9 +215,24 @@
         },
         mounted(){
 
-         
+          this.payerName = window.localStorage.getItem("laliberty_guest_name")
+          this.name = window.localStorage.getItem("laliberty_guest_name")
+          this.email = window.localStorage.getItem("laliberty_guest_email")
+          this.phone = window.localStorage.getItem("laliberty_guest_phone")
+          this.address = window.localStorage.getItem("laliberty_guest_address")
+
           this.products = JSON.parse(window.localStorage.getItem("laliberty_cart"))
-          console.log("products", this.products)
+          
+          axios.post("{{ url('/payment/check') }}", {products: this.products, message: "{{ $payment['message'] }}", referenceCode: this.reference, email: this.email}).then(res => {
+
+            if(res.data.success == false){
+              swal({
+                text:res.data.msg,
+                icon: "error"
+              })
+            }
+
+          })
 
           this.products.forEach((data) => {
 
@@ -214,21 +240,19 @@
 
           })
 
-          this.payerName = window.localStorage.getItem("laliberty_guest_name")
-          this.name = window.localStorage.getItem("laliberty_guest_name")
-          this.email = window.localStorage.getItem("laliberty_guest_email")
-          this.phone = window.localStorage.getItem("laliberty_guest_phone")
-          this.address = window.localStorage.getItem("laliberty_guest_address")
+          
 
-          /*window.localStorage.removeItem("laliberty_guest_name")
-          window.localStorage.removeItem("laliberty_guest_name")
-          window.localStorage.removeItem("laliberty_guest_email")
-          window.localStorage.removeItem("laliberty_guest_phone")
-          window.localStorage.removeItem("laliberty_guest_dni")
-          window.localStorage.removeItem("laliberty_guest_address")
-          window.localStorage.removeItem("laliberty_municipality")
-          window.localStorage.removeItem("laliberty_department")
-          window.localStorage.removeItem("laliberty_cart")*/
+          @if($payment['message'] == 'APPROVED')
+            window.localStorage.removeItem("laliberty_guest_name")
+            window.localStorage.removeItem("laliberty_guest_name")
+            window.localStorage.removeItem("laliberty_guest_email")
+            window.localStorage.removeItem("laliberty_guest_phone")
+            window.localStorage.removeItem("laliberty_guest_dni")
+            window.localStorage.removeItem("laliberty_guest_address")
+            window.localStorage.removeItem("laliberty_municipality")
+            window.localStorage.removeItem("laliberty_department")
+            window.localStorage.removeItem("laliberty_cart")
+          @endif
 
         }
     });
