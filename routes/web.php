@@ -41,6 +41,7 @@ Route::get("payment/response", "PaymentController@response");
 Route::post("/payment/status", "PaymentController@status");
 Route::post("/getSignature", "PaymentController@getSign");
 Route::post("/payment/store","PaymentController@store");
+Route::post("/payment/check", "PaymentController@paymenntCheckAndProcess");
 
 Route::post("checkout", "PaymentController@checkout");
 

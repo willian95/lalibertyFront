@@ -17,96 +17,101 @@ use App\AdminMail;
 
 class PaymentController extends Controller
 {
-    function checkout(){
+
+    function paymenntCheckAndProcess(Request $request){
 
         try{
 
-
-            $guestUser = GuestUser::updateOrCreate([
-                "email" => $request->email
-            ],[
-                "name" => $request->buyerName,
-                "address" => $request->street,
-                "phone" => $request->phone
-            ]);
-
-            $payment = new Payment;
-            if($response->transactionResponse->state == "APPROVED"){
-                $payment->status = "aprobado";
-            }else{
-                $payment->status = "rechazado";
+            if(Payment::where("order_id", $request->referenceCode)->where("status", "!=", "pending")->count() > 0){
+                return response()->json(["success" => false, "msg" => "Esta referencia ya fue utilizada"]);
             }
-            $payment->total = $request->total;
-            $payment->order_id = $response->transactionResponse->transactionId;
-            $payment->guest_user_id = $guestUser->id;
-            $payment->address = Department::where("id", $request->departmentId)->first()->department.", ".Municipality::where("id", $request->municipalityId)->first()->municipality.", ".$request->street;
-            $payment->save();
 
-            if($response->transactionResponse->state == "APPROVED"){
+            $payment = $this->checkPayment($request->referenceCode, $request->message);
+
+            if($request->message == "APPROVED"){
   
                 foreach($request->products as $product){
 
-                    $productPurchase = new ProductPurchase();
-                    $productPurchase->product_color_size_id = $product["productColorSize"]["id"];
-                    $productPurchase->amount = 1;
-                    $productPurchase->price = $product["productColorSize"]["price"];
-                    $productPurchase->payment_id = $payment->id;
-                    $productPurchase->save();
- 
-                    $product = ProductColorSize::where("id", $product["productColorSize"]["id"])->first();
-                    $product->stock = $product->stock - 1;
-                    $product->update();
-
+                    $this->storeProductPurchase($product, $payment);
+                    $this->substractAmountFromStock($product);
+  
                 }
 
-                $user = GuestUser::find($guestUser->id);
-                $data = ["user" => $user, "products" => $request->products, "payment" => $payment];
-                $to_name = $user->name;               
-                $to_email = $user->email;
-
-                \Mail::send("emails.purchaseEmail", $data, function($message) use ($to_name, $to_email) {
-
-    
-                    $message->to($to_email, $to_name)->subject("¡Haz realizado una compra en Laliberty Shop!");
-                    $message->from(env("MAIL_FROM_ADDRESS"), env("MAIL_FROM_NAME"));
-
-                });
-
-                foreach(AdminMail::all() as $admin){
-
-                    $data = ["user" => $user, "products" => $request->products, "payment" => $payment];
-                    $to_name = "Admin";               
-                    $to_email = $admin->email;
-
-                    \Mail::send("emails.adminPurchaseEmail", $data, function($message) use ($to_name, $to_email) {
-
-        
-                        $message->to($to_email, $to_name)->subject("¡Un cliente ha realizado una compra en Laliberty Shop!");
-                        $message->from(env("MAIL_FROM_ADDRESS"), env("MAIL_FROM_NAME"));
-
-                    });
-
-                }
-
-
+                $this->sendEmailClient($request, $payment);
+                $this->sendAdminMail($request, $payment);
 
                 return response()->json(["success" => true, "msg" => "Pago realizado exitosamente"]);
-
-            }else{
-                
-                $message = $response->transactionResponse->paymentNetworkResponseErrorMessage;
-                if($message == "" || $message == null){
-                    $message = $response->transactionResponse->responseMessage;
-                }
-
-                return response()->json(["success" => false, "msg" => $message, "data" => $response]);
 
             }
 
         }catch(\Exception $e){
-            return response()->json(["success" => false, "msg" => $e->getMessage()]);
+            return response()->json(["success" => false, "msg" => "Hubo un problema", "err" => $e->getMessage(), "ln" => $e->getLine()]);
         }
 
+    }
+
+    function checkPayment($referenceCode, $message){
+
+        $payment = Payment::where("order_id", $referenceCode)->first();
+        if($message == "APPROVED"){
+            $payment->status = "aprobado";
+        }else{
+            $payment->status = "rechazado";
+        }
+        $payment->update();
+        
+        return $payment;
+
+    }
+
+    function storeProductPurchase($product, $payment){
+        $productPurchase = new ProductPurchase();
+        $productPurchase->product_color_size_id = $product["productColorSize"]["id"];
+        $productPurchase->amount = 1;
+        $productPurchase->price = $product["productColorSize"]["price"];
+        $productPurchase->payment_id = $payment->id;
+        $productPurchase->save();
+    }
+
+    function sendAdminMail($request, $payment){
+        
+        foreach(AdminMail::all() as $admin){
+
+            $data = ["user" => $user, "products" => $request->products, "payment" => $payment];
+            $to_name = "Admin";               
+            $to_email = $admin->email;
+
+            \Mail::send("emails.adminPurchaseEmail", $data, function($message) use ($to_name, $to_email) {
+
+
+                $message->to($to_email, $to_name)->subject("¡Un cliente ha realizado una compra en Laliberty Shop!");
+                $message->from(env("MAIL_FROM_ADDRESS"), env("MAIL_FROM_NAME"));
+
+            });
+
+        }
+
+    }
+
+    function sendEmailClient($request, $payment){
+        $user = GuestUser::where("email", $request->email)->first();
+        $data = ["user" => $user, "products" => $request->products, "payment" => $payment];
+        $to_name = $user->name;               
+        $to_email = $user->email;
+
+        \Mail::send("emails.purchaseEmail", $data, function($message) use ($to_name, $to_email) {
+
+
+            $message->to($to_email, $to_name)->subject("¡Haz realizado una compra en Laliberty Shop!");
+            $message->from(env("MAIL_FROM_ADDRESS"), env("MAIL_FROM_NAME"));
+
+        });
+    }
+
+    function substractAmountFromStock($product){
+        $product = ProductColorSize::where("id", $product["productColorSize"]["id"])->first();
+        $product->stock = $product->stock - 1;
+        $product->update();
     }
 
     function getSign(Request $request){
@@ -134,7 +139,7 @@ class PaymentController extends Controller
 
     function response(Request $request){
         
-        dd($request->all());
+        //dd($request->all());
         return view("successPayment", ["payment" => $request->all()]);
 
     }

@@ -500,10 +500,8 @@
                             @endif
                             <input name="buyerFullName"    type="hidden"  v-model="guestName" >
                             <input name="buyerEmail"    type="hidden"  v-model="guestEmail" >
-                            {{--<input name="responseUrl"    type="hidden"  value="{{ url('/payment/response') }}" >
-                            <input name="confirmationUrl"    type="hidden"  value="{{ url('/payment/confirmation') }}" >--}}
-                            <input name="responseUrl"    type="hidden"  value="http://www.test.com/response" >
-                            <input name="confirmationUrl"    type="hidden"  value="http://www.test.com/confirmation" >
+                            <input name="responseUrl"    type="hidden"  value="{{ url('/payment/response') }}" >
+                            <input name="confirmationUrl"    type="hidden"  value="{{ url('/payment/confirmation') }}" >
                           </form>
 
                           <div class="col-md-12">
