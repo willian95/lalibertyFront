@@ -3,7 +3,6 @@
 
 <head>
   @include("partials.htmlHead")
-  {!! $metas !!}
   <!--- <link rel="stylesheet" href="assets/css/responsive.css">--->
 </head>
 
