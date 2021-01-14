@@ -32,7 +32,8 @@
         
 <div id="fb-root"></div>
 
-<a href="https://www.facebook.com/sharer/sharer.php?u={{ url()->current() }}&display=popup"> share this </a>
+<a href="https://www.facebook.com/sharer/sharer.php?u={{ url()->current() }}&display=popup" target="_blank"> share this </a>
+<a href="#" >Copiar link</a>
 
 
         <div class="volver text-sm-left">
