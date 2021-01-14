@@ -12,7 +12,7 @@
 
         <div class="container-fluid">	
           <div class="row">	
-          @foreach(App\HomeOrder::with("work", "workImage", "workImage.work", "product", "productImage", "blog")->orderBy("order")->get() as $order)	
+          @foreach(App\HomeOrder::with("work", "workImage", "workImage.work", "product", "productImage", "productImage.product" "blog")->orderBy("order")->get() as $order)	
 
             @if($loop->index < 3)	
 
@@ -51,6 +51,11 @@
                       <source src="{{ $order->workImage->image }}" type="video/mp4">	
                     </video>	
                   @endif	
+                  <div class="grid-infoo">	
+                    <p class="grid-p">	
+                      <h3>{{ $order->workImage->work->title }}</h3>	
+                    </p>	
+                  </div>
                 </a>	
               </div>	
               @elseif($order->product)	
@@ -88,7 +93,11 @@
                       <source src="{{ $order->productImage->image }}" type="video/mp4">	
                     </video>	
                   @endif	
-
+                  <div class="grid-infoo">	
+                    <p class="grid-p">	
+                      <h3>{{ $order->productImage->product->name }}</h3>	
+                    </p>	
+                  </div>
                 </a>	
               </div>	
               @elseif($order->blog)	
@@ -151,6 +160,11 @@
                       <source src="{{ $order->workImage->image }}" type="video/mp4">	
                     </video>	
                   @endif	
+                  <div class="grid-infoo">	
+                    <p class="grid-p">	
+                      <h3>{{ $order->workImage->work->title }}</h3>	
+                    </p>	
+                  </div>
                 </a>	
               </div>	
               @elseif($order->product)	
@@ -188,11 +202,15 @@
                       <source src="{{ $order->productImage->image }}" type="video/mp4">	
                     </video>	
                   @endif	
-
+                  <div class="grid-infoo">	
+                    <p class="grid-p">	
+                      <h3>{{ $order->productImage->product->name }}</h3>	
+                    </p>	
+                  </div>
                 </a>	
               </div>	
               @elseif($order->blog)	
-              <div class="grid-item ">	
+              <div class="offset-md-3">	
                 <a href="{{ url('/blog/'.$order->blog->slug) }}">	
                   @if($order->blog->main_image_file_type == 'image')	
                     <img src="{{ $order->blog->image }}" alt="imagen">	
