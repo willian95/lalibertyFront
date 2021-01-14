@@ -95,7 +95,7 @@
 
   function clipboardCopy(){
 
-    const str = document.getElementById('myInput').innerText;
+    const str = document.getElementById('myInput').value;
     const el = document.createElement('textarea');
     el.value = str;
     el.setAttribute('readonly', '');
