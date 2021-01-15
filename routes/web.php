@@ -49,7 +49,7 @@ Route::get("/departments", "DepartmentController@fetch");
 Route::get("/municipalities/{department_id}", "MunicipalityController@fetch");
 
 Route::get("/purchase/{id}", function(){
-    $purchase = ProductPurchase::where("payment_id", $payment->id)->with("productColorSize", "productColorSize.product", "productColorSize.color", "productColorSize.size")->get();
+    $purchase = App\ProductPurchase::where("payment_id", $payment->id)->with("productColorSize", "productColorSize.product", "productColorSize.color", "productColorSize.size")->get();
 
     dd($purchase);
 });
