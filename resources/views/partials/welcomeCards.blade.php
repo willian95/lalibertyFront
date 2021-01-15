@@ -15,6 +15,8 @@
     }
     else if($loop->index == 6){
         $style = "margin-top: -19rem;";
+    }else if($loop->index == 20){
+        $style = "margin-top: -25rem; width: 200px; margin-left: 15rem;"
     }
 
 
