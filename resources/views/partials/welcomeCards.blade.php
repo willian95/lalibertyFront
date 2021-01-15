@@ -6,7 +6,7 @@
         $class = "col-md-6 offset-md-3 col-lg-6 offset-lg-3";
     }
     
-    else if($loop->index == 3 || $loop->index == 11 || $loop->index == 20){
+    else if($loop->index == 3 || $loop->index == 20){
         $class = "col-md-4 offset-md-8 col-lg-4 offset-lg-8";
     }
 
@@ -22,7 +22,7 @@
         $class = "col-lg-12";
     }
 
-    else if($loop->index == 13 || $loop->index == 14 || $loop->index == 15){
+    else if($loop->index == 11 || $loop->index == 12 || $loop->index == 13){
         $class="col-md-4 col-lg-4";
     }
 
