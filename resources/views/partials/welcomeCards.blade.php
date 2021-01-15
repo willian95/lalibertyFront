@@ -3,11 +3,11 @@
     $class = "";
 
     if($loop->index == 0){
-        $class="col-md-4 offset-md-2 col-lg-4 offset-lg-2";
+        $class="col-md-4  col-lg-4 ";
     }
 
     else if($loop->index == 1){
-        $class="col-md-6 col-lg-6";
+        $class="col-md-8 col-lg-8";
     }
 
     else if($loop->index == 2 || $loop->index == 6 || $loop->index == 7){
