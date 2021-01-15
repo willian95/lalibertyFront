@@ -10,7 +10,7 @@
     else if($loop->index == 4){
         $style = "height: 500px!important; object-fit: contain";
     }
-    else if($loop-> index == 5){
+    else if($loop->index == 5){
         $style = "margin-top: -30rem; margin-left: -8rem; height: 300px!important;"
     }
 
