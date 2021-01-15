@@ -132,7 +132,7 @@ class PaymentController extends Controller
     function confirmation(Request $request){
         
         //Log::info("Showing log");
-        Log::info('Showing log from confirmation checkout '.$request["referenceCode"]);
+        Log::info('Showing log from confirmation checkout '.$request->all());
         //dd($request->all());
         
 
