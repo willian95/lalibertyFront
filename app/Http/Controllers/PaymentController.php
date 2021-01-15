@@ -141,7 +141,11 @@ class PaymentController extends Controller
 
             }
 
+            $this->sendEmailClient($request, $payment);
+            $this->sendAdminMail($request, $payment);
+
         }
+        
         
     }
 
