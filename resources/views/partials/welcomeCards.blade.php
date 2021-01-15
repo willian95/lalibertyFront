@@ -6,7 +6,7 @@
         $class="col-md-2  col-lg-2 offset-md-2 offset-lg-2";
     }
 
-    else if($loop->index == 1){
+    else if($loop->index == 1 || $loop->index == 17){
         $class="col-md-8 col-lg-8";
     }
 
@@ -22,7 +22,7 @@
         $class="col-md-6";
     }
 
-    else if($loop->index == 3 || $loop->index == 4 || $loop->index == 8 || $loop->index == 9 || $loop->index == 11 || $loop->index == 12 || $loop->index == 16 || $loop->index == 17 || $loop->index == 19){
+    else if($loop->index == 3 || $loop->index == 4 || $loop->index == 8 || $loop->index == 9 || $loop->index == 11 || $loop->index == 12 || $loop->index == 16 || $loop->index == 19){
         $class = "col-lg-12";
     }
 
