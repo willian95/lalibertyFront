@@ -145,7 +145,7 @@ class PaymentController extends Controller
             }
 
             $this->sendEmailClient($payment->guest_user_id, $payment);
-            $this->sendAdminMail($request->guest_user_id, $payment);
+            $this->sendAdminMail($payment->guest_user_id, $payment);
 
         }
         
