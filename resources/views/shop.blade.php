@@ -26,7 +26,7 @@
 
 </head>
 
-<body >
+<body style="background: #000;">
   <!--div class="animsition" -->>
     <div>
     
@@ -129,9 +129,7 @@
                
               </div>
               <div class="col-md-12">
-                <p class="nav-link-white top-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, consequatur eaque consectetur ad
-                  quaerat odio velit sit! Commodi sapiente facere nam. Facere magni reprehenderit dicta nostrum commodi
-                  tempore dolorem dolor.</p>
+                <p class="nav-link-white top-text">Esta no es una marca de moda más. De hecho, es justamente lo contrario. Una marca diseñada para liberarnos de las tendencias que nos obligan a comprar masivamente prendas que luego son condenadas a acumular polvo en los armarios. Las consecuencias ambientales y las condiciones laborales que se derivan de esta práctica son aterradoras. La*Liberty es una marca de vestuario básico y atemporal creada para envejecer de forma natural resistiendo los caprichos de la moda. Ropa que redefine el concepto de exclusividad no desde el precio sino desde los pequeños detalles y las ediciones limitadas. Esta inspirada en la libertad y su mensaje siempre será más relevante que el nombre del diseñador, por eso decimos que fue creada para quienes prefieren llamar la antención por el estilo de sus ideas antes que por su forma de vestir.</p>
               </div>
             </div>
           </div>
@@ -169,7 +167,7 @@
       <footer>
         <div class="footer container mt-5 text-center">
    
-            <p>All Rights Reserved @ 2020 - LЛ＊LIBERTУ</p>
+            <p style="color:#fff">All Rights Reserved @ 2020 - LЛ＊LIBERTУ</p>
         </div>
     </footer>
     </main>
