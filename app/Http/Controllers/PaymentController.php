@@ -37,7 +37,19 @@ class PaymentController extends Controller
   
                 }
 
-                $this->sendEmailClient($request, $payment);
+                //$this->sendEmailClient($request, $payment);
+                $user = GuestUser::where("email", $request->email)->first();
+                $data = ["user" => $user, "products" => $request->products, "payment" => $payment];
+                $to_name = $user->name;               
+                $to_email = $user->email;
+
+                \Mail::send("emails.purchaseEmail", $data, function($message) use ($to_name, $to_email) {
+
+                    $message->to($to_email, $to_name)->subject("¡Haz realizado una compra en Laliberty Shop!");
+                    $message->from(env("MAIL_FROM_ADDRESS"), env("MAIL_FROM_NAME"));
+
+                });
+
                 $this->sendAdminMail($request, $payment);
 
                 return response()->json(["success" => true, "msg" => "Pago realizado exitosamente"]);
@@ -83,7 +95,6 @@ class PaymentController extends Controller
 
             \Mail::send("emails.adminPurchaseEmail", $data, function($message) use ($to_name, $to_email) {
 
-
                 $message->to($to_email, $to_name)->subject("¡Un cliente ha realizado una compra en Laliberty Shop!");
                 $message->from(env("MAIL_FROM_ADDRESS"), env("MAIL_FROM_NAME"));
 
@@ -94,6 +105,7 @@ class PaymentController extends Controller
     }
 
     function sendEmailClient($request, $payment){
+
         $user = GuestUser::where("email", $request->email)->first();
         $data = ["user" => $user, "products" => $request->products, "payment" => $payment];
         $to_name = $user->name;               
