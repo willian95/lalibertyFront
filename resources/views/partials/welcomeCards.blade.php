@@ -50,7 +50,7 @@
 
 
 @if($order->work)	
-    <div class="{{ $class }} grid-item">	
+    <div class="{{ $class }} grid-item" style="{{ $style }}">	
     <a href="{{ url('/works?work='.$order->work->slug) }}">	
         @if($order->work->main_image_file_type == 'image')	
         <img src="{{ $order->work->main_image }}" alt="imagen">	
@@ -74,7 +74,7 @@
     <div class="{{ $class }} grid-item"><!-- imagenes secundarias -->	
     <a href="{{ url('/works?work='.$order->workImage->work->slug) }}">	
         @if($order->workImage->file_type == 'image')	
-        <img class="img-miniatura" src="{{ $order->workImage->image }}" alt="imagen">	
+        <img class="img-miniatura" src="{{ $order->workImage->image }}" alt="imagen" style="{{ $style }}">	
         @else	
         @if($isMob)	
         <video style="width: 100%;" controls>	
@@ -95,7 +95,7 @@
     <div class="{{ $class }} grid-item ">	
     <a href="{{ url('/shop') }}">	
         @if($order->product->main_image_file_type == 'image')	
-        <img src="{{ $order->product->image }}" alt="imagen">	
+        <img src="{{ $order->product->image }}" alt="imagen" style="{{ $style }}">	
         @else	
         @if($isMob)	
         <video style="width: 100%;" controls>	
@@ -116,7 +116,7 @@
     <div class="{{ $class }} grid-item"><!-- imagenes secundarias -->	
     <a href="{{ url('/shop') }}">	
         @if($order->productImage->file_type == 'image')	
-        <img class="img-miniatura" src="{{ $order->productImage->image }}" alt="imagen">	
+        <img class="img-miniatura" src="{{ $order->productImage->image }}" alt="imagen" style="{{ $style }}">	
         @else	
         @if($isMob)	
         <video style="width: 100%;" controls>	
@@ -137,7 +137,7 @@
     <div class="{{ $class }} grid-item">	
     <a href="{{ url('/blog/'.$order->blog->slug) }}">	
         @if($order->blog->main_image_file_type == 'image')	
-        <img src="{{ $order->blog->image }}" alt="imagen">	
+        <img src="{{ $order->blog->image }}" alt="imagen" style="{{ $style }}">	
         @else	
         @if($isMob)	
         <video style="width: 100%;" controls>	
