@@ -48,8 +48,8 @@ Route::post("checkout", "PaymentController@checkout");
 Route::get("/departments", "DepartmentController@fetch");
 Route::get("/municipalities/{department_id}", "MunicipalityController@fetch");
 
-Route::get("/purchase/{id}", function(){
-    $purchase = App\ProductPurchase::where("payment_id", $payment->id)->with("productColorSize", "productColorSize.product", "productColorSize.color", "productColorSize.size")->get();
+Route::get("/purchase/{id}", function($id){
+    $purchase = App\ProductPurchase::where("payment_id", $id)->with("productColorSize", "productColorSize.product", "productColorSize.color", "productColorSize.size")->get();
 
     dd($purchase);
 });
