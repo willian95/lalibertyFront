@@ -1548,7 +1548,7 @@ font-family: 'Roboto';
     object-position: 0px -17rem;
 }
 .img-miniatura{
-    height: 500px!important;
+ /*   height: 500px!important;*/
     object-fit: contain;
 }
 .ig-title{
@@ -1573,7 +1573,7 @@ font-family: 'Roboto';
     height: 100%;
 }
 .grid-item img{
-    height: 500px;
+  /*  height: 500px;*/
     object-fit: contain;
 }
 .css-16twpr5 {

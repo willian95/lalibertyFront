@@ -4,11 +4,11 @@
     $style = "";
 
     if($loop->index == 1){
-        $style = "height: 500px!important; object-fit: contain";
+        $style = "";
     }
 
     else if($loop->index == 4){
-        $style = "height: 500px!important; object-fit: contain";
+        $style = "";
     }
     else if($loop->index == 5){
         $style = "margin-top: -30rem; margin-left: -8rem; height: 300px!important;";
@@ -16,7 +16,7 @@
     else if($loop->index == 6){
         $style = "margin-top: -19rem;";
     }else if($loop->index == 20){
-        $style = "margin-top: -25rem; width: 200px; margin-left: 15rem;";
+        $style = "margin-top: -25rem; width: 200px; margin-left: 15rem;    height: 500px;";
     }
 
 

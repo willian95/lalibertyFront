@@ -10,7 +10,7 @@
 <section class="mt-5 mb-5">	
         <!------data-scroll-------->	
 
-        <div class="container-fluid">	
+        <div class="container">	
           <div class="row">	
           @foreach(App\HomeOrder::with("work", "workImage", "workImage.work", "product", "productImage", "productImage.product", "blog")->orderBy("order")->get() as $order)	
 
