@@ -4,7 +4,7 @@
     $style = "";
 
     if($loop->index == 1){
-        $style = "height: 400px!important; object-fit: contain";
+        $style = "height: 500px!important; object-fit: contain";
     }
 
     else if($loop->index == 4){

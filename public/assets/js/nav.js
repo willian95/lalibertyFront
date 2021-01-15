@@ -17,7 +17,7 @@ $(".nav-link").click(function () {
 });
 
 
-
+/*
 
 $('.slider-for').slick({
   slidesToShow: 1,
@@ -33,7 +33,7 @@ $('.slider-nav').slick({
   dots: true,
   focusOnSelect: true
 });
-
+*/
 
 
 
