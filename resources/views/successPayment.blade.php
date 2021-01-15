@@ -223,7 +223,7 @@
 
           this.products = JSON.parse(window.localStorage.getItem("laliberty_cart"))
           
-          axios.post("{{ url('/payment/check') }}", {products: this.products, message: "{{ $payment['message'] }}", referenceCode: this.reference, email: this.email}).then(res => {
+          /*axios.post("{{ url('/payment/check') }}", {products: this.products, message: "{{ $payment['message'] }}", referenceCode: this.reference, email: this.email}).then(res => {
 
             if(res.data.success == false){
               swal({
@@ -232,7 +232,7 @@
               })
             }
 
-          })
+          })*/
 
           this.products.forEach((data) => {
 

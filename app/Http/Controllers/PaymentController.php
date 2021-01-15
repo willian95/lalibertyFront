@@ -130,17 +130,19 @@ class PaymentController extends Controller
     }
 
     function confirmation(Request $request){
-        
-        //Log::info("Showing log");
 
-        foreach($request->all() as $key => $value){   
-            Log::info('Showing log from confirmation checkout '.$key." ".$value);
+        $payment = $this->checkPayment($request["reference_sale"], $request["response_message_pol"]);
+
+        if($request["response_message_pol"] == "APPROVED"){
+  
+            foreach(ProductPurchase::where("payment_id", $payment->id)->get() as $product){
+
+                $this->substractAmountFromStock($product);
+
+            }
+
         }
-
         
-        //dd($request->all());
-        
-
     }
 
     function response(Request $request){
@@ -164,6 +166,12 @@ class PaymentController extends Controller
             $payment->address = $request->address;
             $payment->save();
 
+            foreach($request->products as $product){
+
+                $this->storeProductPurchase($product, $payment);
+            
+            }
+                    
             return response()->json(["success" => true]);
 
         }catch(\Exception $e){

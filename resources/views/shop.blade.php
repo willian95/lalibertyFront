@@ -779,7 +779,7 @@
           },
           storePayment(){
 
-            axios.post("{{ url('/payment/store') }}", {total: this.total, reference: this.referenceCode, email: this.guestEmail, name: this.guestName, address: this.guestAddress, phone: this.guestPhone}).then(res => {
+            axios.post("{{ url('/payment/store') }}", {total: this.total, reference: this.referenceCode, email: this.guestEmail, name: this.guestName, address: this.guestAddress, phone: this.guestPhone, products: this.products}).then(res => {
               console.log(res)
               if(res.data.success == true){
                 window.setTimeout(() => {
@@ -790,7 +790,7 @@
 
           },
           checkWindow() {
-            console.log("hey", childWind)
+
               if (childWind && childWind.closed) {
                   window.clearInterval(this.intervalID);
                   this.paymentLoader = false
