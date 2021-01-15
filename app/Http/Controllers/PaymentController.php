@@ -27,7 +27,7 @@ class PaymentController extends Controller
             }
 
             $payment = $this->checkPayment($request->referenceCode, $request->message);
-
+            Log::info($request->message);
             if($request->message == "APPROVED"){
   
                 foreach($request->products as $product){
