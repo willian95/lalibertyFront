@@ -7,7 +7,7 @@
     }
 
     else if($loop->index == 1){
-        $class="col-md-5 offset-md-1 col-lg-5 offset-lg-1";
+        $class="col-md-6 col-lg-6";
     }
 
     else if($loop->index == 2 || $loop->index == 6 || $loop->index == 7){
