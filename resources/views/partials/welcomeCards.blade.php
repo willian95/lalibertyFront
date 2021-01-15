@@ -14,19 +14,15 @@
         $class = "col-md-6 offset-md-3 col-lg-6 offset-lg-3";
     }
     
-    else if($loop->index == 3 || $loop->index == 20 || $loop->index == 16){
+    else if($loop->index == 3 || $loop->index == 5 || $loop->index == 20 || $loop->index == 16){
         $class = "col-md-4 offset-md-8 col-lg-4 offset-lg-8";
-    }
-
-    else if($loop->index == 4 || $loop->index == 5){
-        $class = "col-md-6 col-lg-6";
     }
 
     else if($loop->index == 8){
         $class = "col-md-6 offset-md-5 col-lg-6 offset-lg-5";
     }
 
-    else if($loop->index == 9 || $loop->index == 10 || $loop->index == 14 || $loop->index == 17 || $loop->index == 19){
+    else if($loop->index == 4 || $loop->index == 9 || $loop->index == 10 || $loop->index == 14 || $loop->index == 17 || $loop->index == 19){
         $class = "col-lg-12";
     }
 
