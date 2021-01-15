@@ -243,7 +243,7 @@
           
 
           @if($payment['message'] == 'APPROVED')
-            /*window.localStorage.removeItem("laliberty_guest_name")
+            window.localStorage.removeItem("laliberty_guest_name")
             window.localStorage.removeItem("laliberty_guest_name")
             window.localStorage.removeItem("laliberty_guest_email")
             window.localStorage.removeItem("laliberty_guest_phone")
@@ -251,7 +251,7 @@
             window.localStorage.removeItem("laliberty_guest_address")
             window.localStorage.removeItem("laliberty_municipality")
             window.localStorage.removeItem("laliberty_department")
-            window.localStorage.removeItem("laliberty_cart")*/
+            window.localStorage.removeItem("laliberty_cart")
           @endif
 
         }
