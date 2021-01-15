@@ -75,9 +75,11 @@ class PaymentController extends Controller
 
     function sendAdminMail($guestUserId, $payment){
         $user = GuestUser::find($guestUserId);
+        $products = ProductPurchase::where("payment_id", $payment->id)->with("productColorSize")->get();
+
         foreach(AdminMail::all() as $admin){
 
-            $data = ["user" => $user, "products" => $request->products, "payment" => $payment];
+            $data = ["user" => $user, "products" => $products, "payment" => $payment];
             $to_name = "Admin";               
             $to_email = $admin->email;
 
@@ -95,7 +97,8 @@ class PaymentController extends Controller
     function sendEmailClient($guestUserId, $payment){
 
         $user = GuestUser::find($guestUserId);
-        $data = ["user" => $user, "products" => $request->products, "payment" => $payment];
+        $products = ProductPurchase::where("payment_id", $payment->id)->with("productColorSize")->get();
+        $data = ["user" => $user, "products" => $products, "payment" => $payment];
         $to_name = $user->name;               
         $to_email = $user->email;
 
