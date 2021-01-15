@@ -27,7 +27,7 @@
     }
 
     else if($loop->index == 15){
-        $class="col-md-8 offset-md-2 col-lg-8 offset-lg-2";
+        $class="col-md-8 col-lg-8";
     }
 
     else if($loop->index == 18){
