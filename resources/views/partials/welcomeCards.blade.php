@@ -3,7 +3,7 @@
     $class = "";
 
     if($loop->index == 0){
-        $class="col-md-4  col-lg-4 ";
+        $class="col-md-2  col-lg-2 ";
     }
 
     else if($loop->index == 1){
