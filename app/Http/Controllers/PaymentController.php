@@ -27,7 +27,7 @@ class PaymentController extends Controller
             }
 
             $payment = $this->checkPayment($request->referenceCode, $request->message);
-            Log::info($request->message);
+            
             if($request->message == "APPROVED"){
   
                 foreach($request->products as $product){
@@ -37,19 +37,7 @@ class PaymentController extends Controller
   
                 }
 
-                //$this->sendEmailClient($request, $payment);
-                $user = GuestUser::where("email", $request->email)->first();
-                $data = ["user" => $user, "products" => $request->products, "payment" => $payment];
-                $to_name = $user->name;               
-                $to_email = $user->email;
-
-                \Mail::send("emails.purchaseEmail", $data, function($message) use ($to_name, $to_email) {
-
-                    $message->to($to_email, $to_name)->subject("¡Haz realizado una compra en Laliberty Shop!");
-                    $message->from(env("MAIL_FROM_ADDRESS"), env("MAIL_FROM_NAME"));
-
-                });
-
+                $this->sendEmailClient($request, $payment);
                 $this->sendAdminMail($request, $payment);
 
                 return response()->json(["success" => true, "msg" => "Pago realizado exitosamente"]);
@@ -144,7 +132,7 @@ class PaymentController extends Controller
     function confirmation(Request $request){
         
         //Log::info("Showing log");
-        //Log::info('Showing log from confirmation checkout', json_decode($request->all()));
+        Log::info('Showing log from confirmation checkout', $request["referenceCode"]);
         //dd($request->all());
         
 
