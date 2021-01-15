@@ -13,6 +13,9 @@
     else if($loop->index == 5){
         $style = "margin-top: -30rem; margin-left: -8rem; height: 300px!important;";
     }
+    else if($loop->index == 6){
+        $style = "margin-top: -19rem;";
+    }
 
 
     if($loop->index == 0){
@@ -57,15 +60,15 @@
 
 
 @if($order->work)	
-    <div class="{{ $class }} grid-item" style="{{ $style }}">	
+    <div class="{{ $class }} grid-item">	
     <a href="{{ url('/works?work='.$order->work->slug) }}">	
         @if($order->work->main_image_file_type == 'image')	
-        <img src="{{ $order->work->main_image }}" alt="imagen">	
+        <img src="{{ $order->work->main_image }}" alt="imagen" style="{{ $style }}">	
         @else	
         @if($isMob)	
-        <video style="width: 100%;" controls>	
+        <video style="width: 100%;" controls style="{{ $style }}">	
         @else	
-        <video style="width: 100%;" loop autoplay="true" muted="muted">	
+        <video style="width: 100%;" loop autoplay="true" muted="muted" style="{{ $style }}">	
         @endif	
             <source src="{{ $order->work->main_image }}" type="video/mp4">	
         </video>	
@@ -84,9 +87,9 @@
         <img class="img-miniatura" src="{{ $order->workImage->image }}" alt="imagen" style="{{ $style }}">	
         @else	
         @if($isMob)	
-        <video style="width: 100%;" controls>	
+        <video style="width: 100%;" controls style="{{ $style }}">	
         @else	
-        <video style="width: 100%;" loop autoplay="true" muted="muted">	
+        <video style="width: 100%;" loop autoplay="true" muted="muted" style="{{ $style }}">	
         @endif	
             <source src="{{ $order->workImage->image }}" type="video/mp4">	
         </video>	
@@ -105,9 +108,9 @@
         <img src="{{ $order->product->image }}" alt="imagen" style="{{ $style }}">	
         @else	
         @if($isMob)	
-        <video style="width: 100%;" controls>	
+        <video style="width: 100%;" controls style="{{ $style }}">	
         @else	
-        <video style="width: 100%;" loop autoplay="true" muted="muted">	
+        <video style="width: 100%;" loop autoplay="true" muted="muted" style="{{ $style }}">	
         @endif	
             <source src="{{ $order->product->image }}" type="video/mp4">	
         </video>	
@@ -126,9 +129,9 @@
         <img class="img-miniatura" src="{{ $order->productImage->image }}" alt="imagen" style="{{ $style }}">	
         @else	
         @if($isMob)	
-        <video style="width: 100%;" controls>	
+        <video style="width: 100%;" controls style="{{ $style }}">	
         @else	
-        <video style="width: 100%;" loop autoplay="true" muted="muted">	
+        <video style="width: 100%;" loop autoplay="true" muted="muted" style="{{ $style }}">	
         @endif	
             <source src="{{ $order->productImage->image }}" type="video/mp4">	
         </video>	
@@ -147,9 +150,9 @@
         <img src="{{ $order->blog->image }}" alt="imagen" style="{{ $style }}">	
         @else	
         @if($isMob)	
-        <video style="width: 100%;" controls>	
+        <video style="width: 100%;" controls style="{{ $style }}">	
         @else	
-        <video style="width: 100%;" loop autoplay="true" muted="muted">	
+        <video style="width: 100%;" loop autoplay="true" muted="muted" style="{{ $style }}">	
         @endif	
             <source src="{{ $order->blog->image }}" type="video/mp4">	
         </video>	
