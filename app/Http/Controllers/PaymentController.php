@@ -73,8 +73,8 @@ class PaymentController extends Controller
         $productPurchase->save();
     }
 
-    function sendAdminMail($request, $payment){
-        $user = GuestUser::where("email", $request->email)->first();
+    function sendAdminMail($guestUserId, $payment){
+        $user = GuestUser::find($guestUserId);
         foreach(AdminMail::all() as $admin){
 
             $data = ["user" => $user, "products" => $request->products, "payment" => $payment];
@@ -92,9 +92,9 @@ class PaymentController extends Controller
 
     }
 
-    function sendEmailClient($request, $payment){
+    function sendEmailClient($guestUserId, $payment){
 
-        $user = GuestUser::where("email", $request->email)->first();
+        $user = GuestUser::find($guestUserId);
         $data = ["user" => $user, "products" => $request->products, "payment" => $payment];
         $to_name = $user->name;               
         $to_email = $user->email;
@@ -141,8 +141,8 @@ class PaymentController extends Controller
 
             }
 
-            $this->sendEmailClient($request, $payment);
-            $this->sendAdminMail($request, $payment);
+            $this->sendEmailClient($payment->guest_user_id, $payment);
+            $this->sendAdminMail($request->guest_user_id, $payment);
 
         }
         
