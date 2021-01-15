@@ -21,11 +21,11 @@
 
 
     if($loop->index == 0){
-        $class="col-md-2  col-lg-2 offset-md-2 offset-lg-2";
+        $class="col-md-5  col-lg-5 ";
     }
 
     else if($loop->index == 1 || $loop->index == 17){
-        $class="col-md-8 col-lg-8";
+        $class="col-md-7 col-lg-7";
     }
 
     else if($loop->index == 2){
