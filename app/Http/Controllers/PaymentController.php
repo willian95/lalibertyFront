@@ -109,7 +109,7 @@ class PaymentController extends Controller
     }
 
     function substractAmountFromStock($product){
-        $product = ProductColorSize::where("id", $product->productColor)->first();
+        $product = ProductColorSize::where("id", $product->productColorSize->id)->first();
         $product->stock = $product->stock - 1;
         $product->update();
     }
@@ -135,7 +135,7 @@ class PaymentController extends Controller
 
         if($request["response_message_pol"] == "APPROVED"){
   
-            foreach(ProductPurchase::where("payment_id", $payment->id)->with("")->get() as $product){
+            foreach(ProductPurchase::where("payment_id", $payment->id)->with("productColorSize")->get() as $product){
 
                 $this->substractAmountFromStock($product);
 
