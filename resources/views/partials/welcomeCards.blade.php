@@ -22,7 +22,7 @@
         $class="col-md-6";
     }
 
-    else if($loop->index == 3 || $loop->index == 4 || $loop->index == 8 || $loop->index == 9 || $loop->index == 14 || $loop->index == 17 || $loop->index == 19){
+    else if($loop->index == 3 || $loop->index == 4 || $loop->index == 8 || $loop->index == 9 || $loop->index == 11 || $loop->index == 14 || $loop->index == 17 || $loop->index == 19){
         $class = "col-lg-12";
     }
 
@@ -30,7 +30,7 @@
         $class = "col-md-8 offset-md-4 col-lg-8 offset-lg-4";
     }
 
-    else if($loop->index == 11 || $loop->index == 12 || $loop->index == 13 || $loop->index == 18 || $loop->index == 20){
+    else if($loop->index == 12 || $loop->index == 13 || $loop->index == 18 || $loop->index == 20){
         $class="col-md-4 col-lg-4";
     }
 
