@@ -33,7 +33,7 @@
     }
     
     else if($loop->index == 5){
-        $class = "col-md-4 offset-md-8 col-lg-4 offset-lg-8";
+        $class = "col-md-4 offset-md-8 col-lg-4 offset-lg-8 ml-0";
     }
 
     else if($loop->index == 6 || $loop->index == 7){
@@ -48,12 +48,16 @@
         $class = "col-md-8 offset-md-4 col-lg-8 offset-lg-4";
     }
 
-    else if($loop->index == 13 || $loop->index == 14 || $loop->index == 15 || $loop->index == 20){
+    else if($loop->index == 13 || $loop->index == 14 || $loop->index == 15){
         $class="col-md-4 col-lg-4";
     }
 
     else if($loop->index == 18){
         $class = "col-md-4 offset-md-6 col-lg-4 offset-lg-6";
+    }
+
+    else if($loop->index == 20){
+        $class ="col-md-4 col-lg-4 ml-0";
     }
 
 
