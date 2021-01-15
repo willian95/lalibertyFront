@@ -74,7 +74,7 @@ class PaymentController extends Controller
     }
 
     function sendAdminMail($request, $payment){
-        
+        $user = GuestUser::where("email", $request->email)->first();
         foreach(AdminMail::all() as $admin){
 
             $data = ["user" => $user, "products" => $request->products, "payment" => $payment];
@@ -131,7 +131,7 @@ class PaymentController extends Controller
 
     function confirmation(Request $request){
         
-        Log::info('Showing log from confirmation checkout');
+        Log::info('Showing log from confirmation checkout', json_decode($request->all()));
         //dd($request->all());
         
 
