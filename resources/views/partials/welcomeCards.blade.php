@@ -2,7 +2,15 @@
 
     $class = "";
 
-    if($loop->index == 0 || $loop->index == 1 || $loop->index == 2 || $loop->index == 6 || $loop->index == 7){
+    if($loop->index == 0){
+        $class="col-md-3 offset-md-1 col-lg-3 offset-lg-1";
+    }
+
+    else if($loop->index == 1){
+        $class="col-md-5 offset-md-1 col-lg-5 offset-lg-1";
+    }
+
+    else if($loop->index == 2 || $loop->index == 6 || $loop->index == 7){
         $class = "col-md-6 offset-md-3 col-lg-6 offset-lg-3";
     }
     
