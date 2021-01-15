@@ -18,12 +18,8 @@
         $class = "col-md-6 offset-md-5 col-lg-6 offset-lg-5";
     }
 
-    else if($loop->index == 9){
-        $class = "col-md-10 offset-md-1 col-lg-10 offset-lg-1";
-    }
-
-    else if($loop->index == 10){
-        $class = "col-md-6 offset-md-6 offset-lg-6 col-lg-6";
+    else if($loop->index == 9 || $loop->index == 10){
+        $class = "col-lg-12";
     }
 
     else if($loop->index == 13 || $loop->index == 14 || $loop->index == 15){
