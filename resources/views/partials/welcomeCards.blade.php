@@ -33,7 +33,7 @@
     }
     
     else if($loop->index == 5){
-        $class = "col-md-4 offset-md-8 col-lg-4 offset-lg-8 ml-0";
+        $class = "col-md-4 offset-md-8 col-lg-4 offset-lg-8";
     }
 
     else if($loop->index == 6 || $loop->index == 7){
@@ -57,7 +57,7 @@
     }
 
     else if($loop->index == 20){
-        $class ="col-md-4 col-lg-4 ml-0";
+        $class ="col-md-4 col-lg-4";
     }
 
 
