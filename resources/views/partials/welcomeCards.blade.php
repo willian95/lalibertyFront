@@ -66,9 +66,9 @@
         <img src="{{ $order->work->main_image }}" alt="imagen" style="{{ $style }}">	
         @else	
         @if($isMob)	
-        <video style="width: 100%;" controls style="{{ $style }}">	
+        <video style="width: 100%; {{ $style }}" controls >	
         @else	
-        <video style="width: 100%;" loop autoplay="true" muted="muted" style="{{ $style }}">	
+        <video style="width: 100%; {{ $style }}" loop autoplay="true" muted="muted">	
         @endif	
             <source src="{{ $order->work->main_image }}" type="video/mp4">	
         </video>	
@@ -87,9 +87,9 @@
         <img class="img-miniatura" src="{{ $order->workImage->image }}" alt="imagen" style="{{ $style }}">	
         @else	
         @if($isMob)	
-        <video style="width: 100%;" controls style="{{ $style }}">	
+        <video style="width: 100%; {{ $style }}" controls>	
         @else	
-        <video style="width: 100%;" loop autoplay="true" muted="muted" style="{{ $style }}">	
+        <video style="width: 100%; {{ $style }}" loop autoplay="true" muted="muted">	
         @endif	
             <source src="{{ $order->workImage->image }}" type="video/mp4">	
         </video>	
