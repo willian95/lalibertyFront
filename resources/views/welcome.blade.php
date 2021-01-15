@@ -15,7 +15,7 @@
           @foreach(App\HomeOrder::with("work", "workImage", "workImage.work", "product", "productImage", "productImage.product", "blog")->orderBy("order")->limit(5)->get() as $order)	
 
            
-            @include("partials.welcomeCards", ["order" => $order, "loop" => $loop])
+            @include("partials.welcomeCards", ["order" => $order, "loop" => $loop, "isMob" => $isMob])
               	
 
 
