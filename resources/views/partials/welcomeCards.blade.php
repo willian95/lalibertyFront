@@ -18,20 +18,16 @@
         $class = "col-md-6 offset-md-5 col-lg-6 offset-lg-5";
     }
 
-    else if($loop->index == 9 || $loop->index == 10 || $loop->index == 14 || $loop->index == 19){
+    else if($loop->index == 9 || $loop->index == 10 || $loop->index == 14 || $loop->index == 17 || $loop->index == 19){
         $class = "col-lg-12";
     }
 
-    else if($loop->index == 11 || $loop->index == 12 || $loop->index == 13 || $loop->index == 20){
+    else if($loop->index == 11 || $loop->index == 12 || $loop->index == 13 || $loop->index == 18 || $loop->index == 20){
         $class="col-md-4 col-lg-4";
     }
 
     else if($loop->index == 15){
-        $class="col-md-8";
-    }
-
-    else if($loop->index == 17){
-        $class = "col-md-4 offset-md-2 col-lg-4 offset-lg-2";
+        $class="col-md-8 offset-md-2";
     }
 
     else if($loop->index == 18){
