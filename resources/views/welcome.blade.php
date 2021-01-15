@@ -12,7 +12,7 @@
 
         <div class="container-fluid">	
           <div class="row">	
-          @foreach(App\HomeOrder::with("work", "workImage", "workImage.work", "product", "productImage", "productImage.product", "blog")->orderBy("order")->limit(3)->get() as $order)	
+          @foreach(App\HomeOrder::with("work", "workImage", "workImage.work", "product", "productImage", "productImage.product", "blog")->orderBy("order")->get() as $order)	
 
            
             @include("partials.welcomeCards", ["order" => $order, "loop" => $loop, "isMob" => $isMob])
