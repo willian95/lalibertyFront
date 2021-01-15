@@ -145,7 +145,7 @@ td .es-button-border-2:hover {
                       
                         <tr style="border: 1px solid black; border-collapse:collapse">
                             <td style="border: 1px solid black; border-collapse:collapse; text-align:center">{{ $loop->index + 1 }}</td>
-                            <td style="border: 1px solid black; border-collapse:collapse; text-align:center"><img src="{{ $product->product->image }}" style="width: 60px;"><p>{{ $product->product->name }}</p></td>
+                            <td style="border: 1px solid black; border-collapse:collapse; text-align:center"><img src="{{ $product->productColorSize->product->image }}" style="width: 60px;"><p>{{ $product->productColorSize->product->name }}</p></td>
                      
                             <td style="border: 1px solid black; border-collapse:collapse; text-align:center">{{ $product->productColorSize->size->size }} </td>
                             <td style="border: 1px solid black; border-collapse:collapse; text-align:center">{{ $product->productColorSize->color->name }} </td>
