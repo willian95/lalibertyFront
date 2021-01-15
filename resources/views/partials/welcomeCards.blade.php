@@ -1,6 +1,12 @@
 @php
 
     $class = "";
+    $style = "";
+
+    if($loop->index == 1){
+        $style = "height: 400px!important; object-fit: contain";
+    }
+
 
     if($loop->index == 0){
         $class="col-md-2  col-lg-2 offset-md-2 offset-lg-2";
