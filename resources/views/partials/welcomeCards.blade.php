@@ -6,6 +6,9 @@
     if($loop->index == 1){
         $style = "";
     }
+    else if($loop->index == 2){
+        $style = "height: auto!important;";
+    }
 
     else if($loop->index == 4){
         $style = "";
