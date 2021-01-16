@@ -72,9 +72,9 @@
         <img src="{{ $order->work->main_image }}" alt="imagen" style="{{ $style }}">	
         @else	
         @if($isMob)	
-        <video style="width: 100%; {{ $style }}" controls >	
+        <video style="width: 100%;     height: auto;        {{ $style }}" controls >	
         @else	
-        <video style="width: 100%; {{ $style }}" loop autoplay="true" muted="muted">	
+        <video style="width: 100%;     height: auto;        {{ $style }}" loop autoplay="true" muted="muted">	
         @endif	
             <source src="{{ $order->work->main_image }}" type="video/mp4">	
         </video>	

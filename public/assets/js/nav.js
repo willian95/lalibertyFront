@@ -31,7 +31,8 @@ $('.slider-nav').slick({
   slidesToScroll: 1,
   asNavFor: '.slider-for',
   dots: true,
-  autopaly:true,
+  arrows: true,
+  autoplay:true,
   focusOnSelect: true,
   responsive: [{
     breakpoint: 1200,
