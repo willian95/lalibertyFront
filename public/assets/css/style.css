@@ -1582,7 +1582,7 @@ font-family: 'Roboto';
 }
 video {
     object-fit: contain;
-    width: 529px;
+    width: 100%;
     height: 529px;
 }
 .shares{
@@ -1600,4 +1600,18 @@ video {
 .top-text{
     margin-top: 6px;
     font-size: 13px;
+}
+
+
+.slick-prev:before, .slick-next:before {
+  
+    color: black;
+   
+}
+.slick-prev {
+    left: 0px!important;
+}
+.slick-prev, .slick-next{
+    top: 30%!important;
+    cursor: url(../img/cursor.png), pointer!important;
 }
