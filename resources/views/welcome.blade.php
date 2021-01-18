@@ -30,7 +30,7 @@
         <iframe width= "100%" src="https://open.spotify.com/embed/playlist/4Gw7ehv7RVkyaGys4Yrbbm" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>	
 
 
-        <div data-mc-src="bfff06f2-8293-40d7-96fa-01fb4bb52cf0"></div>	
+        <div class="mt-8" data-mc-src="bfff06f2-8293-40d7-96fa-01fb4bb52cf0"></div>	
 
         <script 	
           src="https://cdn2.woxo.tech/a.js#600069b1c99e460015690ada" 	

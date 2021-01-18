@@ -27,6 +27,7 @@
 
 
                         <div class="servicios-about mt-5 mb-5">
+                            <h3 class="titulo">ESTRATEGIA + DISEÑO + TECNOLOGÍA + ARTE + ALTURISMO</h3>
                             <div class="row">
                                 <div class="col-md-3">
                                     <h3>DIGITAL CRAFTS      </h3>

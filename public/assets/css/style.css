@@ -1384,8 +1384,8 @@ div#galeria:hover img:hover {
 
 .grid-item {
 position: relative;
-  margin-bottom: 10rem;
-  margin-top: 3rem;
+margin-bottom: 3rem;
+margin-top: 3rem;
 }
 
 .grid-top:nth-child(2n) {
@@ -1471,6 +1471,7 @@ transition: all .8s;
 }
 .grid-item a {
     position: relative;
+    cursor: url(../img/cursor.png), pointer;
   }
   .grid-item a:hover h3{
     opacity: 1;
@@ -1632,4 +1633,17 @@ height: 500px!important;
 }
 .timeline__content{
     color: #3e3e3e;
+}
+
+.mt-8{
+    margin-top: 8rem;
+}
+.css-16twpr5 {
+
+    box-shadow: none!important;
+    border-radius: 0;
+}
+.servicios-about .titulo  {
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
 }
