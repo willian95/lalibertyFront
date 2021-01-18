@@ -30,6 +30,7 @@ $('.slider-nav').slick({
   slidesToShow: 5,
   slidesToScroll: 1,
   asNavFor: '.slider-for',
+  adaptiveHeight: true,
   dots: true,
   arrows: true,
   autoplay:false,
