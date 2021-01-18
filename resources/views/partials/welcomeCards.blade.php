@@ -2,8 +2,10 @@
 
     $class = "";
     $style = "";
-
-    if($loop->index == 1){
+    if($loop->index == 0){
+        $style = "width: 300px;";
+    }
+    else if($loop->index == 1){
         $style = "";
     }
     else if($loop->index == 2){

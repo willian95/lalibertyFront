@@ -55,9 +55,7 @@ body :focus {
 section {
     padding: 20px 0 15px;
 }
-a{
-    color: #2196F3!important;
-}
+
 a {
     text-decoration: none !important;
 }
@@ -260,12 +258,14 @@ Nav
 }
 
 .navbar-expand-md .navbar-nav .nav-link {
-    color: #000!important;
+    color: #000;
     font-family: "secciones";
     font-size: 10px;
     padding-left: 50px;
 }
-
+.nav-link-white {
+    color: #fff !important;
+}
 .border-menu {
     border-bottom: 1px solid #00000005;
 }
@@ -506,6 +506,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 16px;
 }
 
 .card-transition:nth-child(1),
@@ -952,9 +953,6 @@ p {
     align-items: center;
 }
 
-a {
-    color: #333;
-}
 
 .galeria--h {
     flex-flow: row wrap;
@@ -1386,6 +1384,7 @@ div#galeria:hover img:hover {
 position: relative;
 margin-bottom: 3rem;
 margin-top: 3rem;
+text-align: center;
 }
 
 .grid-top:nth-child(2n) {
@@ -1646,4 +1645,7 @@ height: 500px!important;
 .servicios-about .titulo  {
     font-size: 1.2rem;
     margin-bottom: 4rem;
+}
+a{
+    color: #2196F3;
 }
