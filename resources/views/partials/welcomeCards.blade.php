@@ -81,12 +81,7 @@
         @endif	
             <source src="{{ $order->work->main_image }}" type="video/mp4">	
         </video>	
-        @endif	
-        <div class="grid-infoo">	
-        <p class="grid-p">	
-            <h3>{{ $order->work->title }}</h3>	
-        </p>	
-        </div>	
+        @endif		
     </a>	
     </div>	
     @elseif($order->workImage)	
@@ -103,11 +98,7 @@
             <source src="{{ $order->workImage->image }}" type="video/mp4">	
         </video>	
         @endif	
-        <div class="grid-infoo">	
-        <p class="grid-p">	
-            <h3>{{ $order->workImage->work->title }}</h3>	
-        </p>	
-        </div>
+
     </a>	
     </div>	
     @elseif($order->product)	
@@ -124,11 +115,7 @@
             <source src="{{ $order->product->image }}" type="video/mp4">	
         </video>	
         @endif	
-        <div class="grid-infoo">	
-        <p class="grid-p">	
-            <h3>{{ $order->product->name }}</h3>	
-        </p>	
-        </div>	
+
     </a>	
     </div>	
     @elseif($order->productImage)	
@@ -145,11 +132,7 @@
             <source src="{{ $order->productImage->image }}" type="video/mp4">	
         </video>	
         @endif	
-        <div class="grid-infoo">	
-        <p class="grid-p">	
-            <h3>{{ $order->productImage->product->name }}</h3>	
-        </p>	
-        </div>
+
     </a>	
     </div>	
     @elseif($order->blog)	
@@ -166,11 +149,7 @@
             <source src="{{ $order->blog->image }}" type="video/mp4">	
         </video>	
         @endif	
-        <div class="grid-infoo">	
-        <p class="grid-p">	
-            <h3>{{ $order->blog->title }}</h3>	
-        </p>	
-        </div>	
+
     </a>	
     </div>	
 @endif
