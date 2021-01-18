@@ -26,8 +26,7 @@ p {
     transition-duration: 0.3s;
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
-    cursor: url("../img/cursor.png"),
-        pointer;
+
 }
 
 *,
@@ -37,7 +36,7 @@ p {
 }
 
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 10px;
     height: 8px;
     background-color: #fff !important;
 }
@@ -56,7 +55,9 @@ body :focus {
 section {
     padding: 20px 0 15px;
 }
-
+a{
+    color: #2196F3!important;
+}
 a {
     text-decoration: none !important;
 }
@@ -77,6 +78,8 @@ body {
     overscroll-behavior: none;
     -webkit-overflow-scrolling: touch;
     font-weight: 300;
+    cursor: url("../img/cursor.png"),
+    pointer;
 }
 
 h1 {
@@ -1547,7 +1550,7 @@ font-family: 'Roboto';
     object-position: 0px -17rem;
 }
 .img-miniatura{
-    height: 500px!important;
+ /*   height: 500px!important;*/
     object-fit: contain;
 }
 .ig-title{
@@ -1572,7 +1575,7 @@ font-family: 'Roboto';
     height: 100%;
 }
 .grid-item img{
-    height: 500px;
+  /*  height: 500px;*/
     object-fit: contain;
 }
 .css-16twpr5 {
@@ -1581,7 +1584,7 @@ font-family: 'Roboto';
 }
 video {
     object-fit: contain;
-    width: 529px;
+    width: 100%;
     height: 529px;
 }
 .shares{
@@ -1599,4 +1602,27 @@ video {
 .top-text{
     margin-top: 6px;
     font-size: 13px;
+}
+
+
+.slick-prev:before, .slick-next:before {
+  
+    color: black;
+   
+}
+.slick-prev {
+    left: 0px!important;
+}
+.slick-prev, .slick-next{
+    top: 30%!important;
+    cursor: url(../img/cursor.png), pointer!important;
+}
+b, strong {
+    font-weight: 700!important;
+}
+.img-works img{
+height: 500px!important;
+}
+.img-works video{
+    width: auto;
 }

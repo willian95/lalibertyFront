@@ -4,11 +4,14 @@
     $style = "";
 
     if($loop->index == 1){
-        $style = "height: 400px!important; object-fit: contain";
+        $style = "";
+    }
+    else if($loop->index == 2){
+        $style = "height: auto!important;";
     }
 
     else if($loop->index == 4){
-        $style = "height: 500px!important; object-fit: contain";
+        $style = "";
     }
     else if($loop->index == 5){
         $style = "margin-top: -30rem; margin-left: -8rem; height: 300px!important;";
@@ -16,20 +19,20 @@
     else if($loop->index == 6){
         $style = "margin-top: -19rem;";
     }else if($loop->index == 20){
-        $style = "margin-top: -25rem; width: 200px; margin-left: 15rem;";
+        $style = "margin-top: -25rem; width: 200px; margin-left: 15rem;    height: 500px;";
     }
 
 
     if($loop->index == 0){
-        $class="col-md-2  col-lg-2 offset-md-2 offset-lg-2";
+        $class="col-md-5  col-lg-5 ";
     }
 
     else if($loop->index == 1 || $loop->index == 17){
-        $class="col-md-8 col-lg-8";
+        $class="col-md-7 col-lg-7";
     }
 
     else if($loop->index == 2){
-        $class = "col-md-6 offset-md-3 col-lg-6 offset-lg-3";
+        $class = "col-md-6 offset-md-3 col-lg-6 offset-lg-3 hola";
     }
     
     else if($loop->index == 5){
@@ -72,9 +75,9 @@
         <img src="{{ $order->work->main_image }}" alt="imagen" style="{{ $style }}">	
         @else	
         @if($isMob)	
-        <video style="width: 100%; {{ $style }}" controls >	
+        <video style="width: 100%;       {{ $style }}" controls >	
         @else	
-        <video style="width: 100%; {{ $style }}" loop autoplay="true" muted="muted">	
+        <video style="width: 100%;         {{ $style }}" loop autoplay="true" muted="muted">	
         @endif	
             <source src="{{ $order->work->main_image }}" type="video/mp4">	
         </video>	
