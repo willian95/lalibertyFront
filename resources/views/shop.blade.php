@@ -636,7 +636,7 @@
         mounted(){
            
             window.setInterval(() => {
-              console.log("mounted")
+              
               if(window.localStorage.getItem("laliberty_product_flag") == "1"){
 
                 window.localStorage.setItem("laliberty_product_flag", "0")
@@ -659,6 +659,8 @@
 
                   
                 })
+
+                console.log("colors", this.productColorSizes)
 
                 this.productColorSizes.forEach((data) => {
 
