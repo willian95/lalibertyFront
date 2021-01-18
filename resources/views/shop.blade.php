@@ -634,6 +634,9 @@
         },
         mounted(){
            
+          this.selectedSize = this.sizes[0]
+          this.selectedColor = this.colors[0]
+
             window.setInterval(() => {
 
               if(window.localStorage.getItem("laliberty_product_flag") == "1"){
@@ -673,7 +676,9 @@
 
                   if(exists == false){
                     this.sizes.push(data.size)
+                    
                   }
+                  
 
                 })
 
