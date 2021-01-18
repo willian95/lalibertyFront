@@ -701,6 +701,7 @@
                         if(exists == false){
                           this.colors.push(data.color)
                           this.selectedColor = this.colors[0]
+                          this.fetchPriceAndStock()
                         }
 
                       }
@@ -818,7 +819,7 @@
           storePayment(){
 
             axios.post("{{ url('/payment/store') }}", {total: this.total, reference: this.referenceCode, email: this.guestEmail, name: this.guestName, address: this.guestAddress, phone: this.guestPhone, products: this.products}).then(res => {
-              console.log(res)
+      
               if(res.data.success == true){
                 window.setTimeout(() => {
                   document.getElementById("form-pay").submit()
