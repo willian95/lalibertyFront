@@ -55,7 +55,9 @@ body :focus {
 section {
     padding: 20px 0 15px;
 }
-
+a{
+    color: #2196F3!important;
+}
 a {
     text-decoration: none !important;
 }
