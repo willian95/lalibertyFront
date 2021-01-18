@@ -197,6 +197,7 @@
 
     function storeLocal(productColorSize){
 
+      window.localStorage.removeItem("laliberty_product")
       window.localStorage.setItem("laliberty_product", JSON.stringify(productColorSize))
       window.localStorage.setItem("laliberty_product_flag", "1")
 
@@ -635,7 +636,7 @@
         mounted(){
            
             window.setInterval(() => {
-
+              
               if(window.localStorage.getItem("laliberty_product_flag") == "1"){
 
                 window.localStorage.setItem("laliberty_product_flag", "0")
@@ -658,7 +659,9 @@
 
                   
                 })
-                
+
+                this.sizes = []
+                this.colors = []
 
                 this.productColorSizes.forEach((data) => {
 
@@ -673,13 +676,48 @@
 
                   if(exists == false){
                     this.sizes.push(data.size)
+
+                    this.selectedSize = this.sizes[0]
+
+                    this.colors = [] 
+                    this.price = ""
+                    this.stock = ""
+                    this.productColorSizeId=""
+
+                    this.productColorSizes.forEach((data) =>{
+
+                      if(data.size.id == this.selectedSize.id){
+
+                        var exists = false
+
+                        this.colors.forEach((color) => {
+                          
+                          if(color.id == data.color.id){
+                            exists == true
+                          }
+
+                        })
+
+                        if(exists == false){
+                          this.colors.push(data.color)
+                          this.selectedColor = this.colors[0]
+                          this.fetchPriceAndStock()
+                        }
+
+                      }
+
+                    })
                   }
 
-                })
+
+                  })
+                
+
+                
 
               }
 
-            })
+            }, 500)
 
         }
     });
@@ -784,7 +822,7 @@
           storePayment(){
 
             axios.post("{{ url('/payment/store') }}", {total: this.total, reference: this.referenceCode, email: this.guestEmail, name: this.guestName, address: this.guestAddress, phone: this.guestPhone, products: this.products}).then(res => {
-              console.log(res)
+      
               if(res.data.success == true){
                 window.setTimeout(() => {
                   document.getElementById("form-pay").submit()
