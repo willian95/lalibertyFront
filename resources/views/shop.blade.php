@@ -660,7 +660,8 @@
                   
                 })
 
-                console.log("colors", this.productColorSizes)
+                this.sizes = []
+                this.colors = []
 
                 this.productColorSizes.forEach((data) => {
 
