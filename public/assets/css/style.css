@@ -1595,6 +1595,7 @@ video {
     font-size: 13px;
     margin-left: 15px;
     margin-top: 11px;
+    color: black;
 }
 .css-1tmxu1x{
     display: none;
@@ -1625,4 +1626,7 @@ height: 500px!important;
 }
 .img-works video{
     width: auto!important;
+}
+.timeline__content{
+    color: #3e3e3e;
 }
