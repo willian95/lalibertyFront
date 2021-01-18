@@ -29,11 +29,6 @@
        <p>-</p>
         <a style="cursor: pointer;" onclick="clipboardCopy()"> <p>Copiar link</p> </a>
 
-
-
-
-        http://www.linkedin.com/shareArticle?url
-
        </div>
         <div class="content-blog">
             @if($blog->main_image_file_type == 'image')
