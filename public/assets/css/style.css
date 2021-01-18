@@ -260,7 +260,7 @@ Nav
 }
 
 .navbar-expand-md .navbar-nav .nav-link {
-    color: #000;
+    color: #000!important;
     font-family: "secciones";
     font-size: 10px;
     padding-left: 50px;
@@ -1624,5 +1624,5 @@ b, strong {
 height: 500px!important;
 }
 .img-works video{
-    width: auto;
+    width: auto!important;
 }
