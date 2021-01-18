@@ -634,8 +634,7 @@
         },
         mounted(){
            
-          this.selectedSize = this.sizes[0]
-          this.selectedColor = this.colors[0]
+          
 
             window.setInterval(() => {
 
@@ -676,7 +675,36 @@
 
                   if(exists == false){
                     this.sizes.push(data.size)
-                    
+
+                    this.selectedSize = this.sizes[0]
+
+                    this.colors = [] 
+                    this.price = ""
+                    this.stock = ""
+                    this.productColorSizeId=""
+            
+                    this.productColorSizes.forEach((data) =>{
+
+                      if(data.size.id == this.selectedSize.id){
+
+                        var exists = false
+
+                        this.colors.forEach((color) => {
+                          
+                          if(color.id == data.color.id){
+                            exists == true
+                          }
+
+                        })
+
+                        if(exists == false){
+                          this.colors.push(data.color)
+                          this.selectedColor = this.colors[0]
+                        }
+
+                      }
+
+                    })
                   }
                   
 
