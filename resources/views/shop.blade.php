@@ -197,6 +197,7 @@
 
     function storeLocal(productColorSize){
 
+      window.localStorage.removeItem("laliberty_product")
       window.localStorage.setItem("laliberty_product", JSON.stringify(productColorSize))
       window.localStorage.setItem("laliberty_product_flag", "1")
 
