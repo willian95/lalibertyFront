@@ -24,13 +24,14 @@ $('.slider-for').slick({
   slidesToScroll: 1,
   arrows: false,
   fade: true,
+  adaptiveHeight: true,
   asNavFor: '.slider-nav'
 });
 $('.slider-nav').slick({
   slidesToShow: 5,
   slidesToScroll: 1,
-  asNavFor: '.slider-for',
   adaptiveHeight: true,
+  asNavFor: '.slider-for',
   dots: true,
   arrows: true,
   autoplay:false,
