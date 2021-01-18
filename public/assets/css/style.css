@@ -557,7 +557,7 @@ p {
 .btn-1 {
     background: transparent;
     font-weight: 100;
-    color: #a1b2a1;
+    color: #a1b2a1!important;
 }
 
 .btn-1 svg {
@@ -1538,7 +1538,9 @@ font-family: 'Roboto';
 }
 
 .carousel-item img {
- width: 100%;
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
 }
 .modal-content {
    

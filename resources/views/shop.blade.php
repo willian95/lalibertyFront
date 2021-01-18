@@ -23,7 +23,11 @@
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
  <link rel="stylesheet" href="{{ url('assets/css/responsive.css') }}">
   
-
+<style>
+  .nav-link-white {
+    color: #fff !important;
+}
+</style>
 </head>
 
 <body style="background: #000;">
