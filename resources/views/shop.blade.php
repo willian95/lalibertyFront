@@ -635,8 +635,6 @@
         },
         mounted(){
            
-          
-
             window.setInterval(() => {
 
               if(window.localStorage.getItem("laliberty_product_flag") == "1"){
@@ -661,7 +659,6 @@
 
                   
                 })
-                
 
                 this.productColorSizes.forEach((data) => {
 
@@ -683,7 +680,7 @@
                     this.price = ""
                     this.stock = ""
                     this.productColorSizeId=""
-            
+
                     this.productColorSizes.forEach((data) =>{
 
                       if(data.size.id == this.selectedSize.id){
@@ -708,13 +705,16 @@
 
                     })
                   }
-                  
 
-                })
+
+                  })
+                
+
+                
 
               }
 
-            })
+            }, 500)
 
         }
     });
