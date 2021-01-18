@@ -52,7 +52,10 @@
 
 
   <style>
-  .single-blog{
+.single-blog a {
+    color: #2196F3!important;
+}
+.single-blog{
     text-align:center;
   }
   .single-blog .content-blog{
