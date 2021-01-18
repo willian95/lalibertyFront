@@ -24,6 +24,8 @@
        <div class="shares">
           <p>Share -</p>
         <a href="https://www.facebook.com/sharer/sharer.php?u={{ url()->current() }}&display=popup" target="_blank"> <p>Facebook </p> </a>
+        <p>-</p>
+        <a href="https://www.linkedin.com/shareArticle?url={{ url()->current() }}" target="_blank"> <p>LinkedIn </p> </a>
        <p>-</p>
         <a style="cursor: pointer;" onclick="clipboardCopy()"> <p>Copiar link</p> </a>
 
