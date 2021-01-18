@@ -32,7 +32,7 @@ $('.slider-nav').slick({
   asNavFor: '.slider-for',
   dots: true,
   arrows: true,
-  autoplay:true,
+  autoplay:false,
   focusOnSelect: true,
   responsive: [{
     breakpoint: 1200,

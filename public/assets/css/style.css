@@ -1615,3 +1615,6 @@ video {
     top: 30%!important;
     cursor: url(../img/cursor.png), pointer!important;
 }
+b, strong {
+    font-weight: 700!important;
+}
