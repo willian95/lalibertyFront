@@ -51,7 +51,7 @@
                                             
                                             <div class="grid container-fluid">
                                                 @foreach(App\WorkImage::where("work_id", $work->id)->get() as $workImage)
-                                                <div class="grid-item ">  
+                                                <div class="grid-item img-works ">  
                                                     @if($workImage->file_type == "image")                                         
                                                     <img
                                                     src="{{ $workImage->image }}"

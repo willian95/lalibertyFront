@@ -1618,3 +1618,9 @@ video {
 b, strong {
     font-weight: 700!important;
 }
+.img-works img{
+height: 500px!important;
+}
+.img-works video{
+    width: auto;
+}
