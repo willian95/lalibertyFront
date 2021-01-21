@@ -144,8 +144,9 @@
       <div class="mt-5">
         <section  id="effect-title">
           <p class="title_custom mb-5 nav-link-white ">Limited Edition</p>
-          @foreach(App\Product::with("productColorSizes", "productColorSizes.size", "productColorSizes.color", "secondaryImages")->get() as $product)
           <div class="card-content">
+          @foreach(App\Product::with("productColorSizes", "productColorSizes.size", "productColorSizes.color", "secondaryImages")->get() as $product)
+     
             <div class="card-transition" data-toggle="modal" data-target="#producto-modal" onclick="storeLocal(JSON.parse('{{ $product }}'))">
               <figure class="card-effect">
                 <p class="ml-3">{{ $product->name }}</p>
@@ -159,9 +160,9 @@
               <a href="#"></a>
               </figure>
             </div>
-          </div>
+         
           @endforeach
-    
+        </div>
           </div>
 
         </section>

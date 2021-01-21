@@ -66,9 +66,6 @@ $('.slider-nav').slick({
 });
 
 
-
-
-
 /***************card product************ */
 let title = $('#effect-title').offset();
 let imgfix = $('.img-fix').offset();

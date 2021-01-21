@@ -55,9 +55,7 @@ body :focus {
 section {
     padding: 20px 0 15px;
 }
-a{
-    color: #2196F3!important;
-}
+
 a {
     text-decoration: none !important;
 }
@@ -260,12 +258,14 @@ Nav
 }
 
 .navbar-expand-md .navbar-nav .nav-link {
-    color: #000!important;
+    color: #000;
     font-family: "secciones";
     font-size: 10px;
     padding-left: 50px;
 }
-
+.nav-link-white {
+    color: #fff !important;
+}
 .border-menu {
     border-bottom: 1px solid #00000005;
 }
@@ -506,6 +506,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 16px;
 }
 
 .card-transition:nth-child(1),
@@ -612,6 +613,7 @@ p {
 }
 .volver  a{
     font-size: 12px;
+    color: #000!important;
 }
 .volver img{
     width: 15px;
@@ -951,9 +953,6 @@ p {
     align-items: center;
 }
 
-a {
-    color: #333;
-}
 
 .galeria--h {
     flex-flow: row wrap;
@@ -1383,8 +1382,9 @@ div#galeria:hover img:hover {
 
 .grid-item {
 position: relative;
-  margin-bottom: 10rem;
-  margin-top: 3rem;
+margin-bottom: 3rem;
+margin-top: 3rem;
+text-align: center;
 }
 
 .grid-top:nth-child(2n) {
@@ -1470,6 +1470,7 @@ transition: all .8s;
 }
 .grid-item a {
     position: relative;
+    cursor: url(../img/cursor.png), pointer;
   }
   .grid-item a:hover h3{
     opacity: 1;
@@ -1631,4 +1632,20 @@ height: 500px!important;
 }
 .timeline__content{
     color: #3e3e3e;
+}
+
+.mt-8{
+    margin-top: 8rem;
+}
+.css-16twpr5 {
+
+    box-shadow: none!important;
+    border-radius: 0;
+}
+.servicios-about .titulo  {
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+}
+a{
+    color: #2196F3;
 }

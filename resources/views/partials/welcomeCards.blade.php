@@ -2,8 +2,10 @@
 
     $class = "";
     $style = "";
-
-    if($loop->index == 1){
+    if($loop->index == 0){
+        $style = "width: 300px;";
+    }
+    else if($loop->index == 1){
         $style = "";
     }
     else if($loop->index == 2){
@@ -14,7 +16,10 @@
         $style = "";
     }
     else if($loop->index == 5){
-        $style = "margin-top: -30rem; margin-left: -8rem; height: 300px!important;";
+        $style = "margin-top: -15rem;
+    margin-left: -8rem;
+    height: 300px!important;
+    margin-bottom: 10rem;";
     }
     else if($loop->index == 6){
         $style = "margin-top: -19rem;";
