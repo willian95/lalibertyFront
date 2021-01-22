@@ -16,17 +16,17 @@
                 <div>
                     <div class="row">
                         <div class="col-md-5">
-                            @if($fashionMerch->main_image_file_type == 'image')
-                                <img class="cliente-img" src="{{ $fashionMerch->main_image }}" alt="">
+                            @if($work->main_image_file_type == 'image')
+                                <img class="cliente-img" src="{{ $work->main_image }}" alt="">
                             @else
                                 <video  controls>
-                                    <source src="{{ $fashionMerch->main_image }}" type="video/mp4">
+                                    <source src="{{ $work->main_image }}" type="video/mp4">
                                 </video>
                             @endif
                         </div>
                         <div class="col-md-7">
                             <div class="texto-client">
-                                <p>{{ $fashionMerch->description }}</p>
+                                <p>{{ $work->description }}</p>
                             </div>
                         </div>
                         <div id="effect-title" class="mt-5"></div>
@@ -35,7 +35,7 @@
                                 
                                     
                                     <div class="grid container-fluid">
-                                        @foreach(App\WorkImage::where("work_id", $fashionMerch->id)->get() as $workImage)
+                                        @foreach(App\WorkImage::where("work_id", $work->id)->get() as $workImage)
                                         <div class="grid-item img-works ">  
                                             @if($workImage->file_type == "image")                                         
                                             <img
