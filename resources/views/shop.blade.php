@@ -323,7 +323,7 @@
 
                 </div>
                 <div class="col-md-8">
-                  <p class="descripcion-produtc">@{{ product.description }}</p>
+                  <div class="descripcion-product" v-html="product.description"></div>
                 </div>
               </div>
 
