@@ -52,7 +52,7 @@
                         </a>
                       </li>
                       <li class='nav-item'>
-                        <a class='redes' href='#'>
+                        <a class='redes' href='https://www.instagram.com/somoslaliberty/'>
                           <svg class="color-ig" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"
                             viewBox="0 0 24 24">
                             <path
