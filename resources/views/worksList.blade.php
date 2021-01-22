@@ -37,7 +37,7 @@
 
             </div>
             <div class="row">
-                {!! $fashionMerch->links() !!}
+                {!! $works->links() !!}
             </div>
         </section>
     
