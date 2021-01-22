@@ -7,29 +7,15 @@ use App\Work;
 
 class FashionMerchController extends Controller
 {
-    function index(Request $request){
+    function index(){
+        $fashionMerch = Work::where("is_fashion_merch", 1)->paginate(10);
+        return view("fashionMerchList", ["fashionMerch" => $fashionMerch]);
+    }
 
-        if($request->has("work")){
-            
-            $workId = Work::where("slug", $request->work)->first();
-            $works = Work::where("is_fashion_merch", 1)->get();
-            $index = 0;
-            $workIndex = 0;
-            foreach($works as $work){
+    function show($slug){
 
-                if($workId->id == $work->id){
-                    $workIndex = $index;
-                }
-                $index++;
-            }
-
-
-            return view("fashionMerch", ["workIndex" => $workIndex]);
-            
-
-        }else{
-            return view("fashionMerch");
-        }
+        $fashionMerch = Work::where("slug", $slug)->first();
+        return view("fashionMerch", ["fashionMerch" => $fashionMerch]);
 
     }
 }
