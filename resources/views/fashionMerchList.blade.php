@@ -36,8 +36,11 @@
                 @endforeach
 
 
-                {!! $fashionMerch->links() !!}
+               
 
+            </div>
+            <div class="row">
+                {!! $fashionMerch->links() !!}
             </div>
         </section>
     
