@@ -8,7 +8,7 @@ use App\Work;
 class FashionMerchController extends Controller
 {
     function index(){
-        $fashionMerch = Work::where("is_fashion_merch", 1)->paginate(5);
+        $fashionMerch = Work::where("is_fashion_merch", 1)->paginate(10);
         return view("fashionMerchList", ["fashionMerch" => $fashionMerch]);
     }
 
