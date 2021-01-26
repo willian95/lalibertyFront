@@ -75,7 +75,7 @@
 
                         <ul class="person mt-5">
                             <li>
-                                <p>Rigoski</p>
+                                <p>Rigo</p>
                                 <img class="person-img" src="{{ url('assets/img/rigo.JPG') }}" alt="">
                                 <div class="redes">
                                     <a target="_blank" href="https://api.whatsapp.com/send?phone=3203045593"><img src="assets/img/iconos/whatsapp.svg" alt=""></a>
@@ -83,11 +83,11 @@
                                     <a href="maito:hola@laliberty.com.co"><img src="assets/img/iconos/mail.svg" alt=""></a>
                                 </div>
                             </li>
-                            <li><p>Freddyski</p>
+                            <li><p>Freddy</p>
                                 <img class="person-img" src="{{ url('assets/img/freddy.JPG') }}" alt="">
                                 <div class="redes">
                                     <a target="_blank" href="https://api.whatsapp.com/send?phone=3202711689"><img src="assets/img/iconos/whatsapp.svg" alt=""></a>
-                                    <a target="_blank" href="www.linkedin.com/in/fredy-mendez"><img src="assets/img/iconos/linkedin.svg" alt=""></a>
+                                    <a target="_blank" href="https://www.linkedin.com/in/fredy-mendez"><img src="assets/img/iconos/linkedin.svg" alt=""></a>
                                     <a href="maito:hola@laliberty.com.co"><img src="assets/img/iconos/mail.svg" alt=""></a>
                                 </div></li>
                         </ul>
