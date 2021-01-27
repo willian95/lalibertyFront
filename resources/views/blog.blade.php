@@ -22,7 +22,7 @@
 
             </div>-->
             <div class="timeline">
-                @foreach(App\Blog::orderBy("id", "desc")->get() as $blog)
+                @foreach(App\Blog::orderBy("created_date", "desc")->get() as $blog)
                   <div class="timeline-item" data-text="{{ $blog->created_at->format('d/m/Y') }}"  >
 
                   <!----------------₍ ὸ.ό₎ރ---------------------->
