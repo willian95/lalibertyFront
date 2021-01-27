@@ -1,28 +1,28 @@
 @media (max-width: 767px) {}
 
 @media (min-width: 0px) and (max-width: 767px) {
-    video {
-   
-        width: 100%;
-        height: 100%;
-    }
-    .video-about img{
+
+    .video-about img {
         object-fit: contain;
         object-position: 0;
     }
-    .video-about{
+
+    .video-about {
         height: auto;
     }
-    .numero{
+
+    .numero {
         display: none;
     }
-    .trash-product{
+
+    .trash-product {
         position: absolute;
         right: 0;
         top: 35%;
     }
+
     .item-product ul {
-     
+
         grid-template-columns: 1fr;
         position: relative;
     }
@@ -31,13 +31,14 @@
     #carrito-modal .modal-dialog {
         max-width: 100%;
     }
+
     .item-product li {
-        
+
         flex-direction: unset;
         justify-content: unset;
-  
+
     }
- 
+
 
     .descripcion-produtc {
 
@@ -200,6 +201,11 @@
 
     .logoxs {
         display: flex !important;
+    }
+
+    video {
+        width: 100% !important;
+        height: 100%;
     }
 }
 
