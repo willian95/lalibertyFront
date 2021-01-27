@@ -19,7 +19,7 @@
         <p class="main_title-general"></p>
 
        <p class="titulo-producto titulo-blog">{{ $blog->title }}</p>
-       <span>{{ $blog->created_at->format("d/m/Y") }}</span>
+       <span>{{ $blog->created_date }}</span>
 
        <div class="shares">
           <p>Share -</p>
