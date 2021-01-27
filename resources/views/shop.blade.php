@@ -27,6 +27,16 @@
   .nav-link-white {
     color: #fff !important;
 }
+@media (max-width: 767px){
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    background-color: #fff;
+  
+}
+.offcanvas-collapse {
+ 
+    background-color: #000000;
+}
+}
 </style>
 </head>
 
@@ -39,7 +49,7 @@
         <nav class='navbar navbar-expand-md navbar-fixed-js'>
           <div class='flex-custom'>
             <a class='brand brand-xs' href='#'>
-              <img alt='' src="{{ url('assets/img/logo-xs.png') }} ">
+              <img alt='logo' class="invertir-color" src="{{ url('assets/img/logo-xs.png') }} ">
             </a>
             <button class='navbar-toggler p-2 border-0 hamburger hamburger--elastic d-none-lg' data-toggle='offcanvas'
               type='button'>
@@ -88,7 +98,7 @@
                         </a>
                       </li>
                       <li class='nav-item'>
-                        <a class='redes' href='#'>
+                        <a class='redes' href='https://www.instagram.com/somoslaliberty/'>
                           <svg class="color-ig         invertir-color" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"
                             viewBox="0 0 24 24">
                             <path
