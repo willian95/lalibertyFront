@@ -9,7 +9,7 @@
 <body>
     <div>
         <main>
-            
+
             @include("partials.header")
 
             <section class="container mt-5 pt-5">
@@ -17,11 +17,11 @@
                     <div class="row">
                         <div class="col-md-5">
                             @if($fashionMerch->main_image_file_type == 'image')
-                                <img class="cliente-img" src="{{ $fashionMerch->main_image }}" alt="">
+                            <img class="cliente-img" src="{{ $fashionMerch->main_image }}" alt="">
                             @else
-                                <video  controls>
-                                    <source src="{{ $fashionMerch->main_image }}" type="video/mp4">
-                                </video>
+                            <video controls>
+                                <source src="{{ $fashionMerch->main_image }}" type="video/mp4">
+                            </video>
                             @endif
                         </div>
                         <div class="col-md-7">
@@ -31,31 +31,29 @@
                         </div>
                         <div id="effect-title" class="mt-5"></div>
                         <div class="galleria-client mt-5">
-                            <!----GALERIA------>                                  
-                                
-                                    
-                                    <div class="grid container-fluid">
-                                        @foreach(App\WorkImage::where("work_id", $fashionMerch->id)->get() as $workImage)
-                                        <div class="grid-item img-works ">  
-                                            @if($workImage->file_type == "image")                                         
-                                            <img
-                                            src="{{ $workImage->image }}"
-                                            alt="">     
-                                            @else
-                                                <video  controls>
-                                                    <source src="{{ $workImage->image }}" type="video/mp4">
-                                                </video>
-                                            @endif                                                                                    
-                                        </div>
-                                        @endforeach
-                                    </div>
-                                    
-                            
-                            
+                            <!----GALERIA------>
+
+
+                            <div class="grid container-fluid">
+                                @foreach(App\WorkImage::where("work_id", $fashionMerch->id)->get() as $workImage)
+                                <div class="grid-item img-works ">
+                                    @if($workImage->file_type == "image")
+                                    <img src="{{ $workImage->image }}" alt="">
+                                    @else
+                                    <video controls>
+                                        <source src="{{ $workImage->image }}" type="video/mp4">
+                                    </video>
+                                    @endif
+                                </div>
+                                @endforeach
+                            </div>
+
+
+
                             <!----GALERIA------>
                         </div>
-                                
-                        
+
+
 
                     </div>
 
@@ -90,7 +88,7 @@
                 $(this).removeClass("hover");
             }
         );
-        
+
     </script>
 
 
