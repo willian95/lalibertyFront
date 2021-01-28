@@ -167,6 +167,7 @@ Nav
         display: block;
         top: 50%;
         margin-top: -2px;
+        left: 30px;
     }
 
     .hamburger-inner,
@@ -515,7 +516,7 @@ p {
 .card-transition:nth-child(3),
 .card-transition:nth-child(4),
 .card-transition:nth-child(6) {
- /*   transform: translate(0px, 55px);*/
+    /*   transform: translate(0px, 55px);*/
     transition: 2s;
 }
 
@@ -746,7 +747,9 @@ p {
 @media only screen and (max-width: 767px) {
     .timeline:before {
         left: 40px;
+        background: rgb(0 0 0 / 0%);
     }
+
 }
 
 .timeline-item {
@@ -810,7 +813,7 @@ p {
     .timeline-item {
         align-self: baseline !important;
         width: 100%;
-        padding: 0 30px 150px 80px;
+        padding: 0 24px 123px 24px;
     }
 
     .timeline-item:before {

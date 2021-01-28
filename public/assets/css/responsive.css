@@ -1,6 +1,10 @@
 @media (max-width: 767px) {}
 
 @media (min-width: 0px) and (max-width: 767px) {
+    .img-shoop {
+
+        object-position: center;
+    }
 
     .video-about img {
         object-fit: contain;
@@ -144,6 +148,7 @@
 
     .brand-xs img {
         width: 130px;
+        margin-left: 60px;
     }
 
     .brand {
