@@ -58,7 +58,7 @@
               </span>
             </button>
             <div class='offcanvas-collapse fil' id='navbarNav'>
-              <ul class='navbar-nav container'>
+              <ul class='navbar-nav '>
                 <div class="row">
                   <div class="col-md-12 flex-custom  mt-3">
                     <div class="menu-flex">

@@ -117,7 +117,7 @@ Nav
 @media (max-width: 767px) {
     .offcanvas-collapse {
         position: fixed;
-        top: 56px;
+        top: 66px;
         /* Height of navbar */
         bottom: 0;
         width: 100%;
@@ -161,13 +161,14 @@ Nav
         height: 24px;
         display: inline-block;
         position: relative;
+        left: 35px;
     }
 
     .hamburger-inner {
         display: block;
         top: 50%;
         margin-top: -2px;
-        left: 30px;
+        /*left: 30px;*/
     }
 
     .hamburger-inner,
@@ -201,7 +202,7 @@ Nav
         top: 5px;
         transition-duration: 0.275s;
         transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        right: 5px;
+        /*right: 5px;*/
     }
 
     .hamburger--elastic .hamburger-inner::before {
@@ -1361,7 +1362,7 @@ div#galeria:hover img:hover {
 
 .redes-nav {
     position: absolute;
-    right: 0;
+    right: 15px;
     display: flex;
     bottom: 10px;
 }
