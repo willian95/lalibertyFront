@@ -515,7 +515,7 @@ p {
 .card-transition:nth-child(3),
 .card-transition:nth-child(4),
 .card-transition:nth-child(6) {
-    transform: translate(0px, 55px);
+ /*   transform: translate(0px, 55px);*/
     transition: 2s;
 }
 
