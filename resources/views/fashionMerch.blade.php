@@ -26,7 +26,7 @@
                         </div>
                         <div class="col-md-7">
                             <div class="texto-client">
-                                <p>{{ $fashionMerch->description }}</p>
+                                <p>{!! $fashionMerch->description !!}</p>
                             </div>
                         </div>
                         <div id="effect-title" class="mt-5"></div>
