@@ -91,12 +91,16 @@
     </div>	
     @elseif($order->workImage)	
     <div class="{{ $class }} grid-item"><!-- imagenes secundarias -->	
-    <a href="{{ url('/works?work='.$order->workImage->work->slug) }}">	
+    @if($order->workImage->file_type == 'image')
+    <a href="{{ url('/works?work='.$order->workImage->work->slug) }}">
+    @else
+    <a>
+    @endif	
         @if($order->workImage->file_type == 'image')	
         <img class="img-miniatura" src="{{ $order->workImage->image }}" alt="imagen" style="{{ $style }}">	
         @else	
         @if($isMob)	
-        <video style="width: 100%; {{ $style }}" controls>	
+        <video style="width: 100%; {{ $style }}" poster="https://www.laliberty.com.co/images/icons/icon-128x128.png" controls>	
         @else	
         <video style="width: 100%; {{ $style }}" loop autoplay="true" muted="muted">	
         @endif	
@@ -107,13 +111,17 @@
     </a>	
     </div>	
     @elseif($order->product)	
-    <div class="{{ $class }} grid-item ">	
+    <div class="{{ $class }} grid-item ">
+    @if($order->product->main_image_file_type == 'image')		
     <a href="{{ url('/shop') }}">	
+    @else
+    <a>
+    @endif
         @if($order->product->main_image_file_type == 'image')	
         <img src="{{ $order->product->image }}" alt="imagen" style="{{ $style }}">	
         @else	
         @if($isMob)	
-        <video style="width: 100%; {{ $style }}" controls>	
+        <video style="width: 100%; {{ $style }}" poster="https://www.laliberty.com.co/images/icons/icon-128x128.png" controls>	
         @else	
         <video style="width: 100%; {{ $style }}" loop autoplay="true" muted="muted">	
         @endif	
@@ -125,12 +133,16 @@
     </div>	
     @elseif($order->productImage)	
     <div class="{{ $class }} grid-item"><!-- imagenes secundarias -->	
+    @if($order->product->main_image_file_type == 'image')
     <a href="{{ url('/shop') }}">	
+    @else
+    <a>
+    @endif
         @if($order->productImage->file_type == 'image')	
         <img class="img-miniatura" src="{{ $order->productImage->image }}" alt="imagen" style="{{ $style }}">	
         @else	
         @if($isMob)	
-        <video style="width: 100%; {{ $style }}" controls>	
+        <video style="width: 100%; {{ $style }}" poster="https://www.laliberty.com.co/images/icons/icon-128x128.png" controls>	
         @else	
         <video style="width: 100%; {{ $style }}" loop autoplay="true" muted="muted">	
         @endif	
@@ -141,13 +153,17 @@
     </a>	
     </div>	
     @elseif($order->blog)	
-    <div class="{{ $class }} grid-item">	
-    <a href="{{ url('/blog/'.$order->blog->slug) }}">	
+    <div class="{{ $class }} grid-item">
+    @if($order->product->main_image_file_type == 'image')	
+    <a href="{{ url('/blog/'.$order->blog->slug) }}">
+    @else
+    <a>
+    @endif	
         @if($order->blog->main_image_file_type == 'image')	
         <img src="{{ $order->blog->image }}" alt="imagen" style="{{ $style }}">	
         @else	
         @if($isMob)	
-        <video style="width: 100%; {{ $style }}" controls>	
+        <video style="width: 100%; {{ $style }}" poster="https://www.laliberty.com.co/images/icons/icon-128x128.png" controls>	
         @else	
         <video style="width: 100%; {{ $style }}" loop autoplay="true" muted="muted">	
         @endif	
