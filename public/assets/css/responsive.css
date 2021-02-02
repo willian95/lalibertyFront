@@ -1,6 +1,11 @@
 @media (max-width: 767px) {}
 
 @media (min-width: 0px) and (max-width: 767px) {
+    .supah-scroll{
+        transform: none!important;
+        position: relative;
+        will-change: initial;
+    }
     .img-shoop {
 
         object-position: center;

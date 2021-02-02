@@ -26,7 +26,7 @@
                         <a class='nav-link animsition-link  ' href="{{ url('/fashion-merch') }}">FASHION MERCH</a>
                       </li>
                       <li class='nav-item '>
-                        <a class='nav-link animsition-link ' href="{{ url('/shop') }}">LIBERTY SHOP</a>
+                        <a class='nav-link animsition-link ' href="{{ url('/shop') }}">SHOP</a>
                       </li>
                       <li class='nav-item '>
                         <a class='nav-link animsition-link ' href="{{ url('/about') }}">ABOUT US</a>
