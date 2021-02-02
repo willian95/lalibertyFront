@@ -12,7 +12,7 @@
               </span>
             </button>
             <div class='offcanvas-collapse fil' id='navbarNav'>
-              <ul class='navbar-nav container'>
+              <ul class='navbar-nav '>
                 <div class="row">
                   <div class="col-md-12 flex-custom  mt-3">
                     <div class="menu-flex">
@@ -26,7 +26,7 @@
                         <a class='nav-link animsition-link  ' href="{{ url('/fashion-merch') }}">FASHION MERCH</a>
                       </li>
                       <li class='nav-item '>
-                        <a class='nav-link animsition-link ' href="{{ url('/shop') }}">LIBERTY SHOP</a>
+                        <a class='nav-link animsition-link ' href="{{ url('/shop') }}">SHOP</a>
                       </li>
                       <li class='nav-item '>
                         <a class='nav-link animsition-link ' href="{{ url('/about') }}">ABOUT US</a>

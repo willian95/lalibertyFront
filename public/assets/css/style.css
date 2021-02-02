@@ -117,7 +117,7 @@ Nav
 @media (max-width: 767px) {
     .offcanvas-collapse {
         position: fixed;
-        top: 56px;
+        top: 66px;
         /* Height of navbar */
         bottom: 0;
         width: 100%;
@@ -161,12 +161,14 @@ Nav
         height: 24px;
         display: inline-block;
         position: relative;
+        left: 35px;
     }
 
     .hamburger-inner {
         display: block;
         top: 50%;
         margin-top: -2px;
+        /*left: 30px;*/
     }
 
     .hamburger-inner,
@@ -200,7 +202,7 @@ Nav
         top: 5px;
         transition-duration: 0.275s;
         transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        right: 5px;
+        /*right: 5px;*/
     }
 
     .hamburger--elastic .hamburger-inner::before {
@@ -515,7 +517,7 @@ p {
 .card-transition:nth-child(3),
 .card-transition:nth-child(4),
 .card-transition:nth-child(6) {
- /*   transform: translate(0px, 55px);*/
+    /*   transform: translate(0px, 55px);*/
     transition: 2s;
 }
 
@@ -746,7 +748,9 @@ p {
 @media only screen and (max-width: 767px) {
     .timeline:before {
         left: 40px;
+        background: rgb(0 0 0 / 0%);
     }
+
 }
 
 .timeline-item {
@@ -810,7 +814,7 @@ p {
     .timeline-item {
         align-self: baseline !important;
         width: 100%;
-        padding: 0 30px 150px 80px;
+        padding: 0 24px 123px 24px;
     }
 
     .timeline-item:before {
@@ -1358,7 +1362,7 @@ div#galeria:hover img:hover {
 
 .redes-nav {
     position: absolute;
-    right: 0;
+    right: 15px;
     display: flex;
     bottom: 10px;
 }

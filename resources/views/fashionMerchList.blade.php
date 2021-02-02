@@ -61,6 +61,22 @@
             </div>
         </section>
     
-    </main>
+            <footer>
+                <div class="footer container mt-5 text-center">
 
+                    <p>All Rights Reserved @ 2020 - LЛ＊LIBERTУ</p>
+                </div>
+            </footer>
+    </main>
+<!-- partial -->
+<script src="assets/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js">
+</script>
+
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/nav.js"></script>
 </body>

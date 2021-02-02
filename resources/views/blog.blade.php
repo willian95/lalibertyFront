@@ -48,10 +48,12 @@
         </div>
     </section>
     <br><br><br><br><br>
+  <footer class="footer-estyle">
+        <div class="footer container mt-5 text-center">
 
-    <footer style="padding-bottom: 150px;">
-
-    </footer>
+          <p>All Rights Reserved @ 2020 - LЛ＊LIBERTУ</p>
+        </div>
+      </footer>
   </div>
 </div>
 <!-- partial -->
