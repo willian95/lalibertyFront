@@ -36,7 +36,7 @@
             <footer class="footer-estyle">
                 <div class="footer container mt-5 text-center">
 
-                    <p>All Rights Reserved @ 2020 - LЛ＊LIBERTУ</p>
+                    <p>All Rights Reserved @ 2021 - LЛ＊LIBERTУ</p>
                 </div>
             </footer>
         </main>
