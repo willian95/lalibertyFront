@@ -23,7 +23,7 @@
                                 @if($work->main_image_file_type == 'image')
                                     <img src="{{ $work->main_image }}" class="fashion-img" alt="imagen work">
                                 @else
-                                    <video  controls>
+                                    <video poster="https://www.laliberty.com.co/images/unnamed.jpg" controls>
                                         <source src="{{ $work->main_image }}" type="video/mp4">
                                     </video>
                                 @endif

@@ -80,7 +80,7 @@
         <img src="{{ $order->work->main_image }}" alt="imagen" style="{{ $style }}">	
         @else	
         @if($isMob)	
-        <video style="width: 100%;       {{ $style }}" controls >	
+        <video style="width: 100%;       {{ $style }}" controls poster="https://www.laliberty.com.co/images/unnamed.jpg">	
         @else	
         <video style="width: 100%;         {{ $style }}" loop autoplay="true" muted="muted">	
         @endif	
@@ -100,7 +100,7 @@
         <img class="img-miniatura" src="{{ $order->workImage->image }}" alt="imagen" style="{{ $style }}">	
         @else	
         @if($isMob)	
-        <video style="width: 100%; {{ $style }}" poster="https://www.laliberty.com.co/images/icons/icon-128x128.png" controls>	
+        <video style="width: 100%; {{ $style }}" poster="https://www.laliberty.com.co/images/unnamed.jpg" controls>	
         @else	
         <video style="width: 100%; {{ $style }}" loop autoplay="true" muted="muted">	
         @endif	
@@ -121,7 +121,7 @@
         <img src="{{ $order->product->image }}" alt="imagen" style="{{ $style }}">	
         @else	
         @if($isMob)	
-        <video style="width: 100%; {{ $style }}" poster="https://www.laliberty.com.co/images/icons/icon-128x128.png" controls>	
+        <video style="width: 100%; {{ $style }}" poster="https://www.laliberty.com.co/images/unnamed.jpg" controls>	
         @else	
         <video style="width: 100%; {{ $style }}" loop autoplay="true" muted="muted">	
         @endif	
@@ -142,7 +142,7 @@
         <img class="img-miniatura" src="{{ $order->productImage->image }}" alt="imagen" style="{{ $style }}">	
         @else	
         @if($isMob)	
-        <video style="width: 100%; {{ $style }}" poster="https://www.laliberty.com.co/images/icons/icon-128x128.png" controls>	
+        <video style="width: 100%; {{ $style }}" poster="https://www.laliberty.com.co/images/unnamed.jpg" controls>	
         @else	
         <video style="width: 100%; {{ $style }}" loop autoplay="true" muted="muted">	
         @endif	
@@ -163,7 +163,7 @@
         <img src="{{ $order->blog->image }}" alt="imagen" style="{{ $style }}">	
         @else	
         @if($isMob)	
-        <video style="width: 100%; {{ $style }}" poster="https://www.laliberty.com.co/images/icons/icon-128x128.png" controls>	
+        <video style="width: 100%; {{ $style }}" poster="https://www.laliberty.com.co/images/unnamed.jpg" controls>	
         @else	
         <video style="width: 100%; {{ $style }}" loop autoplay="true" muted="muted">	
         @endif	

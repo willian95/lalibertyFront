@@ -19,7 +19,7 @@
                             @if($fashionMerch->main_image_file_type == 'image')
                             <img class="cliente-img" src="{{ $fashionMerch->main_image }}" alt="">
                             @else
-                            <video controls>
+                            <video controls poster="https://www.laliberty.com.co/images/unnamed.jpg">
                                 <source src="{{ $fashionMerch->main_image }}" type="video/mp4">
                             </video>
                             @endif
@@ -40,7 +40,7 @@
                                     @if($workImage->file_type == "image")
                                     <img src="{{ $workImage->image }}" alt="">
                                     @else
-                                    <video controls>
+                                    <video controls poster="https://www.laliberty.com.co/images/unnamed.jpg">
                                         <source src="{{ $workImage->image }}" type="video/mp4">
                                     </video>
                                     @endif

@@ -163,7 +163,7 @@
                 @if($product->main_image_file_type == 'image')
                 <img src="{{ $product->image }}" alt="" />
                 @else
-                  <video style="width: 100%;" controls>
+                  <video style="width: 100%;" controls poster="https://www.laliberty.com.co/images/unnamed.jpg">
                     <source src="{{ $product->image }}" type="video/mp4">
                   </video>
                 @endif
@@ -277,7 +277,7 @@
                               <div class="carousel-inner" id="inner-carousel">
                                   <div class="carousel-item active"> 
                                     <img :src="product.image" alt="imagen de producto" v-if="product.main_image_file_type == 'image'"> 
-                                    <video style="width: 100%;" controls v-else>
+                                    <video style="width: 100%;" poster="https://www.laliberty.com.co/images/unnamed.jpg" controls v-else>
                                       <source :src="product.image" type="video/mp4">
                                     </video>
                                   </div>
