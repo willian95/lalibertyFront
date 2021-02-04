@@ -63,7 +63,8 @@ class SupahScroll {
   events() {
     window.addEventListener('load', this.update.bind(this));
     window.addEventListener('resize', this.update.bind(this));
-  }}
+  }
+}
 
 
 
@@ -72,8 +73,8 @@ class SupahScroll {
      ------------------------------*/
 const supahscroll = new SupahScroll({
   el: 'main',
-  speed: 0.1 });
+  speed: 0.1
+});
 
 
 
- 

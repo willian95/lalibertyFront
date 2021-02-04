@@ -1530,7 +1530,7 @@ div#galeria:hover img:hover {
 }
 
 .brand img {
-    width: 50%;
+    width: 38%;
 }
 
 .logo-xs {
@@ -1733,4 +1733,10 @@ a {
 
 .img-works video {
     width: auto;
+}
+
+.termins strong {
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    display: flex;
 }
