@@ -80,7 +80,7 @@
         <img src="{{ $order->work->main_image }}" alt="imagen" style="{{ $style }}">	
         @else	
         @if($isMob)	
-        <video style="width: 100%;       {{ $style }}" controls poster="https://www.laliberty.com.co/images/unnamed.jpg">	
+        <video style="width: 100%;       {{ $style }}" controls poster="{{ $order->poster }}">	
         @else	
         <video style="width: 100%;         {{ $style }}" loop autoplay="true" muted="muted">	
         @endif	
@@ -100,7 +100,7 @@
         <img class="img-miniatura" src="{{ $order->workImage->image }}" alt="imagen" style="{{ $style }}">	
         @else	
         @if($isMob)	
-        <video style="width: 100%; {{ $style }}" poster="https://www.laliberty.com.co/images/unnamed.jpg" controls>	
+        <video style="width: 100%; {{ $style }}" poster="{{ $order->poster }}" controls>	
         @else	
         <video style="width: 100%; {{ $style }}" loop autoplay="true" muted="muted">	
         @endif	
@@ -121,7 +121,7 @@
         <img src="{{ $order->product->image }}" alt="imagen" style="{{ $style }}">	
         @else	
         @if($isMob)	
-        <video style="width: 100%; {{ $style }}" poster="https://www.laliberty.com.co/images/unnamed.jpg" controls>	
+        <video style="width: 100%; {{ $style }}" poster="{{ $order->poster }}" controls>	
         @else	
         <video style="width: 100%; {{ $style }}" loop autoplay="true" muted="muted">	
         @endif	
@@ -142,7 +142,7 @@
         <img class="img-miniatura" src="{{ $order->productImage->image }}" alt="imagen" style="{{ $style }}">	
         @else	
         @if($isMob)	
-        <video style="width: 100%; {{ $style }}" poster="https://www.laliberty.com.co/images/unnamed.jpg" controls>	
+        <video style="width: 100%; {{ $style }}" poster="{{ $order->poster }}" controls>	
         @else	
         <video style="width: 100%; {{ $style }}" loop autoplay="true" muted="muted">	
         @endif	
@@ -163,7 +163,7 @@
         <img src="{{ $order->blog->image }}" alt="imagen" style="{{ $style }}">	
         @else	
         @if($isMob)	
-        <video style="width: 100%; {{ $style }}" poster="https://www.laliberty.com.co/images/unnamed.jpg" controls>	
+        <video style="width: 100%; {{ $style }}" poster="{{ $order->poster }}" controls>	
         @else	
         <video style="width: 100%; {{ $style }}" loop autoplay="true" muted="muted">	
         @endif	
