@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('coming');
-});
+});*/
 
-Route::get('/front-test', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
@@ -55,13 +55,6 @@ Route::get("/municipalities/{department_id}", "MunicipalityController@fetch");
 Route::get('/offline', function () {    
     return view('offline');
 });
-
-Route::get("/check-variables", function(){
-
-    echo env("PAYU_API_KEY");
-    echo env("PAYU_MERCHANT_ID");
-
-}); 
 
 //Route::get("/ping", "PaymentController@ping");
 
