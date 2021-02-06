@@ -56,6 +56,13 @@ Route::get('/offline', function () {
     return view('offline');
 });
 
+Route::get("/check-variables", function(){
+
+    echo env("PAYU_API_KEY");
+    echo env("PAYU_MERCHANT_ID");
+
+}); 
+
 //Route::get("/ping", "PaymentController@ping");
 
 //Route::get("/ping", "")
