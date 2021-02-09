@@ -100,18 +100,18 @@ class HomeController extends Controller
         if($order->work){
 
             $html = "<div class='$class grid-item'>";	
-                $html .="<a href='url('/works?work='.$order->work->slug)'>";	
+                $html .="<a href='".url('/works?work='.$order->work->slug)."'>";	
                         if($order->work->main_image_file_type == 'image'){
-                            $html .="<img src='$order->work->main_image' alt='imagen' style='$style'>";
+                            $html .="<img src='".$order->work->main_image."' alt='imagen' style='$style'>";
                         }
                         else{
 
                             if(intval($isMob) == 1){
-                                $html .="<video style='width: 100%; $style' controls poster='$order->poster'>";
+                                $html .="<video style='width: 100%; $style' controls poster='".$order->poster."'>";
                             }else{
                                 $html .="<video style='width: 100%; $style' loop autoplay='true' muted='muted'>";
                             }
-                                $html .="<source src='$order->work->main_image' type='video/mp4'>";	
+                                $html .="<source src='".$order->work->main_image."' type='video/mp4'>";	
                             $html .="</video>";
 
                         }       	
@@ -123,20 +123,20 @@ class HomeController extends Controller
 
             $html = "<div class='$class grid-item'>";
                 if($order->workImage->file_type == 'image'){
-                    $html .= "<a href='url('/works?work='.$order->workImage->work->slug)'>";
+                    $html .= "<a href='".url('/works?work='.$order->workImage->work->slug)."'>";
                 }else{
                     $html .= "<a>";
                 }
         
                 if($order->workImage->file_type == 'image'){
-                    $html .= "<img class='img-miniatura' src='$order->workImage->image' alt='imagen' style='$style'>";
+                    $html .= "<img class='img-miniatura' src='".$order->workImage->image."' alt='imagen' style='$style'>";
                 }else{
                     if(intval($isMob) == 1){
-                        $html .= "<video style='width: 100%; $style' poster='$order->poster' controls>";
+                        $html .= "<video style='width: 100%; $style' poster='".$order->poster."' controls>";
                     }else{
                         $html .= "<video style='width: 100%; $style' loop autoplay='true' muted='muted'>";
                     }	
-                        $html .= "<source src='$order->workImage->image' type='video/mp4'>";	
+                        $html .= "<source src='".$order->workImage->image."' type='video/mp4'>";	
                     $html .= "</video>";	
                 }
                     	

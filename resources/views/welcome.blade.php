@@ -30,7 +30,9 @@
       
     </div>
 
-  <button onclick="fetchContent()">loadMore</button>
+      <p>
+      <button onclick="fetchContent()">loadMore</button>
+      </p>
     </div>	
   </div>	<!---->
 
