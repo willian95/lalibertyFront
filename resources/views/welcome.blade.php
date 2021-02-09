@@ -67,7 +67,7 @@
 
         if(y_scroll_pos > scroll_pos_test) {
           if(loading == false){
-            console.log("target")
+            console.log("target", scroll_pos_test)
             fetchContent()
           }
         }
