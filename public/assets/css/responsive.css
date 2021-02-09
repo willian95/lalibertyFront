@@ -152,8 +152,9 @@
     }
 
     .brand-xs img {
-        width: 150px;
-        margin-left: 50px;
+      width: 180px;
+margin-left: 50px;
+margin-top: 20px;
     }
 
     .brand {

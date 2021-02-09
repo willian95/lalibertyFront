@@ -1740,3 +1740,6 @@ a {
     margin-top: 1.5rem;
     display: flex;
 }
+.footer p{
+    font-size: 14px;
+}
