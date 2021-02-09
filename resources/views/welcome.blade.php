@@ -65,6 +65,8 @@
         var y_scroll_pos = window.pageYOffset;
         var scroll_pos_test = element_position;
 
+        console.log("scroll", y_scroll_pos)
+
         if(y_scroll_pos > scroll_pos_test) {
           fetchContent()
         }
