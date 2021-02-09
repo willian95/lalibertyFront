@@ -30,8 +30,8 @@
       
     </div>
 
-      <p>
-        <button onclick="fetchContent()">loadMore</button>
+      <p id="scroll-to">
+        
       </p>
     </div>	
   </div>	<!---->
@@ -59,6 +59,17 @@
 
     var pages = 6, page = 2;
 
+    var element_position = ""
+
+    $(window).on('scroll', function() {
+        var y_scroll_pos = window.pageYOffset;
+        var scroll_pos_test = element_position;
+
+        if(y_scroll_pos > scroll_pos_test) {
+          fetchContent()
+        }
+    });
+
     function fetchContent(){
 
       $.get("{{ url('/fetch-content/') }}"+"/"+page+"/"+"{{ $isMob }}", function(res){
@@ -74,6 +85,10 @@
       })
 
     }
+
+    window.setInterval(() => {
+      element_position = $('#scroll-to').offset().top;
+    }, 1000)
 
   </script>
     
