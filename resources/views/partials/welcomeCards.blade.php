@@ -73,7 +73,7 @@
 
 
 
-@if($order->work)	
+    @if($order->work)	
     <div class="{{ $class }} grid-item">	
     <a href="{{ url('/works?work='.$order->work->slug) }}">	
         @if($order->work->main_image_file_type == 'image')	

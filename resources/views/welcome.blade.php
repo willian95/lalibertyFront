@@ -52,15 +52,15 @@
 
     var pages = 6, page = 2;
 
-      function fetchContent(){
+    function fetchContent(){
 
-        $.get("{{ url('/fetch-content/') }}"+"/"+page, function(res){
+      $.get("{{ url('/fetch-content/') }}"+"/"+page, function(res){
 
-          console.log("res", res)
+        console.log("res", res)
 
-        })
+      })
 
-      }
+    }
 
   </script>
     
