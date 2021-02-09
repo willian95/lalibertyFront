@@ -22,7 +22,7 @@ class HomeController extends Controller
             $loop++;
         }
 
-        return response()->json(["html" => $htmlContents]);
+        //return response()->json(["html" => $htmlContents]);
 
     }
 
