@@ -28,8 +28,6 @@ class HomeController extends Controller
 
     function welcomeCards($loop, $isMob, $order){
 
-        dump($loop);
-
         $class = "";
         $style = "";
         if($loop == 0){
