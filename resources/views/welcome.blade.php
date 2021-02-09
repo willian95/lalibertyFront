@@ -57,7 +57,7 @@
 
   <script>
 
-    var pages = 6, page = 2;
+    var pages = 6, page = 2, loading = false;
 
     var element_position = ""
 
@@ -68,14 +68,16 @@
         console.log("scroll", y_scroll_pos)
 
         if(y_scroll_pos > scroll_pos_test) {
-          fetchContent()
+          if(loading == false){
+            fetchContent()
+          }
         }
     });
 
     function fetchContent(){
-
+      loading = true
       $.get("{{ url('/fetch-content/') }}"+"/"+page+"/"+"{{ $isMob }}", function(res){
-
+        loading = false
         res.html.forEach((data) => {
 
           $("#home").append(data)
