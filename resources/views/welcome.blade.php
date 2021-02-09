@@ -66,7 +66,7 @@
         var scroll_pos_test = element_position - 400;
 
         if(y_scroll_pos > scroll_pos_test) {
-          if(loading == false){
+          if(loading == false && page <= 6){
             
             fetchContent()
           }
