@@ -14,7 +14,7 @@ class HomeController extends Controller
 
         $contents = HomeOrder::with("work", "workImage", "workImage.work", "product", "productImage", "productImage.product", "blog")->orderBy("order")->skip($skip)->take($dataAmount)->get();
 
-        $loop = $skip;
+        $loop = $skip + 1;
         $htmlContents = [];
         foreach($contents as $order){
             
