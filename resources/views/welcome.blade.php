@@ -74,7 +74,7 @@
     });
 
     function fetchContent(){
-      console.log("called")
+
       loading = true
       $.get("{{ url('/fetch-content/') }}"+"/"+page+"/"+"{{ $isMob }}", function(res){
         window.setTimeout(() => {
