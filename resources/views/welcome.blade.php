@@ -22,13 +22,10 @@
     @endforeach	
 
     <div id="home">
-      <div v-for="content in contents">
-
-      </div>
-
-      <button @click="fetchContent()">loadMore</button>
+      
     </div>
 
+  <button onclick="fetchContent()">loadMore</button>
     </div>	
   </div>	<!---->
 
@@ -51,35 +48,21 @@
 
 @push("scripts")
 
-    <script src="{{ url('js/app.js') }}"></script>
-    <script>
+  <script>
 
-      const home = new Vue({
-        el: '#home',
-        data() {
-          return {
-            pages:6,
-            page:2,
-            contents:[]
-          }
-        },
-        methods:{
+    var pages = 6, page = 2;
 
-          fetchContent(){
+      function fetchContent(){
 
-            axios.get("{{ url('fetch-content') }}"+"/"+page).then(res => {
+        $.get("{{ url('/fetch-content/') }}"+"/"+page, function(res){
 
-              console.log("res", res)
+          console.log("res", res)
 
-            })
+        })
 
-          }
+      }
 
-        }
-        
-      })
-    
-    </script>    
+  </script>
     
 
 @endpush
