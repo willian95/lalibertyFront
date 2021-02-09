@@ -65,8 +65,6 @@
         var y_scroll_pos = window.pageYOffset;
         var scroll_pos_test = element_position;
 
-        console.log("scroll", y_scroll_pos)
-
         if(y_scroll_pos > scroll_pos_test) {
           if(loading == false){
             fetchContent()
@@ -77,7 +75,9 @@
     function fetchContent(){
       loading = true
       $.get("{{ url('/fetch-content/') }}"+"/"+page+"/"+"{{ $isMob }}", function(res){
-        loading = false
+        window.setTimeout(() => {
+          loading = false
+        }, 2000);
         res.html.forEach((data) => {
 
           $("#home").append(data)
