@@ -17,16 +17,16 @@
 
   <div class="container">	
     <div class="row">	
-    @foreach(App\HomeOrder::with("work", "workImage", "workImage.work", "product", "productImage", "productImage.product", "blog")->orderBy("order")->take(4)->get() as $order)	
+      @foreach(App\HomeOrder::with("work", "workImage", "workImage.work", "product", "productImage", "productImage.product", "blog")->orderBy("order")->take(4)->get() as $order)	
 
-      
-      @include("partials.welcomeCards", ["order" => $order, "loop" => $loop, "isMob" => $isMob])
-          
+        
+        @include("partials.welcomeCards", ["order" => $order, "loop" => $loop, "isMob" => $isMob])
+            
 
 
-    @endforeach	
-
-    <div id="home">
+      @endforeach	
+    </div>
+    <div id="home" class="row">
       
     </div>
 
