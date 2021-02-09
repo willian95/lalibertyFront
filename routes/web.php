@@ -21,7 +21,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get("/fetch-content/{page}", "HomeController@fetchContent");
+Route::get("/fetch-content/{page}/{isMob}", "HomeController@fetchContent");
 
 Route::get("/shop", "ShopController@index");
 

@@ -5,6 +5,11 @@
 @php	
   $ua = strtolower($_SERVER['HTTP_USER_AGENT']);	
   $isMob = is_numeric(strpos($ua, "mobile"));	
+
+  if($isMob == ""){
+    $isMob = 0;
+  }
+
 @endphp	
 
 <section class="mt-5 mb-5" >	
@@ -54,9 +59,15 @@
 
     function fetchContent(){
 
-      $.get("{{ url('/fetch-content/') }}"+"/"+page, function(res){
+      $.get("{{ url('/fetch-content/') }}"+"/"+page+"/"+"{{ $isMob }}", function(res){
 
-        console.log("res", res)
+        res.html.forEach((data) => {
+
+          $("#home").append(data)
+
+        })
+
+        page++
 
       })
 

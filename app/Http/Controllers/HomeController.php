@@ -15,13 +15,14 @@ class HomeController extends Controller
         $contents = HomeOrder::with("work", "workImage", "workImage.work", "product", "productImage", "productImage.product", "blog")->orderBy("order")->skip($skip)->take($dataAmount)->get();
 
         $loop = $skip;
-        foreach($content as $order){
+        $htmlContents = [];
+        foreach($contents as $order){
             
-            dump($this->welcomeCards($loop, $isMob, $order));
+            array_push($htmlContents, $this->welcomeCards($loop, $isMob, $order));
             $loop++;
         }
 
-        //return response()->json(["content" => $content]);
+        return response()->json(["html" => $htmlContents]);
 
     }
 
@@ -95,7 +96,7 @@ class HomeController extends Controller
             $class ="col-md-4 col-lg-4";
         }
     
-    
+       
         if($order->work){
 
             $html = "<div class='$class grid-item'>";	
@@ -105,7 +106,7 @@ class HomeController extends Controller
                         }
                         else{
 
-                            if($isMob){
+                            if(intval($isMob) == 1){
                                 $html .="<video style='width: 100%; $style' controls poster='$order->poster'>";
                             }else{
                                 $html .="<video style='width: 100%; $style' loop autoplay='true' muted='muted'>";
@@ -118,6 +119,33 @@ class HomeController extends Controller
                     $html .="</div>";	
 
         }
+        else if($order->workImage){
+
+            $html = "<div class='$class grid-item'>";
+                if($order->workImage->file_type == 'image'){
+                    $html .= "<a href='url('/works?work='.$order->workImage->work->slug)'>";
+                }else{
+                    $html .= "<a>";
+                }
+        
+                if($order->workImage->file_type == 'image'){
+                    $html .= "<img class='img-miniatura' src='$order->workImage->image' alt='imagen' style='$style'>";
+                }else{
+                    if(intval($isMob) == 1){
+                        $html .= "<video style='width: 100%; $style' poster='$order->poster' controls>";
+                    }else{
+                        $html .= "<video style='width: 100%; $style' loop autoplay='true' muted='muted'>";
+                    }	
+                        $html .= "<source src='$order->workImage->image' type='video/mp4'>";	
+                    $html .= "</video>";	
+                }
+                    	
+                $html .= "</a>";	
+            $html .="</div>";
+
+
+        }
+    
 
         return $html;
     
