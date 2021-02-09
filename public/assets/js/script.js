@@ -71,10 +71,10 @@ class SupahScroll {
 /*------------------------------
      Initialize
      ------------------------------*/
-const supahscroll = new SupahScroll({
+/*const supahscroll = new SupahScroll({
   el: 'main',
   speed: 0.1
-});
+});*/
 
 
 

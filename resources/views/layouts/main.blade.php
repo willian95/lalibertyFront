@@ -60,9 +60,9 @@
 
     <script src="{{ url('assets/js/animsition.min.js') }}"></script>
     <script>
-        /*$(document).ready(function () {
+        $(document).ready(function () {
             $('.animsition').animsition();
-        });*/
+        });
         $('.css-1tmxu1x').html("Venta");
 
     </script>

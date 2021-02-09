@@ -31,7 +31,7 @@
     </div>
 
       <p>
-      <button onclick="fetchContent()">loadMore</button>
+        <button onclick="fetchContent()">loadMore</button>
       </p>
     </div>	
   </div>	<!---->
