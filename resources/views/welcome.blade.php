@@ -7,23 +7,32 @@
   $isMob = is_numeric(strpos($ua, "mobile"));	
 @endphp	
 
-<section class="mt-5 mb-5">	
+<section class="mt-5 mb-5" >	
         <!------data-scroll-------->	
 
-        <div class="container">	
-          <div class="row">	
-          @foreach(App\HomeOrder::with("work", "workImage", "workImage.work", "product", "productImage", "productImage.product", "blog")->orderBy("order")->take(4)->get() as $order)	
+  <div class="container">	
+    <div class="row">	
+    @foreach(App\HomeOrder::with("work", "workImage", "workImage.work", "product", "productImage", "productImage.product", "blog")->orderBy("order")->take(4)->get() as $order)	
 
-           
-            @include("partials.welcomeCards", ["order" => $order, "loop" => $loop, "isMob" => $isMob])
-              	
+      
+      @include("partials.welcomeCards", ["order" => $order, "loop" => $loop, "isMob" => $isMob])
+          
 
 
-          @endforeach	
-          </div>	
-        </div>	<!---->
+    @endforeach	
 
-      </section>	
+    <div id="home">
+      <div v-for="content in contents">
+
+      </div>
+
+      <button @click="fetchContent()">loadMore</button>
+    </div>
+
+    </div>	
+  </div>	<!---->
+
+</section>	
 
 
       <section class="container">	
@@ -39,3 +48,38 @@
       </section>	
 
 @endsection 
+
+@push("scripts")
+
+    <script src="{{ url('js/app.js') }}"></script>
+    <script>
+
+      const home = new Vue({
+        el: '#home',
+        data() {
+          return {
+            pages:6,
+            page:2,
+            contents:[]
+          }
+        },
+        methods:{
+
+          fetchContent(){
+
+            axios.get("{{ url('fetch-content') }}"+"/"+page).then(res => {
+
+              console.log("res", res)
+
+            })
+
+          }
+
+        }
+        
+      })
+    
+    </script>    
+    
+
+@endpush

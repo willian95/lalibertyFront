@@ -67,6 +67,8 @@
 
     </script>
 
+    @stack("scripts")
+
     <!-- Modal -->
     <div class="modal fade" id="terminos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
