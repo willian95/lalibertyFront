@@ -63,7 +63,7 @@
 
     $(window).on('scroll', function() {
         var y_scroll_pos = window.pageYOffset;
-        var scroll_pos_test = element_position - 200;
+        var scroll_pos_test = element_position - 400;
 
         if(y_scroll_pos > scroll_pos_test) {
           if(loading == false){
