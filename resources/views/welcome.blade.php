@@ -63,11 +63,13 @@
 
     $(window).on('scroll', function() {
         var y_scroll_pos = window.pageYOffset;
-        var scroll_pos_test = element_position;
+        var scroll_pos_test = element_position - 400;
+
+        console.log(scroll_pos)
 
         if(y_scroll_pos > scroll_pos_test) {
           if(loading == false){
-            console.log("target", scroll_pos_test)
+            
             fetchContent()
           }
         }
