@@ -67,12 +67,14 @@
 
         if(y_scroll_pos > scroll_pos_test) {
           if(loading == false){
+            console.log("target")
             fetchContent()
           }
         }
     });
 
     function fetchContent(){
+      console.log("called")
       loading = true
       $.get("{{ url('/fetch-content/') }}"+"/"+page+"/"+"{{ $isMob }}", function(res){
         window.setTimeout(() => {
