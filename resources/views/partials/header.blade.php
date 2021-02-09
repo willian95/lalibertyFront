@@ -17,7 +17,7 @@
                   <div class="col-md-12 flex-custom  mt-3">
                     <div class="menu-flex">
                       <li class='nav-item  '>
-                        <a class='nav-link animsition-link  nav-link-black ' href="{{ url('/front-test') }}">HOME</a>
+                        <a class='nav-link animsition-link  nav-link-black ' href="{{ url('/') }}">HOME</a>
                       </li>
                       <li class='nav-item  '>
                         <a class='nav-link animsition-link  nav-link-black ' href="{{ url('/works') }}">WORK</a>
