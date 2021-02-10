@@ -36,7 +36,9 @@
             <footer class="footer-estyle">
                 <div class="footer container mt-5 text-center">
 
-                    <p>All Rights Reserved @ 2020 - LЛ＊LIBERTУ - <a data-toggle="modal" data-target="#terminos">Terms &
+                    <p>All Rights Reserved @  <script>
+                        document.write(new Date().getFullYear());
+                    </script> - LЛ＊LIBERTУ - <a data-toggle="modal" data-target="#terminos">Terms &
                     Conditions</a></p>
                 </div>
             </footer>
