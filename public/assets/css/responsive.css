@@ -109,7 +109,8 @@
 
     .grid-item img {
         width: 100%;
-        height: auto;
+        height: auto!important;
+        margin: 0!important;
     }
 
     .navbar-expand-md .navbar-nav .nav-link {
@@ -153,71 +154,72 @@
 
     .brand-xs img {
       width: 180px;
-margin-left: 50px;
-margin-top: 20px;
-    }
+      margin-left: 50px;
+      margin-top: 20px;
+  }
 
-    .brand {
-        display: none;
-    }
+  .brand {
+    display: none;
+}
 
-    .m-155 {
-        margin: 0;
-    }
+.m-155 {
+    margin: 0;
+}
 
-    .flex-content {
+.flex-content {
 
-        flex-direction: column;
-    }
+    flex-direction: column;
+}
 
-    .ml-5,
-    .mx-5 {
-        margin-left: 0rem !important;
-    }
+.ml-5,
+.mx-5 {
+    margin-left: 0rem !important;
+}
 
-    .navbar-expand-md .navbar-nav .nav-link {
+.navbar-expand-md .navbar-nav .nav-link {
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    .mr-5,
-    .mx-5 {
-        margin-right: 0rem !important;
-    }
+.mr-5,
+.mx-5 {
+    margin-right: 0rem !important;
+}
 
-    [class^="flaticon-"]:before,
-    [class*=" flaticon-"]:before,
-    [class^="flaticon-"]:after,
-    [class*=" flaticon-"]:after {
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
 
-        margin-left: 0;
-    }
+    margin-left: 0;
+}
 
-    .main-banner_text ul {
+.main-banner_text ul {
 
-        flex-direction: column;
-    }
+    flex-direction: column;
+}
 
-    .main-banner_text li {
-        margin-bottom: 10px;
-    }
+.main-banner_text li {
+    margin-bottom: 10px;
+}
 
-    .main_pagos ul {
+.main_pagos ul {
 
-        flex-direction: column;
-        padding: 0;
-    }
+    flex-direction: column;
+    padding: 0;
+}
 
-    .logoxs {
-        display: flex !important;
-    }
+.logoxs {
+    display: flex !important;
+}
 
-    video {
-        width: 100% !important;
-        height: 100%;
-    }
+video {
+    width: 100% !important;
+    height: 100%;
+    margin: 0!important;
+}
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -322,6 +324,6 @@ margin-top: 20px;
 @media (min-width:2560px) {
 
     .brand img {
-    width: 20%;
-}
+        width: 20%;
+    }
 }
