@@ -2,6 +2,14 @@
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
+    .fashion-new{
+        margin-top: 4rem;
+    }
+    .fashion-img {
+        height: auto;
+        object-fit: contain;
+        width: 100%;
+    }
     .supah-scroll {
         transform: none !important;
         position: relative;
@@ -95,6 +103,7 @@
 
     .grid-item {
         margin-bottom: 6rem;
+        margin-top: 4rem;
     }
 
     .grid-item img {
@@ -304,7 +313,7 @@
     .brand img {
         width: 20%;
     }
-}*/
+    }*/
 
 
 
