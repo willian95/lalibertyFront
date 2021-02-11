@@ -17,56 +17,8 @@ $(".nav-link").click(function () {
 });
 
 
-/*
 
-$('.slider-for').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: false,
-  fade: true,
-  adaptiveHeight: true,
-  asNavFor: '.slider-nav'
-});
-$('.slider-nav').slick({
-  slidesToShow: 5,
-  slidesToScroll: 1,
-  adaptiveHeight: true,
-  asNavFor: '.slider-for',
-  dots: true,
-  arrows: true,
-  autoplay:false,
-  focusOnSelect: true,
-  responsive: [{
-    breakpoint: 1200,
-    settings: {
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      infinite: true,
-      dots: false
-    }
-  },
-  {
-    breakpoint: 900,
-    settings: {
-      slidesToShow: 2,
-      slidesToScroll: 1
-    }
-  },
-  {
-    breakpoint: 600,
-    settings: {
-      slidesToShow: 2,
-      slidesToScroll: 1,
-      dots: false,
-      arrows: false,
-
-    }
-  }
-  ]
-});
-*/
-
-/***************card product************ */
+/***************card product************
 let title = $('#effect-title').offset();
 let imgfix = $('.img-fix').offset();
 let efecto = $('.card-transition').offset();
@@ -84,7 +36,7 @@ $(window).scroll(function () {
   } else {
     $(".img-fix").removeClass("efect-title");
     $(".card-transition").removeClass("efect-none");
-  }
+  } */
 
 
-});
+
