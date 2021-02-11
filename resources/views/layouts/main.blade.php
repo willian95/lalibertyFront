@@ -55,7 +55,7 @@
     </script>
 
     <script src="{{ url('assets/js/slick.min.js') }}"></script>
-    <!--<script src="{{ url('assets/js/nav.js') }}"></script>-->
+    <script src="{{ url('assets/js/nav.js') }}"></script>
 
 
     <script src="{{ url('assets/js/animsition.min.js') }}"></script>
@@ -63,7 +63,7 @@
         $(document).ready(function () {
             $('.animsition').animsition();
         });
-        $('.css-1tmxu1x').html("Venta");
+
 
     </script>
 

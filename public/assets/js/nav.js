@@ -17,7 +17,7 @@ $(".nav-link").click(function () {
 });
 
 
-
+/*
 
 $('.slider-for').slick({
   slidesToShow: 1,
@@ -64,7 +64,7 @@ $('.slider-nav').slick({
   }
   ]
 });
-
+*/
 
 /***************card product************ */
 let title = $('#effect-title').offset();

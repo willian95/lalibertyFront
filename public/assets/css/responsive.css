@@ -1,13 +1,13 @@
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+}
 
 @media (min-width: 0px) and (max-width: 767px) {
-    .supah-scroll{
-        transform: none!important;
+    .supah-scroll {
+        transform: none !important;
         position: relative;
         will-change: initial;
     }
     .img-shoop {
-
         object-position: center;
     }
 
@@ -31,7 +31,6 @@
     }
 
     .item-product ul {
-
         grid-template-columns: 1fr;
         position: relative;
     }
@@ -42,15 +41,11 @@
     }
 
     .item-product li {
-
         flex-direction: unset;
         justify-content: unset;
-
     }
 
-
     .descripcion-produtc {
-
         margin: 17px 0px;
     }
 
@@ -61,7 +56,6 @@
 
     .content-blog img {
         height: auto;
-
     }
 
     .timeline__img {
@@ -80,7 +74,6 @@
 
     .cliente-img {
         height: auto;
-
     }
 
     .logo-xs {
@@ -92,29 +85,25 @@
     }
 
     .card-effect {
-
         margin: 0px;
     }
 
     .person {
-
         display: block;
         padding: 0;
     }
 
     .grid-item {
-
         margin-bottom: 6rem;
     }
 
     .grid-item img {
         width: 100%;
-        height: auto!important;
-        margin: 0!important;
+        height: auto !important;
+        margin: 0 !important;
     }
 
     .navbar-expand-md .navbar-nav .nav-link {
-
         padding-left: 0;
     }
 
@@ -128,7 +117,6 @@
 
     .menu-flex {
         display: block;
-
     }
 
     .navbar-nav .flex-custom {
@@ -140,7 +128,6 @@
     }
 
     .elipse img {
-
         width: 80% !important;
         margin-left: 5rem !important;
         margin-top: 5rem !important;
@@ -153,73 +140,68 @@
     }
 
     .brand-xs img {
-      width: 180px;
-      margin-left: 50px;
-      margin-top: 20px;
-  }
+        width: 90%;
+        margin-left: 25px;
+        margin-top: 20px;
+    }
 
-  .brand {
-    display: none;
-}
+    .brand {
+        display: none;
+    }
 
-.m-155 {
-    margin: 0;
-}
+    .m-155 {
+        margin: 0;
+    }
 
-.flex-content {
+    .flex-content {
+        flex-direction: column;
+    }
 
-    flex-direction: column;
-}
+    .ml-5,
+    .mx-5 {
+        margin-left: 0rem !important;
+    }
 
-.ml-5,
-.mx-5 {
-    margin-left: 0rem !important;
-}
+    .navbar-expand-md .navbar-nav .nav-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.navbar-expand-md .navbar-nav .nav-link {
+    .mr-5,
+    .mx-5 {
+        margin-right: 0rem !important;
+    }
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    [class^="flaticon-"]:before,
+    [class*=" flaticon-"]:before,
+    [class^="flaticon-"]:after,
+    [class*=" flaticon-"]:after {
+        margin-left: 0;
+    }
 
-.mr-5,
-.mx-5 {
-    margin-right: 0rem !important;
-}
+    .main-banner_text ul {
+        flex-direction: column;
+    }
 
-[class^="flaticon-"]:before,
-[class*=" flaticon-"]:before,
-[class^="flaticon-"]:after,
-[class*=" flaticon-"]:after {
+    .main-banner_text li {
+        margin-bottom: 10px;
+    }
 
-    margin-left: 0;
-}
+    .main_pagos ul {
+        flex-direction: column;
+        padding: 0;
+    }
 
-.main-banner_text ul {
+    .logoxs {
+        display: flex !important;
+    }
 
-    flex-direction: column;
-}
-
-.main-banner_text li {
-    margin-bottom: 10px;
-}
-
-.main_pagos ul {
-
-    flex-direction: column;
-    padding: 0;
-}
-
-.logoxs {
-    display: flex !important;
-}
-
-video {
-    width: 100% !important;
-    height: 100%;
-    margin: 0!important;
-}
+    video {
+        width: 100% !important;
+        height: 100%;
+        margin: 0 !important;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -232,7 +214,8 @@ video {
     }
 }
 
-@media (min-width: 1440px) and (max-width: 1199px) {}
+@media (min-width: 1440px) and (max-width: 1199px) {
+}
 
 @media (min-width: 768px) and (max-width: 991px) {
     .offcanvas-collapse {
@@ -270,7 +253,6 @@ video {
     }
 
     .flex-content {
-
         flex-direction: column;
     }
 
@@ -280,7 +262,6 @@ video {
     }
 
     .navbar-expand-md .navbar-nav .nav-link {
-
         display: flex;
         justify-content: center;
         align-items: center;
@@ -295,17 +276,14 @@ video {
     [class*=" flaticon-"]:before,
     [class^="flaticon-"]:after,
     [class*=" flaticon-"]:after {
-
         margin-left: 0;
     }
-
 
     .main-banner_text li {
         margin-bottom: 10px;
     }
 
     .main_pagos ul {
-
         flex-direction: column;
         padding: 0;
     }
@@ -321,9 +299,14 @@ video {
         border-radius: 10px;
     }
 }
-@media (min-width:2560px) {
-
+/*
+@media (min-width: 2560px) {
     .brand img {
         width: 20%;
     }
-}
+}*/
+
+
+
+
+
