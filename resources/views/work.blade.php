@@ -19,8 +19,8 @@
                             @if($work->main_image_file_type == 'image')
                                 <img class="cliente-img" src="{{ $work->main_image }}" alt="">
                             @else
-                                <video poster="https://www.laliberty.com.co/images/unnamed.jpg"  controls>
-                                    <source src="{{ $work->main_image }}" type="video/mp4">
+                                <video controls>
+                                    <source src="{{ $work->main_image }}#t=0.5" type="video/mp4">
                                 </video>
                             @endif
                         </div>
@@ -42,8 +42,8 @@
                                             src="{{ $workImage->image }}"
                                             alt="">     
                                             @else
-                                                <video poster="https://www.laliberty.com.co/images/unnamed.jpg"  controls>
-                                                    <source src="{{ $workImage->image }}" type="video/mp4">
+                                                <video  controls>
+                                                    <source src="{{ $workImage->image }}#t=0.5" type="video/mp4">
                                                 </video>
                                             @endif                                                                                    
                                         </div>
