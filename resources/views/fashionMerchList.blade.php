@@ -39,8 +39,8 @@
                             @if($merch->main_image_file_type == 'image')
                             <img src="{{ $merch->main_image }}" class="fashion-img" alt="imagen work">
                             @else
-                            <video  controls poster="https://www.laliberty.com.co/images/unnamed.jpg">
-                                <source src="{{ $merch->main_image }}" type="video/mp4">
+                            <video  controls>
+                                <source src="{{ $merch->main_image }}#t=0.5" type="video/mp4">
                                 </video>
                                 @endif
                                 

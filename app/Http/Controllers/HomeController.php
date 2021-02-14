@@ -146,6 +146,86 @@ class HomeController extends Controller
 
         }
 
+        else if($order->product){
+
+            $html = "<div class='$class grid-item'>";
+            if($order->product->main_image_file_type == 'image'){
+                $html .= "<a href='".url('/shop')."'>";
+            }else{
+                $html .= "<a>";
+            }
+            
+            if($order->product->main_image_file_type == 'image'){
+                $html .= "<img class='img-miniatura' src='".$order->product->image."' alt='imagen' style='$style'>";
+            }else{
+                if(intval($isMob) == 1){
+                    $html .= "<video style='width: 100%; $style' poster='".$order->poster."' controls>";
+                }else{
+                    $html .= "<video style='width: 100%; $style' loop autoplay='true' muted='muted'>";
+                }	
+                $html .= "<source src='".$order->product->image."' type='video/mp4'>";	
+                $html .= "</video>";	
+            }
+            
+            $html .= "</a>";	
+            $html .="</div>";
+
+
+        }
+        else if($order->productImage){
+
+            $html = "<div class='$class grid-item'>";
+            if($order->productImage->file_type == 'image'){
+                $html .= "<a href='".url('/shop')."'>";
+            }else{
+                $html .= "<a>";
+            }
+            
+            if($order->productImage->file_type == 'image'){
+                $html .= "<img class='img-miniatura' src='".$order->productImage->image."' alt='imagen' style='$style'>";
+            }else{
+                if(intval($isMob) == 1){
+                    $html .= "<video style='width: 100%; $style' poster='".$order->poster."' controls>";
+                }else{
+                    $html .= "<video style='width: 100%; $style' loop autoplay='true' muted='muted'>";
+                }	
+                $html .= "<source src='".$order->productImage->image."' type='video/mp4'>";	
+                $html .= "</video>";	
+            }
+            
+            $html .= "</a>";	
+            $html .="</div>";
+
+
+        }
+
+        else if($order->blog){
+
+            $html = "<div class='$class grid-item'>";
+            if($order->blog->main_image_file_type == 'image'){
+                $html .= "<a href='".url('/blog/'.$order->blog->slug)."'>";
+            }else{
+                $html .= "<a>";
+            }
+            
+            if($order->blog->main_image_file_type == 'image'){
+                $html .= "<img class='img-miniatura' src='".$order->blog->image."' alt='imagen' style='$style'>";
+            }else{
+                if(intval($isMob) == 1){
+                    $html .= "<video style='width: 100%; $style' poster='".$order->poster."' controls>";
+                }else{
+                    $html .= "<video style='width: 100%; $style' loop autoplay='true' muted='muted'>";
+                }	
+                $html .= "<source src='".$order->blog->image."' type='video/mp4'>";	
+                $html .= "</video>";	
+            }
+            
+            $html .= "</a>";	
+            $html .="</div>";
+
+
+        }
+        
 
         return $html;
 

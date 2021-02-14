@@ -133,7 +133,7 @@ $class ="col-md-4 col-lg-4";
                                 </div>	
                                 @elseif($order->productImage)	
                                 <div class="{{ $class }} grid-item"><!-- imagenes secundarias -->	
-                                    @if($order->product->main_image_file_type == 'image')
+                                    @if($order->productImage->file_type == 'image')
                                     <a href="{{ url('/shop') }}">	
                                         @else
                                         <a>
@@ -154,7 +154,7 @@ $class ="col-md-4 col-lg-4";
                                             </div>	
                                             @elseif($order->blog)	
                                             <div class="{{ $class }} grid-item">
-                                                @if($order->product->main_image_file_type == 'image')	
+                                                @if($order->blog->main_image_file_type == 'image')	
                                                 <a href="{{ url('/blog/'.$order->blog->slug) }}">
                                                     @else
                                                     <a>

@@ -31,8 +31,8 @@
                     @if($blog->main_image_file_type == 'image')
                     <img class="timeline__img" src="{{ $blog->image }}" />
                     @else
-                    <video style="width: 100%;" controls poster="https://www.laliberty.com.co/images/unnamed.jpg">
-                      <source src="{{ $blog->image }}" type="video/mp4">
+                    <video style="width: 100%;" controls>
+                      <source src="{{ $blog->image }}#t=0.5" type="video/mp4">
                       </video>
                       @endif
 
