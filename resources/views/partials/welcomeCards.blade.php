@@ -80,11 +80,11 @@ $class ="col-md-4 col-lg-4";
         <img src="{{ $order->work->main_image }}" alt="imagen" style="{{ $style }}">	
         @else	
         @if($isMob)	
-        <video style="width: 100%;       {{ $style }}" controls poster="{{ $order->poster }}">	
+        <video style="width: 100%;       {{ $style }}" controls>	
             @else	
             <video style="width: 100%;         {{ $style }}" loop autoplay="true" muted="muted">	
                 @endif	
-                <source src="{{ $order->work->main_image }}" type="video/mp4">	
+                <source src="{{ $order->work->main_image }}#t=0.5" type="video/mp4">	
                 </video>	
                 @endif		
             </a>	
@@ -100,11 +100,11 @@ $class ="col-md-4 col-lg-4";
                     <img class="img-miniatura" src="{{ $order->workImage->image }}" alt="imagen" style="{{ $style }}">	
                     @else	
                     @if($isMob)	
-                    <video style="width: 100%; {{ $style }}" poster="{{ $order->poster }}" controls>	
+                    <video style="width: 100%; {{ $style }}" controls>	
                         @else	
                         <video style="width: 100%; {{ $style }}" loop autoplay="true" muted="muted">	
                             @endif	
-                            <source src="{{ $order->workImage->image }}" type="video/mp4">	
+                            <source src="{{ $order->workImage->image }}#t=0.5" type="video/mp4">	
                             </video>	
                             @endif	
 
@@ -121,11 +121,11 @@ $class ="col-md-4 col-lg-4";
                                 <img src="{{ $order->product->image }}" alt="imagen" style="{{ $style }}">	
                                 @else	
                                 @if($isMob)	
-                                <video style="width: 100%; {{ $style }}" poster="{{ $order->poster }}" controls>	
+                                <video style="width: 100%; {{ $style }}" controls>	
                                     @else	
                                     <video style="width: 100%; {{ $style }}" loop autoplay="true" muted="muted">	
                                         @endif	
-                                        <source src="{{ $order->product->image }}" type="video/mp4">	
+                                        <source src="{{ $order->product->image }}#t=0.5" type="video/mp4">	
                                         </video>	
                                         @endif	
 
@@ -142,11 +142,11 @@ $class ="col-md-4 col-lg-4";
                                             <img class="img-miniatura" src="{{ $order->productImage->image }}" alt="imagen" style="{{ $style }}">	
                                             @else	
                                             @if($isMob)	
-                                            <video style="width: 100%; {{ $style }}" poster="{{ $order->poster }}" controls>	
+                                            <video style="width: 100%; {{ $style }}" controls>	
                                                 @else	
                                                 <video style="width: 100%; {{ $style }}" loop autoplay="true" muted="muted">	
                                                     @endif	
-                                                    <source src="{{ $order->productImage->image }}" type="video/mp4">	
+                                                    <source src="{{ $order->productImage->image }}#t=0.5" type="video/mp4">	
                                                     </video>	
                                                     @endif	
 
@@ -163,11 +163,11 @@ $class ="col-md-4 col-lg-4";
                                                         <img src="{{ $order->blog->image }}" alt="imagen" style="{{ $style }}">	
                                                         @else	
                                                         @if($isMob)	
-                                                        <video style="width: 100%; {{ $style }}" poster="{{ $order->poster }}" controls>	
+                                                        <video style="width: 100%; {{ $style }}" controls>	
                                                             @else	
                                                             <video style="width: 100%; {{ $style }}" loop autoplay="true" muted="muted">	
                                                                 @endif	
-                                                                <source src="{{ $order->blog->image }}" type="video/mp4">	
+                                                                <source src="{{ $order->blog->image }}#t=0.5" type="video/mp4">	
                                                                 </video>	
                                                                 @endif	
 

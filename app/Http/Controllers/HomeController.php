@@ -107,11 +107,11 @@ class HomeController extends Controller
                         else{
 
                             if(intval($isMob) == 1){
-                                $html .="<video style='width: 100%; $style' controls poster='".$order->poster."'>";
+                                $html .="<video style='width: 100%; $style' controls>";
                             }else{
                                 $html .="<video style='width: 100%; $style' loop autoplay='true' muted='muted'>";
                             }
-                                $html .="<source src='".$order->work->main_image."' type='video/mp4'>";	
+                                $html .="<source src='".$order->work->main_image."#t=0.5' type='video/mp4'>";	
                             $html .="</video>";
 
                         }       	
@@ -132,11 +132,11 @@ class HomeController extends Controller
                     $html .= "<img class='img-miniatura' src='".$order->workImage->image."' alt='imagen' style='$style'>";
                 }else{
                     if(intval($isMob) == 1){
-                        $html .= "<video style='width: 100%; $style' poster='".$order->poster."' controls>";
+                        $html .= "<video style='width: 100%; $style' controls>";
                     }else{
                         $html .= "<video style='width: 100%; $style' loop autoplay='true' muted='muted'>";
                     }	
-                        $html .= "<source src='".$order->workImage->image."' type='video/mp4'>";	
+                        $html .= "<source src='".$order->workImage->image."#t=0.5' type='video/mp4'>";	
                     $html .= "</video>";	
                 }
                     	
@@ -158,11 +158,11 @@ class HomeController extends Controller
                     $html .= "<img class='img-miniatura' src='".$order->product->image."' alt='imagen' style='$style'>";
                 }else{
                     if(intval($isMob) == 1){
-                        $html .= "<video style='width: 100%; $style' poster='".$order->poster."' controls>";
+                        $html .= "<video style='width: 100%; $style' controls>";
                     }else{
                         $html .= "<video style='width: 100%; $style' loop autoplay='true' muted='muted'>";
                     }	
-                        $html .= "<source src='".$order->product->image."' type='video/mp4'>";	
+                        $html .= "<source src='".$order->product->image."#t=0.5' type='video/mp4'>";	
                     $html .= "</video>";	
                 }
                     	
@@ -184,11 +184,11 @@ class HomeController extends Controller
                     $html .= "<img class='img-miniatura' src='".$order->productImage->image."' alt='imagen' style='$style'>";
                 }else{
                     if(intval($isMob) == 1){
-                        $html .= "<video style='width: 100%; $style' poster='".$order->poster."' controls>";
+                        $html .= "<video style='width: 100%; $style' controls>";
                     }else{
                         $html .= "<video style='width: 100%; $style' loop autoplay='true' muted='muted'>";
                     }	
-                        $html .= "<source src='".$order->productImage->image."' type='video/mp4'>";	
+                        $html .= "<source src='".$order->productImage->image."#t=0.5' type='video/mp4'>";	
                     $html .= "</video>";	
                 }
                     	
@@ -211,11 +211,11 @@ class HomeController extends Controller
                     $html .= "<img class='img-miniatura' src='".$order->blog->image."' alt='imagen' style='$style'>";
                 }else{
                     if(intval($isMob) == 1){
-                        $html .= "<video style='width: 100%; $style' poster='".$order->poster."' controls>";
+                        $html .= "<video style='width: 100%; $style' controls>";
                     }else{
                         $html .= "<video style='width: 100%; $style' loop autoplay='true' muted='muted'>";
                     }	
-                        $html .= "<source src='".$order->blog->image."' type='video/mp4'>";	
+                        $html .= "<source src='".$order->blog->image."#t=0.5' type='video/mp4'>";	
                     $html .= "</video>";	
                 }
                     	
