@@ -62,11 +62,11 @@
 
 
                     <footer>
-                     <div class="footer container mt-5 text-center">
+                       <div class="footer container mt-5 text-center">
 
-                         <p>All Rights Reserved @  <script>
+                           <p>All Rights Reserved @  <script>
                             document.write(new Date().getFullYear());
-                        </script> - LЛ＊LIBERTУ - <a data-toggle="modal" data-target="#terminos">Terms &
+                        </script> - LЛ＊LIBERTУ - <a data-toggle="modal" data-target=".terminos">Terms &
                         Conditions</a></p>
                     </div>
                 </footer>

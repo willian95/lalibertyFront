@@ -1746,3 +1746,6 @@ a {
 .m7{
     margin-bottom: 7rem;
 }
+.footer a{
+    cursor: pointer;
+}
