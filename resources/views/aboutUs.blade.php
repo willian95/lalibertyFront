@@ -79,7 +79,7 @@
                                 <img class="person-img" src="{{ url('assets/img/rigo.JPG') }}" alt="">
                                 <div class="redes">
                                     <a target="_blank" data-toggle="tooltip" data-placement="top" title="whatsapp" href="https://api.whatsapp.com/send?phone=3203045593"><img src="assets/img/iconos/whatsapp.svg" alt=""></a>
-                                    <a href="rigoabello.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Portafolio" ><img src="assets/img/iconos/job.svg" alt=""></a>
+                                    <a href="https://rigoabello.com/" target="_blank" data-toggle="tooltip" data-placement="top" title="Portafolio" ><img src="assets/img/iconos/job.svg" alt=""></a>
                                     <a target="_blank" data-toggle="tooltip" data-placement="top" title="linkedin" href="https://www.linkedin.com/in/rigoabello/"><img src="assets/img/iconos/linkedin.svg" alt=""></a>
                                     <a href="maito:hola@laliberty.com.co" data-toggle="tooltip" data-placement="top" title="Email" ><img src="assets/img/iconos/mail.svg" alt=""></a>
                                 </div>
@@ -88,7 +88,7 @@
                                 <img class="person-img" src="{{ url('assets/img/freddy.JPG') }}" alt="">
                                 <div class="redes">
                                     <a target="_blank" data-toggle="tooltip" data-placement="top" title="whatsapp" href="https://api.whatsapp.com/send?phone=3202711689"><img src="assets/img/iconos/whatsapp.svg" alt=""></a>
-                                    <a href="efepuntomendez.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Portafolio"><img src="assets/img/iconos/job.svg" alt=""></a>
+                                    <a href="https://efepuntomendez.com/" target="_blank" data-toggle="tooltip" data-placement="top" title="Portafolio"><img src="assets/img/iconos/job.svg" alt=""></a>
                                     <a target="_blank" data-toggle="tooltip" data-placement="top" title="linkedin" href="https://www.linkedin.com/in/fredy-mendez"><img src="assets/img/iconos/linkedin.svg" alt=""></a>
                                     <a href="maito:hola@laliberty.com.co" data-toggle="tooltip" data-placement="top" title="Email"><img src="assets/img/iconos/mail.svg" alt=""></a>
                                     
@@ -103,149 +103,149 @@
 
 
                 <footer>
-                 <div class="footer container mt-5 text-center">
+                   <div class="footer container mt-5 text-center">
 
-                   <p>All Rights Reserved @  <script>
-                    document.write(new Date().getFullYear());
-                </script> - LЛ＊LIBERTУ - <a data-toggle="modal" data-target="#terminos">Terms &
-                Conditions</a></p>
-            </div>
-        </footer>
-    </main>
-</div>
-<!-- partial -->
-<script src="assets/js/script.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">
-</script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js">
-</script>
-
-<script src="assets/js/slick.min.js"></script>
-<script src="assets/js/nav.js"></script>
-
-<script>
-    /* Demo purposes only */
-    $(".hover").mouseleave(
-        function () {
-            $(this).removeClass("hover");
-        }
-        );
+                     <p>All Rights Reserved @  <script>
+                        document.write(new Date().getFullYear());
+                    </script> - LЛ＊LIBERTУ - <a data-toggle="modal" data-target="#terminos">Terms &
+                    Conditions</a></p>
+                </div>
+            </footer>
+        </main>
+    </div>
+    <!-- partial -->
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js">
     </script>
 
-    <!-- Modal detalle del producto -->
-    <div class="modal fade" id="producto-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">
-                    <p class="titulo-producto">Jacket - limited</p>
-                    <span class="precio">$100.000</span>
-                </h5>
-                <div class="carrito-icon ml-auto">
-                    <a href="">
-                        <svg class="carrito-icon-hoevr" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 450.391 450.391"
-                        style="enable-background:new 0 0 450.391 450.391;" xml:space="preserve">
-                        <g>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/nav.js"></script>
+
+    <script>
+        /* Demo purposes only */
+        $(".hover").mouseleave(
+            function () {
+                $(this).removeClass("hover");
+            }
+            );
+        </script>
+
+        <!-- Modal detalle del producto -->
+        <div class="modal fade" id="producto-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">
+                        <p class="titulo-producto">Jacket - limited</p>
+                        <span class="precio">$100.000</span>
+                    </h5>
+                    <div class="carrito-icon ml-auto">
+                        <a href="">
+                            <svg class="carrito-icon-hoevr" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 450.391 450.391"
+                            style="enable-background:new 0 0 450.391 450.391;" xml:space="preserve">
                             <g>
                                 <g>
-                                    <path
-                                    d="M143.673,350.322c-25.969,0-47.02,21.052-47.02,47.02c0,25.969,21.052,47.02,47.02,47.02 c25.969,0,47.02-21.052,47.02-47.02C190.694,371.374,169.642,350.322,143.673,350.322z M143.673,423.465 c-14.427,0-26.122-11.695-26.122-26.122c0-14.427,11.695-26.122,26.122-26.122c14.427,0,26.122,11.695,26.122,26.122 C169.796,411.77,158.1,423.465,143.673,423.465z" />
-                                    <path
-                                    d="M342.204,350.322c-25.969,0-47.02,21.052-47.02,47.02c0,25.969,21.052,47.02,47.02,47.02s47.02-21.052,47.02-47.02 C389.224,371.374,368.173,350.322,342.204,350.322z M342.204,423.465c-14.427,0-26.122-11.695-26.122-26.122 c0-14.427,11.695-26.122,26.122-26.122s26.122,11.695,26.122,26.122C368.327,411.77,356.631,423.465,342.204,423.465z" />
-                                    <path
-                                    d="M448.261,76.037c-2.176-2.377-5.153-3.865-8.359-4.18L99.788,67.155L90.384,38.42 C83.759,19.211,65.771,6.243,45.453,6.028H10.449C4.678,6.028,0,10.706,0,16.477s4.678,10.449,10.449,10.449h35.004 c11.361,0.251,21.365,7.546,25.078,18.286l66.351,200.098l-5.224,12.016c-5.827,15.026-4.077,31.938,4.702,45.453 c8.695,13.274,23.323,21.466,39.184,21.943h203.233c5.771,0,10.449-4.678,10.449-10.449c0-5.771-4.678-10.449-10.449-10.449 H175.543c-8.957-0.224-17.202-4.936-21.943-12.539c-4.688-7.51-5.651-16.762-2.612-25.078l4.18-9.404l219.951-22.988 c24.16-2.661,44.034-20.233,49.633-43.886l25.078-105.012C450.96,81.893,450.36,78.492,448.261,76.037z M404.376,185.228 c-3.392,15.226-16.319,26.457-31.869,27.69l-217.339,22.465L106.58,88.053l320.261,4.702L404.376,185.228z" />
+                                    <g>
+                                        <path
+                                        d="M143.673,350.322c-25.969,0-47.02,21.052-47.02,47.02c0,25.969,21.052,47.02,47.02,47.02 c25.969,0,47.02-21.052,47.02-47.02C190.694,371.374,169.642,350.322,143.673,350.322z M143.673,423.465 c-14.427,0-26.122-11.695-26.122-26.122c0-14.427,11.695-26.122,26.122-26.122c14.427,0,26.122,11.695,26.122,26.122 C169.796,411.77,158.1,423.465,143.673,423.465z" />
+                                        <path
+                                        d="M342.204,350.322c-25.969,0-47.02,21.052-47.02,47.02c0,25.969,21.052,47.02,47.02,47.02s47.02-21.052,47.02-47.02 C389.224,371.374,368.173,350.322,342.204,350.322z M342.204,423.465c-14.427,0-26.122-11.695-26.122-26.122 c0-14.427,11.695-26.122,26.122-26.122s26.122,11.695,26.122,26.122C368.327,411.77,356.631,423.465,342.204,423.465z" />
+                                        <path
+                                        d="M448.261,76.037c-2.176-2.377-5.153-3.865-8.359-4.18L99.788,67.155L90.384,38.42 C83.759,19.211,65.771,6.243,45.453,6.028H10.449C4.678,6.028,0,10.706,0,16.477s4.678,10.449,10.449,10.449h35.004 c11.361,0.251,21.365,7.546,25.078,18.286l66.351,200.098l-5.224,12.016c-5.827,15.026-4.077,31.938,4.702,45.453 c8.695,13.274,23.323,21.466,39.184,21.943h203.233c5.771,0,10.449-4.678,10.449-10.449c0-5.771-4.678-10.449-10.449-10.449 H175.543c-8.957-0.224-17.202-4.936-21.943-12.539c-4.688-7.51-5.651-16.762-2.612-25.078l4.18-9.404l219.951-22.988 c24.16-2.661,44.034-20.233,49.633-43.886l25.078-105.012C450.96,81.893,450.36,78.492,448.261,76.037z M404.376,185.228 c-3.392,15.226-16.319,26.457-31.869,27.69l-217.339,22.465L106.58,88.053l320.261,4.702L404.376,185.228z" />
+                                    </g>
                                 </g>
                             </g>
-                        </g>
-                        <g> </g>
-                        <g> </g>
-                        <g> </g>
-                        <g> </g>
-                        <g> </g>
-                        <g> </g>
-                        <g> </g>
-                        <g> </g>
-                        <g> </g>
-                        <g> </g>
-                        <g> </g>
-                        <g> </g>
-                        <g> </g>
-                        <g> </g>
-                        <g> </g>
-                    </svg>
-                </a>
-            </div>
-            <button type="button" class="close pl-0 ml-4" data-dismiss="modal" aria-label="Close">
-                <span style="    font-size: 40px;" aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="details-product">
-
-
-                        <img src="http://imgfz.com/i/yhKapEl.png" alt="">
-                    </div>
+                            <g> </g>
+                            <g> </g>
+                            <g> </g>
+                            <g> </g>
+                            <g> </g>
+                            <g> </g>
+                            <g> </g>
+                            <g> </g>
+                            <g> </g>
+                            <g> </g>
+                            <g> </g>
+                            <g> </g>
+                            <g> </g>
+                            <g> </g>
+                            <g> </g>
+                        </svg>
+                    </a>
                 </div>
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <strong>
-                                <p>Stock : 2/5</p>
-                            </strong>
-                            <div class="input-group mb-4 mt-4">
-                                <select class="custom-select" id="inputGroupSelect02">
-                                    <option selected>Talla...</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
-
-                            </div>
-                            <!------------->
-                            <div class="input-group  mb-4 mt-4">
-                                <select class="custom-select" id="inputGroupSelect02">
-                                    <option selected>Color...</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
-
-                            </div>
-                            <!------------->
-                            <a class="btn btn-1 mt-5" href="#" data-toggle="modal" data-target="#carrito-modal">
-                                <svg>
-                                    <rect x="0" y="0" fill="none" width="100%" height="100%"></rect>
-                                </svg>
-                                Comprar
-                            </a>
+                <button type="button" class="close pl-0 ml-4" data-dismiss="modal" aria-label="Close">
+                    <span style="    font-size: 40px;" aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="details-product">
 
 
-                        </div>
-                        <div class="col-md-8">
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum itaque magnam
-                                culpa, numquam
-                                molestiae, molestias eligendi voluptas doloremque vero mollitia esse non dolorum
-                                consectetur
-                                quisquam voluptatem distinctio sunt pariatur harum. <br><br> Lorem ipsum dolor
-                                sit amet consectetur
-                                adipisicing elit. Iusto inventore nesciunt sunt, atque enim assumenda aliquid
-                                doloribus ullam
-                                tempora? Error minus, pariatur cupiditate atque architecto est. Rerum vitae
-                            cumque minima.</p>
+                            <img src="http://imgfz.com/i/yhKapEl.png" alt="">
                         </div>
                     </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <strong>
+                                    <p>Stock : 2/5</p>
+                                </strong>
+                                <div class="input-group mb-4 mt-4">
+                                    <select class="custom-select" id="inputGroupSelect02">
+                                        <option selected>Talla...</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
 
+                                </div>
+                                <!------------->
+                                <div class="input-group  mb-4 mt-4">
+                                    <select class="custom-select" id="inputGroupSelect02">
+                                        <option selected>Color...</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+
+                                </div>
+                                <!------------->
+                                <a class="btn btn-1 mt-5" href="#" data-toggle="modal" data-target="#carrito-modal">
+                                    <svg>
+                                        <rect x="0" y="0" fill="none" width="100%" height="100%"></rect>
+                                    </svg>
+                                    Comprar
+                                </a>
+
+
+                            </div>
+                            <div class="col-md-8">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum itaque magnam
+                                    culpa, numquam
+                                    molestiae, molestias eligendi voluptas doloremque vero mollitia esse non dolorum
+                                    consectetur
+                                    quisquam voluptatem distinctio sunt pariatur harum. <br><br> Lorem ipsum dolor
+                                    sit amet consectetur
+                                    adipisicing elit. Iusto inventore nesciunt sunt, atque enim assumenda aliquid
+                                    doloribus ullam
+                                    tempora? Error minus, pariatur cupiditate atque architecto est. Rerum vitae
+                                cumque minima.</p>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 
 <!-- carrito modal -->
