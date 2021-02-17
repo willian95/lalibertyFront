@@ -149,7 +149,7 @@
                     Recibimos tus pagos de cualquier tarjeta de crédito, débito o efectivo (Efecty, Gana, Baloto) a
                     través
                     de PAYU.
-                    Realiza tu compra en la tienda virtual de True y selecciona como método de pago PAYU.
+                    Realiza tu compra en la tienda virtual y selecciona como método de pago PAYU.
                     Completa el pago a través de la plataforma, cuando termines nos pondremos en contacto contigo
                     para
                     inicar el despacho.
@@ -159,7 +159,7 @@
                     Todas nuestras ediciones son limitadas, los inventarios se actualizan automáticamente, sin
                     embargo,
                     se
-                    pueden presentar errores en y que la prenda que compraste ya no se encuentre disponible. En este
+                    pueden presentar errores y que la prenda que compraste ya no se encuentre disponible. En este
                     caso
                     te notificaremos a través de correo, whatsapp o llamada telefónica y te daremos la opción de
                     escoger
