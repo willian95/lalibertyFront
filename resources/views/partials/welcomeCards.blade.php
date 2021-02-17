@@ -22,7 +22,7 @@ height: 300px!important;
 margin-bottom: 10rem;";
 }
 else if($loop->index == 6){
-$style = "margin-top: -19rem;";
+$style = "margin-top: -14rem;";
 }else if($loop->index == 20){
 $style = "margin-top: -19rem; width: 200px; margin-left: 0rem;    height: 500px;";
 }
