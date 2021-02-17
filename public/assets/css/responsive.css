@@ -150,7 +150,7 @@
 
     .brand-xs img {
         width: 90%;
-        margin-left: 25px;
+        margin-left: 50px;
         margin-top: 20px;
     }
 
@@ -310,12 +310,17 @@
 }
 
 @media (min-width: 2560px) {
-    .brand img {
-        width: 20%;
-    }
+ .brand img {
+    width: 30%;
+}
 }
 
 
+@media (width:1280px) and (height: 800px) {
+    .brand img {
+        width: 50%;
+    }
+}
+@media (width:1280px) and (height: 800px) {
 
-
-
+}

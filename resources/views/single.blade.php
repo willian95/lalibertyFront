@@ -78,7 +78,7 @@
 
            <p>All Rights Reserved @  <script>
             document.write(new Date().getFullYear());
-          </script> - LЛ＊LIBERTУ - <a data-toggle="modal" data-target="#terminos">Terms &
+          </script> - LЛ＊LIBERTУ - <a data-toggle="modal" data-target=".terminos">Terms &
           Conditions</a></p>
         </div>
       </footer>
