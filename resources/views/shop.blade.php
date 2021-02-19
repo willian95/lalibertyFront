@@ -809,6 +809,8 @@ aria-hidden="true">
 
               })
 
+              $('.carousel').carousel();
+
               this.sizes = []
               this.colors = []
 
