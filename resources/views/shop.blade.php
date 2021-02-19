@@ -809,7 +809,7 @@ aria-hidden="true">
 
               })
 
-              $('.carousel').carousel();
+              $('.carousel').carousel({ interval: 1000 });
 
               this.sizes = []
               this.colors = []
