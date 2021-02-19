@@ -791,18 +791,18 @@ aria-hidden="true">
               this.productColorSizes = this.product.product_color_sizes
               this.secondaryImages = this.product.secondary_images
 
-              $("#bottom-carousel").empty()
+              $(".deletable").remove()
 
               this.secondaryImages.forEach((data,index) => {
 
                 if(data.file_type == 'image'){
-                  $("#inner-carousel").append("<div class='carousel-item'> <img src='"+data.image+"' > </div>")
-                  $("#bottom-carousel").append("<li class='list-inline-item'> <a id='carousel-selector-"+(index+1)+"' data-slide-to='"+(index+1)+"' data-target='#custCarousel'> <img src='"+data.image+"' class='img-fluid'> </a> </li>")
+                  $("#inner-carousel").append("<div class='carousel-item deletable'> <img src='"+data.image+"' > </div>")
+                  $("#bottom-carousel").append("<li class='list-inline-item deletable'> <a id='carousel-selector-"+(index+1)+"' data-slide-to='"+(index+1)+"' data-target='#custCarousel'> <img src='"+data.image+"' class='img-fluid'> </a> </li>")
                   
                 }else{
 
-                  $("#inner-carousel").append("<div class='carousel-item'><video style='width: 100%;' controls> <source src='"+data.image+"' type='video/mp4'></video></div>")
-                  $("#bottom-carousel").append("<li class='list-inline-item'> <a id='carousel-selector-"+(index+1)+"' data-slide-to='"+(index+1)+"' data-target='#custCarousel'> <span>Video</span> </a> </li>")
+                  $("#inner-carousel").append("<div class='carousel-item deletable'><video style='width: 100%;' controls> <source src='"+data.image+"' type='video/mp4'></video></div>")
+                  $("#bottom-carousel").append("<li class='list-inline-item deletable'> <a id='carousel-selector-"+(index+1)+"' data-slide-to='"+(index+1)+"' data-target='#custCarousel'> <span>Video</span> </a> </li>")
 
                 }
 
