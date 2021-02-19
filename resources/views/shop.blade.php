@@ -418,7 +418,8 @@ aria-hidden="true">
                     </div> <!-- Left right -->
                     <a class="carousel-control-prev" href="#custCarousel" data-slide="prev"> <span class="carousel-control-prev-icon"></span> </a> <a class="carousel-control-next" href="#custCarousel" data-slide="next"> <span class="carousel-control-next-icon"></span> </a> <!-- Thumbnails -->
                     <ol class="carousel-indicators list-inline" id="bottom-carousel">
-                      <li class="list-inline-item active"> <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel"> <img :src="product.image" v-if="product.main_image_file_type == 'image'" class="img-fluid"> <span v-else>Video</span> </a> </li>
+                      <li class="list-inline-item active"> <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel"> 
+                      <img :src="product.image" v-if="product.main_image_file_type == 'image'" class="img-fluid"> <span v-else>Video</span> </a> </li>
 
                     </ol>
                   </div>
@@ -783,6 +784,7 @@ aria-hidden="true">
 
             if(window.localStorage.getItem("laliberty_product_flag") == "1"){
 
+              this.secondaryImages = []
               window.localStorage.setItem("laliberty_product_flag", "0")
               this.product = JSON.parse(window.localStorage.getItem("laliberty_product"))
               this.productColorSizes = this.product.product_color_sizes
