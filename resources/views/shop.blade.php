@@ -791,7 +791,20 @@ aria-hidden="true">
               this.productColorSizes = this.product.product_color_sizes
               this.secondaryImages = this.product.secondary_images
 
-              $(".deletable").remove()
+              $("#inner-carousel").empty()
+              $("#bottom-carousel").empty()
+
+              if(this.product.main_image_file_type == 'image'){
+                
+                $("#inner-carousel").append("<div class='carousel-item deletable'> <img src='"+this.product.image+"' > </div>")
+                $("#bottom-carousel").append("<li class='list-inline-item deletable'> <a id='carousel-selector-0' data-slide-to='0' data-target='#custCarousel'> <img src='"+this.product.image+"' class='img-fluid'> </a> </li>")
+
+              }else{
+
+                $("#inner-carousel").append("<div class='carousel-item deletable'><video style='width: 100%;' controls> <source src='"+this.product.image+"' type='video/mp4'></video></div>")
+                $("#bottom-carousel").append("<li class='list-inline-item deletable'> <a id='carousel-selector-0' data-slide-to=0' data-target='#custCarousel'> <span>Video</span> </a> </li>")
+
+              }
 
               this.secondaryImages.forEach((data,index) => {
 
@@ -809,7 +822,10 @@ aria-hidden="true">
 
               })
 
-              $('.carousel').carousel({ interval: 1000 });
+              $('.carousel-item').first().addClass('active');
+              $('.carousel-indicators > li').first().addClass('active');
+              $('#custCarousel').carousel();
+              
 
               this.sizes = []
               this.colors = []
