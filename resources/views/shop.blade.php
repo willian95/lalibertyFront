@@ -791,6 +791,7 @@ aria-hidden="true">
               this.productColorSizes = this.product.product_color_sizes
               this.secondaryImages = this.product.secondary_images
 
+              $("#inner-carousel").empty()
 
               this.secondaryImages.forEach((data,index) => {
 
