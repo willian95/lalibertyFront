@@ -705,6 +705,7 @@ aria-hidden="true">
             selectedSize:"",
             selectedColor:"",
             productColorSizeId:"",
+            secondaryImages:[],
             price:"",
             stock:""
           }
