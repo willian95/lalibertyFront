@@ -50,7 +50,7 @@ class HomeController extends Controller
             margin-bottom: 10rem;";
         }
         else if($loop == 6){
-            $style = "margin-top: -19rem;";
+            $style = "margin-top: -14rem;";
         }else if($loop == 20){
             $style = "margin-top: -16rem; width: 200px; margin-left: 0rem;    height: 500px;";
         }
