@@ -713,6 +713,7 @@ aria-hidden="true">
         methods: {
 
           fetchColors(){
+            this.selectedColor = ""
             this.colors = [] 
             this.price = ""
             this.stock = ""
