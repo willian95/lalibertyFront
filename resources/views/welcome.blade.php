@@ -40,7 +40,8 @@ $isMob = 0;
 
 
 <section class="container">	
-  <iframe width= "100%" src="https://open.spotify.com/embed/playlist/4Gw7ehv7RVkyaGys4Yrbbm" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>	
+<iframe width= "100%" src="https://open.spotify.com/embed/playlist/7u4OkKQMoNPedpzuZ8fxjP" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  
 
 
   <div class="mt-8" data-mc-src="bfff06f2-8293-40d7-96fa-01fb4bb52cf0"></div>	
