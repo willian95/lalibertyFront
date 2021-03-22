@@ -17,7 +17,24 @@
         <p class="main_title-general"></p>
         <div class="timeline-container" id="timeline-1">
           <div class="timeline">
-            
+            @foreach(App\Blog::orderBy("created_date", "desc")->get() as $blog)
+              <div class="timeline-item" data-text="{{ $blog->created_at->format('d/m/Y') }}"  >
+                <a href="{{ url('/blog/'.$blog->slug) }}">
+                  <div class="timeline__content">
+                    {{--@if($blog->main_image_file_type == 'image')
+                      <img class="timeline__img" src="{{ $blog->image }}" />
+                    @else
+                      <video style="width: 100%;" controls>
+                        <source src="{{ $blog->image }}#t=0.5" type="video/mp4">
+                      </video>
+                    @endif--}}
+
+                    <h2 class="timeline__content-title">{{ $blog->title }}</h2>
+                    {{--<p class="timeline__content-desc">{!! substr($blog->description, 0, 60) !!}...</p>--}}
+                  </div>
+                </a>
+              </div>
+            @endforeach
           </div>
         </div>
       </section>
