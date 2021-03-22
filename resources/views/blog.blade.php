@@ -30,7 +30,7 @@
                     @endif--}}
 
                     <h2 class="timeline__content-title">{{ $blog->title }}</h2>
-                    {{--<p class="timeline__content-desc">{!! substr($blog->description, 0, 60) !!}...</p>--}}
+                    <p class="timeline__content-desc">{!! substr($blog->description, 0, 60) !!}...</p>
                   </div>
                 </a>
               </div>
