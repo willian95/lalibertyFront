@@ -55,7 +55,7 @@
                     
 
                 </div>
-                <div class="row">
+                <div class="row centeres">
                     {!! $fashionMerch->links() !!}
                 </div>
             </section>

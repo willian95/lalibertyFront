@@ -36,7 +36,7 @@
                     @endforeach
 
                 </div>
-                <div class="row">
+                <div class="row centeres">
                     {!! $works->links() !!}
                 </div>
             </section>

@@ -1749,3 +1749,23 @@ a {
 .footer a{
     cursor: pointer;
 }
+.page-link {
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif !important;
+}
+.page-item.active .page-link {
+   
+    background-color: #0000008c;
+    border-color: #0000;
+}
+.page-link {
+
+    color: #000;
+ 
+}
+.centeres{
+    width: 100%;
+text-align: center;
+justify-content: center;
+display: flex;
+}
